@@ -1,0 +1,142 @@
+{
+  "lstorms": {
+    "floods": {},
+    "hurricanes": {
+      "Andrew": {
+        "landfall": {
+          "cat": "",
+          "date": "",
+          "loc": "",
+          "windspeed": "",
+          "pressure": ""
+        },
+        "max": {
+          "catMax": "",
+          "windspeedMax": "",
+          "pressureMax": ""
+        },
+        "facts": ""
+      },
+      "Galveston": {
+        "landfall": {
+          "cat": "",
+          "date": "",
+          "loc": "",
+          "windspeed": "",
+          "pressure": ""
+        },
+        "max": {
+          "catMax": "",
+          "windspeedMax": "",
+          "pressureMax": ""
+        },
+        "facts": ""
+      },
+      "Harvey": {
+        "landfall": {
+          "cat": "",
+          "date": "",
+          "loc": "",
+          "windspeed": "",
+          "pressure": ""
+        },
+        "max": {
+          "catMax": "",
+          "windspeedMax": "",
+          "pressureMax": ""
+        },
+        "facts": ""
+      },
+      "Ian": {
+        "landfall": {
+          "cat": "",
+          "date": "",
+          "loc": "",
+          "windspeed": "",
+          "pressure": ""
+        },
+        "max": {
+          "catMax": "",
+          "windspeedMax": "",
+          "pressureMax": ""
+        },
+        "facts": ""
+      },
+      "Ike": {
+        "landfall": {
+          "cat": "",
+          "date": "",
+          "loc": "",
+          "windspeed": "",
+          "pressure": ""
+        },
+        "max": {
+          "catMax": "",
+          "windspeedMax": "",
+          "pressureMax": ""
+        },
+        "facts": ""
+      },
+      "Katrina": {
+        "landfall": {
+          "cat": "",
+          "date": "",
+          "loc": "",
+          "windspeed": "",
+          "pressure": ""
+        },
+        "max": {
+          "catMax": "",
+          "windspeedMax": "",
+          "pressureMax": ""
+        },
+        "facts": ""
+      },
+      "Maria": {
+        "landfall": {
+          "cat": "",
+          "date": "",
+          "loc": "",
+          "windspeed": "",
+          "pressure": ""
+        },
+        "max": {
+          "catMax": "",
+          "windspeedMax": "",
+          "pressureMax": ""
+        },
+        "facts": ""
+      },
+      "Sandy": {
+        "landfall": {
+          "cat": "",
+          "date": "",
+          "loc": "",
+          "windspeed": "",
+          "pressure": ""
+        },
+        "max": {
+          "catMax": "",
+          "windspeedMax": "",
+          "pressureMax": ""
+        },
+        "facts": ""
+      }
+    },
+    "snow": {
+      "stormName": {
+        "date": "",
+        "snowAmountIN": ""
+      }
+    },
+    "tornadoes": {
+      "Tri-State": {
+        "date": "",
+        "loc": "",
+        "duration": "",
+        "windspeed": "",
+        "ef-rating": ""
+      }
+    }
+  }
+}

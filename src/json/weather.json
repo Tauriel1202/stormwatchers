@@ -1,0 +1,59 @@
+{
+  "weatherSummaries": {
+    "clouds": {
+      "what": "",
+      "how": "",
+      "facts": "",
+      "img": "../imgs/clouds.jpg"
+    },
+    "hail": {
+      "what": "",
+      "how": "",
+      "facts": "",
+      "img": ""
+    },
+    "hurricanes": {
+      "what": "",
+      "how": "",
+      "facts": "",
+      "img": ""
+    },
+    "rain": {
+      "what": "",
+      "how": "",
+      "facts": "",
+      "img": ""
+    },
+    "rainbows": {
+      "what": "",
+      "how": "",
+      "facts": "",
+      "img": ""
+    },
+    "snow": {
+      "what": "",
+      "how": "",
+      "facts": "",
+      "img": ""
+    },
+    "thunderstorms": {
+      "what": "",
+      "how": "",
+      "facts": "",
+      "img": ""
+    },
+    "tornadoes": {
+      "what": "",
+      "how": "",
+      "facts": "",
+      "img": ""
+    },
+    "wind": {
+      "what": "",
+      "how": "",
+      "facts": "",
+      "formula": "",
+      "img": ""
+    }
+  }
+}
