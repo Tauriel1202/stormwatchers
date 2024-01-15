@@ -5,7 +5,7 @@
       "what": "Clouds are a collection of water vapor or droplets. Sometimes, those droplets freeze and become crystals, and other times, they just rain as water vapor. Clouds also can collect and carry particles like dust. There are three clouds level: high, mid or alto, and low. Higher clouds are colder and wispier, middle are more scaly, and low level are puffier. <br> There are several different types of clouds. Each forms in its own conditions, has it own unique shape, and sits on one of the three cloud levels. The three main types of clouds are cumulus, stratus, and cirrus. <br> <em>Cumulus</em> <br> Cumulus clouds are those fluffy white puffs we see on a sunny summer day. They are the warmer air, fair-weather cloud. Cumulus clouds are generally puffy and white with heaped tops and flatter, silvery bottoms. These clouds are part of the low cloud level. <br> <em>Stratus</em> <br> Stratus clouds make the sky look grey, although sometimes they break apart letting some sky or sun through. They form in all parts of the years. Strati are low lying, grey clouds that often lead to drizzle, light rain, or snow. Sometimes, strati just make the sky look grey. <br> <em>Cirrus</em> <br> Cirrus are wispy clouds like hair. They form on cooler days and are always made of ice crystals. These clouds are also fair-weather clouds and are colorful during sunrise or sunset. Cirri are often thin, letting the sun shine through.  These clouds are high-level clouds drifting far above the earth’s surface. <br> These are the three that merge to create more kinds: cirrocumulus, cirrostratus, altocumulus, altostratus, nimbostratus, cumulonimbus, and stratocumulus. <br> <em>Cirrocumulus</em> <br> Cirrocumulus clouds are flat white clouds that have a rippled appearance. They are close together and very thin. Cirrocumuli are high level clouds like their Cirrus cousins. Like Cirrus clouds, Cirrocumulus are mostly ice crystals. <br> <em>Cirrostratus</em> <br> Cirrostratus clouds are thin and nearly transparent like Cirrus clouds. Unlike Cirrus clouds, Cirrostratus can make a sheet that extends across the sky. Since they are so thin, the sun is often seen with a halo. They are the last of the high-level clouds. <br><em>Altocumulus</em><br>Altocumuli are mid-level clouds with a scaly appearance. These grey or white clouds are a patchy sheetlike cloud. Each scale is small and thin. Altocumuli are the most common mid-level cloud, often appearing alongside other clouds.<br><em>Altostratus</em><br>Altostrati are big grey or bluish sheets that cover the sky. While they are thin enough to reveal the round shape of the sun, Altostrati are darker and thicker than some of the other cloud types. These clouds sometimes produce a light drizzle. Altostratus clouds are technically mid-level clouds, but sometimes they stretch up into the high-level.<br><em>Nimbostratus</em><br>Nimbostrati are basically thicker, darker Altostratus clouds. These are thicker than Altostratus, blocking out the sun entirely. These clouds often produce heavier rain or snow. These clouds get lower as they precipitate (rain or snow). Although Altostratus clouds are often low in the sky, they are actually mid-level, sometimes even extending up into the high-level!<br><em>Cumulonimbus</em><br>Cumulonimbus clouds are thunderstorm clouds. With their thick, puffy, grey appearance, they sometimes look like a wall of clouds. They have flat, plumed tops. These dark clouds sometimes have smaller individual clouds floating around their bases. Cumulonimbus clouds can produce heavy rain, hail, and sometimes tornadoes. Despite their towering appearance, these clouds are actually low-level clouds.<br><em>Stratocumulus</em><br>Stratocumulus clouds are the last of the cloud types. They are patchy, creating a messy gridded or honeycombed appearance. Like some of the other types, these are made of individual shapes that float close together to give it a patterned appearance. These are also low-level clouds.",
       "how": "",
       "facts": "",
-      "imgTile": "stormwatchers/src/imgs/clouds.jpg",
+      "imgTile": "./imgs/weatherPics/clouds.jpg",
       "img1": "",
       "img2": "",
       "img3": ""
@@ -14,7 +14,7 @@
       "what": "",
       "how": "",
       "facts": "",
-      "imgTile": "",
+      "imgTile": "./imgs/weatherPics/fog.jpg",
       "img1": "",
       "img2": "",
       "img3": ""
@@ -23,16 +23,16 @@
       "what": "",
       "how": "",
       "facts": "",
-      "imgTile": "",
+      "imgTile": "./imgs/weatherPics/hail.jpg",
       "img1": "",
       "img2": "",
       "img3": ""
     },
     "hurricanes": {
-      "what": "",
+      "what": "Hi! I'm a hurricane!",
       "how": "",
       "facts": "",
-      "imgTile": "",
+      "imgTile": "./imgs/weatherPics/hurricane.jpg",
       "img1": "",
       "img2": "",
       "img3": ""
@@ -41,7 +41,7 @@
       "what": "",
       "how": "",
       "facts": "",
-      "imgTile": "",
+      "imgTile": "./imgs/weatherPics/lightning.jpg",
       "img1": "",
       "img2": "",
       "img3": ""
@@ -50,7 +50,7 @@
       "what": "",
       "how": "",
       "facts": "",
-      "imgTile": "",
+      "imgTile": "./imgs/weatherPics/mist.jpg",
       "img1": "",
       "img2": "",
       "img3": ""
@@ -59,7 +59,7 @@
       "what": "",
       "how": "",
       "facts": "",
-      "imgTile": "",
+      "imgTile": "./imgs/weatherPics/rain.jpg",
       "img1": "",
       "img2": "",
       "img3": ""
@@ -68,7 +68,7 @@
       "what": "",
       "how": "",
       "facts": "",
-      "imgTile": "",
+      "imgTile": "./imgs/weatherPics/rainbow.jpg",
       "img1": "",
       "img2": "",
       "img3": ""
@@ -77,7 +77,7 @@
       "what": "",
       "how": "",
       "facts": "",
-      "imgTile": "",
+      "imgTile": "./imgs/weatherPics/snow.jpg",
       "img1": "",
       "img2": "",
       "img3": ""
@@ -86,7 +86,7 @@
       "what": "",
       "how": "",
       "facts": "",
-      "imgTile": "",
+      "imgTile": "./imgs/weatherPics/thunderstorm.jpg",
       "img1": "",
       "img2": "",
       "img3": ""
@@ -95,7 +95,7 @@
       "what": "",
       "how": "",
       "facts": "",
-      "imgTile": "",
+      "imgTile": "./imgs/weatherPics/tornado.jpg",
       "img1": "",
       "img2": "",
       "img3": ""
@@ -105,7 +105,7 @@
       "how": "",
       "facts": "",
       "formula": "",
-      "imgTile": "",
+      "imgTile": "./imgs/weatherPics/wind.jpg",
       "img1": "",
       "img2": "",
       "img3": ""

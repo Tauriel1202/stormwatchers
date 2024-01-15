@@ -1,6 +1,6 @@
 import React from "react";
-import accountImg from "../imgs/icons/accountImg.png";
-import logo from "../imgs/icons/logoPlaceholder.png";
+// import accountImg from "../imgs/icons/accountImg.png";
+// import logo from "../imgs/icons/logoPlaceholder.png";
 
 function Header() {
   return (
@@ -9,7 +9,7 @@ function Header() {
         <div className="headerContent">
           <div className="imgDiv">
             <img
-              src={logo}
+              src="./imgs/icons/logoPlaceholder.png"
               alt="Stormwatchers: Kids logo"
               width="100"
               height="100"
@@ -18,7 +18,7 @@ function Header() {
           <h1>Stormwatchers: Kids</h1>
           <div className="imgDiv">
             <a href="/account">
-              <img src={accountImg} alt="account" width="100" height="100" />
+              <img src="./imgs/icons/accountImg.png" alt="account" width="100" height="100" />
             </a>
           </div>
         </div>

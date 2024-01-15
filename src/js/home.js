@@ -4,8 +4,6 @@ import lJson from "../json/lstorms.json";
 import Header from "../js/header";
 import Footer from "../js/footer";
 
-//test import
-import Tornado from "../imgs/icons/tornadoIcon.jpeg";
 
 function App() {
   // random tips
@@ -80,7 +78,7 @@ function App() {
           <div className="weatherTile">
             <div className="imgDiv">
               <img
-                src={Tornado}
+                src=''
                 alt="current weather image"
                 width={100}
                 height={100}
@@ -95,7 +93,7 @@ function App() {
           <div className="weatherTile">
             <div className="imgDiv">
               <img
-                src={Tornado}
+                src=''
                 alt="tomorrow's weather image"
                 width={100}
                 height={100}
@@ -110,7 +108,7 @@ function App() {
           <div className="weatherTile">
             <div className="imgDiv">
               <img
-                src={Tornado}
+                src=''
                 alt="two days forward weather image"
                 width={100}
                 height={100}

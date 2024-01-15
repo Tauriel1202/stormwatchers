@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../imgs/icons/logoPlaceholder.png";
+// import logo from "../imgs/icons/logoPlaceholder.png";
 
 function Footer() {
   return (
@@ -7,8 +7,8 @@ function Footer() {
       <footer>
         <div className="imgDiv">
           <img
-            src={logo}
-            alt="Stormwatchers: Kids Logo"
+              src="./imgs/icons/logoPlaceholder.png"
+              alt="Stormwatchers: Kids Logo"
             width={100}
             height={100}
           />
