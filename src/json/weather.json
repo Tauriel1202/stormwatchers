@@ -1,59 +1,114 @@
 {
   "weatherSummaries": {
     "clouds": {
+      "overview": "We are all familiar with clouds. We often see them as fluffy white puffs on a summer day, a long thin wisp like hair on colder days, or tall, dark masses like the clouds of a storm. Sometimes, they are similar to a flat grey sheet like before it snows. <br> We know what they look like, and what they can bring. However, clouds are not the fluffy marshmallows we think they are. So, what are they really? And how do they form?",
+      "what": "Clouds are a collection of water vapor or droplets. Sometimes, those droplets freeze and become crystals, and other times, they just rain as water vapor. Clouds also can collect and carry particles like dust. There are three clouds level: high, mid or alto, and low. Higher clouds are colder and wispier, middle are more scaly, and low level are puffier. <br> There are several different types of clouds. Each forms in its own conditions, has it own unique shape, and sits on one of the three cloud levels. The three main types of clouds are cumulus, stratus, and cirrus. <br> <em>Cumulus</em> <br> Cumulus clouds are those fluffy white puffs we see on a sunny summer day. They are the warmer air, fair-weather cloud. Cumulus clouds are generally puffy and white with heaped tops and flatter, silvery bottoms. These clouds are part of the low cloud level. <br> ",
+      "how": "",
+      "facts": "",
+      "imgTile": "../imgTiles/clouds.jpg",
+      "img1": "",
+      "img2": "",
+      "img3": ""
+    },
+    "fog": {
       "what": "",
       "how": "",
       "facts": "",
-      "img": "../imgs/clouds.jpg"
+      "imgTile": "",
+      "img1": "",
+      "img2": "",
+      "img3": ""
     },
     "hail": {
       "what": "",
       "how": "",
       "facts": "",
-      "img": ""
+      "imgTile": "",
+      "img1": "",
+      "img2": "",
+      "img3": ""
     },
     "hurricanes": {
       "what": "",
       "how": "",
       "facts": "",
-      "img": ""
+      "imgTile": "",
+      "img1": "",
+      "img2": "",
+      "img3": ""
+    },
+    "lightning": {
+      "what": "",
+      "how": "",
+      "facts": "",
+      "imgTile": "",
+      "img1": "",
+      "img2": "",
+      "img3": ""
+    },
+    "mist": {
+      "what": "",
+      "how": "",
+      "facts": "",
+      "imgTile": "",
+      "img1": "",
+      "img2": "",
+      "img3": ""
     },
     "rain": {
       "what": "",
       "how": "",
       "facts": "",
-      "img": ""
+      "imgTile": "",
+      "img1": "",
+      "img2": "",
+      "img3": ""
     },
     "rainbows": {
       "what": "",
       "how": "",
       "facts": "",
-      "img": ""
+      "imgTile": "",
+      "img1": "",
+      "img2": "",
+      "img3": ""
     },
     "snow": {
       "what": "",
       "how": "",
       "facts": "",
-      "img": ""
+      "imgTile": "",
+      "img1": "",
+      "img2": "",
+      "img3": ""
     },
     "thunderstorms": {
       "what": "",
       "how": "",
       "facts": "",
-      "img": ""
+      "imgTile": "",
+      "img1": "",
+      "img2": "",
+      "img3": ""
     },
     "tornadoes": {
       "what": "",
       "how": "",
       "facts": "",
-      "img": ""
+      "imgTile": "",
+      "img1": "",
+      "img2": "",
+      "img3": ""
     },
     "wind": {
       "what": "",
       "how": "",
       "facts": "",
       "formula": "",
-      "img": ""
+      "imgTile": "",
+      "img1": "",
+      "img2": "",
+      "img3": ""
     }
   }
 }

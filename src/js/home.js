@@ -40,10 +40,10 @@ function App() {
             <div className="tipTop">
               <div className="imgDiv">
                 <img
-                  src={`${window.location}imgs/icons/logoPlaceholder.png`}
+                  src={require(randValue.img)}
                   alt={randValue.subject}
-                  width={50}
-                  height={50}
+                  width={25}
+                  height={25}
                 />
               </div>
               <h4>{randValue.subject}</h4>
