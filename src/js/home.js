@@ -32,22 +32,22 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <main>
+      <main className="home">
         <h2>Home</h2>
         <div className="content">
           <div className="tips">
             <h3>Weather Tip</h3>
-            <div className="tipTop">
-              <div className="imgDiv">
+            {/* <div className="tipTop"> */}
+              {/* <div className="imgDiv">
                 <img
                   src={require(randValue.img)}
                   alt={randValue.subject}
                   width={25}
                   height={25}
                 />
-              </div>
+              </div> */}
               <h4>{randValue.subject}</h4>
-            </div>
+            {/* </div> */}
             <p>{randValue.tip}</p>
           </div>
           <div className="highlightedStorm">

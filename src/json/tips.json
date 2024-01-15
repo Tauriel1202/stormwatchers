@@ -1,44 +1,36 @@
 {
   "tips": [
     {
-      "subject": "Lightning Safety",
-      "tip": "Standing under a tree does not keep you safe from lightning.",
-      "img": "../imgs/icons/lightningIcon.webp"
+      "subject": "⚡ Lightning Safety ⚡",
+      "tip": "Standing under a tree does not keep you safe from lightning."
     },
     {
-      "subject": "Tornado Safety",
-      "tip": "Stay away from windows!",
-      "img": "../imgs/icons/tornadoIcon.jpeg"
+      "subject": "🌪 Tornado Safety 🌪",
+      "tip": "Stay away from windows!"
     },
     {
-      "subject": "Beach safety",
-      "tip": "Storms out at sea can create large waves that crash on the shore. Be aware of weather and ocean conditions when playing in the ocean.",
-      "img": "../imgs/icons/beachIcon.png"
+      "subject": "🌊 Beach safety 🌊",
+      "tip": "Storms out at sea can create large waves that crash on the shore. Be aware of weather and ocean conditions when playing in the ocean."
     },
     {
-      "subject": "Lightning Safety",
-      "tip": "Metal conducts electricity, but it does not attract it.",
-      "img": "../imgs/icons/lightningIcon.webp"
+      "subject": "⚡ Lightning Safety ⚡",
+      "tip": "Metal conducts electricity, but it does not attract it."
     },
     {
-      "subject": "Cold Safety",
-      "tip": "Wind chill lowers the overall outside temperature.",
-      "img": "../imgs/icons/coldIcon.png"
+      "subject": "🧊 Cold Safety 🧊",
+      "tip": "Wind chill lowers the overall outside temperature."
     },
     {
-      "subject": "Heat Safety",
-      "tip": "Light, cool foods like fruit help you stay cool in the heat.",
-      "img": "../imgs/icons/heatIcon.jpeg"
+      "subject": "🥵 Heat Safety 🥵",
+      "tip": "Light, cool foods like fruit help you stay cool in the heat."
     },
     {
-      "subject": "Heat Safety",
-      "tip": "Light colored fabrics reflect the sun's rays and keep you cooler.",
-      "img": "../imgs/icons/heatIcon.jpeg"
+      "subject": "🥵 Heat Safety 🥵",
+      "tip": "Light colored fabrics reflect the sun's rays and keep you cooler."
     },
     {
-      "subject": "Water Safety",
-      "tip": "Bacteria levels in bodies of water rise after a storm because rain washes pollutants into them. They return to their normal level after about 72 hours (3 days).",
-      "img": "../imgs/icons/waterIcon.png"
+      "subject": "💦 Water Safety 💦",
+      "tip": "Bacteria levels in bodies of water rise after a storm because rain washes pollutants into them. They return to their normal level after about 72 hours (3 days)."
     }
   ]
 }
