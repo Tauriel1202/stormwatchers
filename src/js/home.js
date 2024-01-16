@@ -78,7 +78,7 @@ function App() {
           <div className="weatherTile">
             <div className="imgDiv">
               <img
-                src=''
+                src='./imgs/icons/rain.jpg'
                 alt="current weather image"
                 width={100}
                 height={100}
@@ -93,7 +93,7 @@ function App() {
           <div className="weatherTile">
             <div className="imgDiv">
               <img
-                src=''
+                src='./imgs/icons/rain.jpg'
                 alt="tomorrow's weather image"
                 width={100}
                 height={100}
@@ -108,7 +108,7 @@ function App() {
           <div className="weatherTile">
             <div className="imgDiv">
               <img
-                src=''
+                src='./imgs/icons/rain.jpg'
                 alt="two days forward weather image"
                 width={100}
                 height={100}

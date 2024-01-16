@@ -246,6 +246,14 @@ h2 {
   margin: 2%;
 }
 
+.tile button {
+  cursor: pointer;
+}
+
+.tile:hover {
+  border: 3.5px solid var(--accents);
+}
+
 .weather h3 {
   padding: 0.6em 0 0;
 }
@@ -280,13 +288,103 @@ h2 {
   color: var(--lightgrey);
   border: 3.5px solid var(--accents);
   border-left: none;
-  width: 15em;
-  height: 40.5em;
+  width: 16.5em;
+  height: 55em;
+  margin-bottom: 0.5em;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
 }
 
-.summaryDiv aside h4 {
-  border-bottom: 3.5px solid var(--accents);
+.summaryDiv aside h3 {
+  background-color: var(--lightgrey);
+  color: var(--black);
   padding: 1em;
+}
+
+.summaryDiv aside button {
+  width: 20em;
+  background-color: var(--stormblue);
+  color: var(--lightgrey);
+  border: 3px solid var(--accents);
+  padding: 1em;
+}
+
+.deets {
+  max-width: 820px;
+  background-color: var(--lightgrey);
+  padding: 2%;
+  margin: auto;
+}
+
+.deets h2 {
+  padding-bottom: 0.5em;
+}
+
+.deets h3 {
+  background-color: var(--accents);
+  padding-bottom: 0.5em;
+}
+
+.deets p {
+  margin: 2% 0 2em;
+}
+
+.deets span {
+  color: var(--grey);
+  border-bottom: 3px outset var(--accents);
+}
+
+.deets ul,
+.deets li {
+  margin: 1em;
+}
+
+.deets .imgDiv {
+  width: 60%;
+  height: auto;
+  margin: 2em auto;
+}
+
+.deets .imgDiv:nth-of-type(2) {
+  width: 100%;
+  margin: 2em 0;
+  padding: 0;
+}
+
+.deets h3 span {
+  border: none;
+}
+
+.weather .miniNav {
+  margin: 0;
+  padding: 0;
+  display: grid;
+}
+
+.weather .miniNav a {
+  border-bottom: 2.5px solid var(--stormblue);
+  border-right: 2.5px solid var(--stormblue);
+
+  padding: 0.7em;
+}
+
+.weather .miniNav a:last-of-type {
+  border-bottom: none;
+}
+
+.all {
+  padding: 1em;
+  border-left: 2.5px solid var(--accents);
+  border-top: 2.5px solid var(--accents);
+}
+
+.all a {
+  text-decoration: none;
+  color: var(--lightgrey);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 100;
+  font-size: 0.9em;
 }
 /*#endregion UNTILED*/
 
