@@ -296,6 +296,12 @@ h2 {
   top: 0;
 }
 
+.summaryDiv aside h4:hover,
+.summaryDiv aside button:hover {
+  border: 2px solid var(--lightgrey);
+  cursor: pointer;
+}
+
 .summaryDiv aside h3 {
   background-color: var(--lightgrey);
   color: var(--black);

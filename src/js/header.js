@@ -25,10 +25,10 @@ function Header() {
         <nav>
           <a href="/">Home</a>
           <a href="/weather">Weather Types</a>
-          <a href="/prep">Storm Prep</a>
-          <a href="/past">Past Weather Data</a>
-          <a href="/lstorms">Legendary Storms</a>
-          <a href="/watch">Report a Storm</a>
+          <a href="/stormprep">Storm Prep</a>
+          <a href="/pastweather">Past Weather Data</a>
+          <a href="/legendarystorms">Legendary Storms</a>
+          <a href="/stormwatch">Report a Storm</a>
           <a href="/printables">Printable Activities</a>
         </nav>
       </header>

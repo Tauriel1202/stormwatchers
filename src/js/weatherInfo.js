@@ -32,7 +32,7 @@ class Weather extends React.Component {
     return (
       <nav className="miniNav">
         <a href="#top">Back to Top</a>
-        <a href="#what">What are {this.state.weatherType}?</a>
+        <a href="#what">What {this.checkPlural(this.state.weatherType)}?</a>
         <a href="#how">How are they formed?</a>
         <a href="#facts">Facts</a>
         <a href="#resources">Resources</a>
@@ -63,7 +63,7 @@ class Weather extends React.Component {
 
   summary() {
     return (
-      <div className="summaryDiv" key={"summary"}>
+      <div className="summaryDiv" key={this.state.weatherType}>
         <aside>
           <h3>Navigation</h3>
           <h4 className="all">
