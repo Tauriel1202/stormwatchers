@@ -246,7 +246,7 @@ h2 {
   margin: 2%;
 }
 
-.tile button {
+.tile a {
   cursor: pointer;
 }
 
@@ -288,16 +288,15 @@ h2 {
   color: var(--lightgrey);
   border: 3.5px solid var(--accents);
   border-left: none;
-  width: 16.5em;
-  height: 55em;
+  width: 15em;
+  height: 54.7em;
   margin-bottom: 0.5em;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
 }
 
-.summaryDiv aside h4:hover,
-.summaryDiv aside button:hover {
+.summaryDiv aside h4:hover {
   border: 2px solid var(--lightgrey);
   cursor: pointer;
 }
@@ -308,12 +307,25 @@ h2 {
   padding: 1em;
 }
 
-.summaryDiv aside button {
-  width: 20em;
+.summaryDiv aside h4 {
   background-color: var(--stormblue);
-  color: var(--lightgrey);
   border: 3px solid var(--accents);
+  padding: 0.7em;
+}
+
+.summaryDiv aside a {
+  color: var(--lightgrey);
+  text-decoration: none;
+  font-weight: 100;
   padding: 1em;
+}
+
+.summaryDiv aside nav a {
+  color: var(--grey);
+}
+
+.summaryDiv aside h4:last-of-type {
+  margin-bottom: 2em;
 }
 
 .deets {
@@ -363,7 +375,7 @@ h2 {
 }
 
 .weather .miniNav {
-  margin: 0;
+  margin: 0.5em 0 0;
   padding: 0;
   display: grid;
 }

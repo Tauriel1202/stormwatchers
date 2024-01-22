@@ -11,6 +11,7 @@ import Lstorms from "./js/lstorms";
 import Watch from "./js/watch";
 import Printables from "./js/printables";
 import Account from "./js/account";
+import InfoTemplate from "./js/infoTemplate";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -25,6 +26,8 @@ root.render(
         <Route path="/stormwatch" element={<Watch />} />
         <Route path="/printables" element={<Printables />} />
         <Route path="/account" element={<Account />} />
+
+        <Route path="/weather/summary" element={<InfoTemplate />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
