@@ -9,7 +9,7 @@ function Header() {
         <div className="headerContent">
           <div className="imgDiv">
             <img
-              src="./imgs/icons/logoPlaceholder.png"
+              src="https://github.com/Tauriel1202/stormwatchers/blob/master/public/imgs/icons/logoPlaceholder.png?raw=true"
               alt="Stormwatchers: Kids logo"
               width="100"
               height="100"
@@ -18,7 +18,7 @@ function Header() {
           <h1>Stormwatchers: Kids</h1>
           <div className="imgDiv">
             <a href="/account">
-              <img src="./imgs/icons/accountImg.png" alt="account" width="100" height="100" />
+              <img src="https://github.com/Tauriel1202/stormwatchers/blob/master/public/imgs/icons/accountImg.png?raw=true" alt="account" width="100" height="100" />
             </a>
           </div>
         </div>

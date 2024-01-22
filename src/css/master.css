@@ -356,6 +356,7 @@ h2 {
 .deets ul,
 .deets li {
   margin: 1em;
+  list-style-type: none;
 }
 
 .deets .imgDiv {
@@ -428,3 +429,12 @@ footer .imgDiv {
 }
 
 /*#endregion FOOTER*/
+
+
+/*region small version*/
+@media only screen and (max-width: 920px){
+  main {
+    background-color: rgb(255, 0, 140);
+  }
+}
+/*#endregion small version*/

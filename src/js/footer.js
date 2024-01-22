@@ -7,7 +7,7 @@ function Footer() {
       <footer>
         <div className="imgDiv">
           <img
-              src="./imgs/icons/logoPlaceholder.png"
+              src="https://github.com/Tauriel1202/stormwatchers/blob/master/public/imgs/icons/logoPlaceholder.png?raw=true"
               alt="Stormwatchers: Kids Logo"
             width={100}
             height={100}
