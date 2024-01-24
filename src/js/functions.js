@@ -1,5 +1,11 @@
 export function toTitleCase(string) {
-  return string.slice(0, 1)[0].toUpperCase() + string.slice(1, string.length);
+  return string
+    .split(" ")
+    .map(
+      (x) =>
+        x.slice(0, 1)[0].toUpperCase() + x.slice(1, x.length)
+    )
+    .join(" ");
 }
 
 export function checkPlural(string) {
