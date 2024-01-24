@@ -22,14 +22,19 @@ function Header() {
             </a>
           </div>
         </div>
+        <button onClick={() => {
+          document.querySelector('nav').classList.toggle('on')
+          this.classList.toggle('on')
+        }}></button>
         <nav>
-          <a href="/">Home</a>
-          <a href="/weather">Weather Types</a>
-          <a href="/stormprep">Storm Prep</a>
-          <a href="/pastweather">Past Weather Data</a>
-          <a href="/legendarystorms">Legendary Storms</a>
-          <a href="/stormwatch">Report a Storm</a>
-          <a href="/printables">Printable Activities</a>
+          <li><a href="/">Home</a></li>
+          <li><a href="/weather">Weather Types</a></li>
+          <li><a href="/stormprep">Storm Prep</a></li>
+          <li><a href="/pastweather">Past Weather Data</a></li>
+          <li><a href="/legendarystorms">Legendary Storms</a></li>
+          <li><a href="/stormwatch">Report a Storm</a></li>
+          <li><a href="/printables">Printable Activities</a></li>
+          <li className="smallNav"><a href="/account">Account</a></li>
         </nav>
       </header>
     </>

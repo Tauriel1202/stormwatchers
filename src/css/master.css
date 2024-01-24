@@ -4,6 +4,7 @@
   --stormblue: #005d8fff;
   --accents: #00ccf5ff;
   --lightgrey: #e3eced;
+  --yellow: #fffec1;
 }
 
 * {
@@ -55,13 +56,40 @@ header .imgDiv {
 
 nav {
   background-color: var(--accents);
-  padding: 0.8em 0.5em;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 0.5em;
 }
 
-nav a {
+nav li {
   color: var(--black);
+  list-style-type: none;
   padding: 1em 2em;
+}
+
+nav li a {
   text-decoration: none;
+  padding: 1em;
+}
+
+header nav li:hover {
+  background-color: var(--yellow);
+}
+
+.smallNav {
+  display: none;
+}
+
+.headerContent button::before {
+  content: '≡';
+}
+
+button.on {
+  content: '❎';
+}
+
+.on {
+  background-color: yellow;
 }
 
 /*#endregion HEADER*/
@@ -202,7 +230,7 @@ h2 {
 }
 
 .weatherTile .imgDiv {
-  width: 50px;
+  width: 85px;
   height: auto;
   margin: 0.5em auto;
 }
@@ -239,6 +267,7 @@ h2 {
 
 .tile {
   width: 12em;
+  min-width: 12em;
   height: auto;
   border: 3px outset var(--stormblue);
   border-radius: 15px;
@@ -430,11 +459,91 @@ footer .imgDiv {
 
 /*#endregion FOOTER*/
 
-
-/*region small version*/
-@media only screen and (max-width: 920px){
+/*#region MED version*/
+@media only screen and (max-width: 900px) {
   main {
     background-color: rgb(255, 0, 140);
   }
+
+  header {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .tiles {
+    max-width: 700px;
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
-/*#endregion small version*/
+/*#endregion MED version*/
+/*#region SMALL version*/
+@media only screen and (max-width: 480px) {
+  main {
+    background-color: yellow;
+  }
+
+  .headerContent {
+    display: unset;
+    margin: auto;
+  }
+
+  header .imgDiv:first-of-type {
+    max-width: none;
+    margin: 1em auto;
+  }
+
+  h1 {
+    margin: 1em;
+  }
+
+  header .imgDiv:last-of-type {
+    display: none;
+  }
+
+  header nav {
+    width: 100%;
+    text-align: center;
+    padding: 0;
+    display: grid;
+  }
+
+  .smallNav {
+    display: unset;
+  }
+
+  header nav li {
+    border-bottom: 2px solid var(--stormblue);
+  }
+
+  .tiles {
+    max-width: 200px;
+  }
+
+  .forecast {
+    /* max-width: 90%; */
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+
+    display: flex;
+    /* margin: auto; */
+  }
+
+  .forecast .imgDiv {
+    height: 85px;
+  }
+
+  .weatherTile .weatherData {
+    display: none;
+  } 
+
+  .weatherTile {
+    padding: 0 auto;
+    margin: 2% auto;
+  }
+
+  .home {
+    display: unset;
+  }
+}
+/*#endregion SMALL version*/

@@ -51,7 +51,7 @@ class App extends React.Component {
     if (day in this.state.weatherData) {
       if (day === "current") {
         forecastImg = this.state.weatherData[day].weather[0].description;
-        forecastImg = forecastImg.replace(/light |heavy |moderate |partly |mostly /g, "");
+        forecastImg = forecastImg.replace(/light |heavy |moderate |partly |mostly |overcast /g, "");
 
         current = toTitleCase(
           this.state.weatherData[day].weather[0].description
