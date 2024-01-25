@@ -20,11 +20,26 @@ function InfoTemplate() {
   let stateWeatherType = new URLSearchParams(window.location.search).get(
     "weatherType"
   );
-console.log(stateWeatherType, '💩💩')
   let usableJSON = weatherJSON.weatherSummaries[stateWeatherType];
   // let img1 = require(`${usableJSON.img1}`);
   let img1 = usableJSON.img1;
   let img2 = usableJSON.img2;
+
+  let img3;
+  if (usableJSON.img3) {
+    img3 = (
+      <div>
+        <img
+          src={usableJSON.img3}
+          alt={stateWeatherType}
+          width={100}
+          height={100}
+        />
+      </div>
+    );
+  } else {
+    img3 = <></>;
+  }
 
   return (
     <>
@@ -64,12 +79,7 @@ console.log(stateWeatherType, '💩💩')
               }}
             ></p>
             <div className="imgDiv">
-              <img
-                src={img1}
-                alt={stateWeatherType}
-                width={100}
-                height={100}
-              />
+              <img src={img1} alt={stateWeatherType} width={100} height={100} />
             </div>
             <h3 id="how">How {checkPlural(stateWeatherType)} formed?</h3>
             <p
@@ -78,13 +88,9 @@ console.log(stateWeatherType, '💩💩')
               }}
             ></p>
             <div className="imgDiv">
-              <img
-                src={img2}
-                alt={stateWeatherType}
-                width={100}
-                height={100}
-              />
+              <img src={img2} alt={stateWeatherType} width={100} height={100} />
             </div>
+            {img3}
             <h3 id="facts">Bonus facts about {stateWeatherType}</h3>
             <p
               dangerouslySetInnerHTML={{
