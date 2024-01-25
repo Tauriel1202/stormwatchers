@@ -54,17 +54,22 @@ header .imgDiv {
   margin: 0.5em;
 }
 
-nav {
+nav, .headerContent p {
   background-color: var(--accents);
   display: flex;
   flex-wrap: wrap;
   padding: 0 0.5em;
 }
 
+.headerContent p {
+  padding: 1em;
+  margin: auto;
+}
+
 nav li {
   color: var(--black);
   list-style-type: none;
-  padding: 1em 2em;
+  padding: 1em 1.5em;
 }
 
 nav li a {
@@ -80,12 +85,8 @@ header nav li:hover {
   display: none;
 }
 
-.headerContent button::before {
-  content: '≡';
-}
-
-button.on {
-  content: '❎';
+header button {
+  display: none;
 }
 
 .on {
@@ -510,6 +511,18 @@ footer .imgDiv {
 
   .smallNav {
     display: unset;
+  }
+
+  .headerContent button {
+    display: inline;
+  }
+
+  .headerContent button::before {
+    content: '≡';
+  }
+  
+  button.on {
+    content: '❎';
   }
 
   header nav li {

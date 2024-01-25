@@ -29,13 +29,14 @@
       "img3": ""
     },
     "hurricanes": {
-      "what": "Hi! I'm a hurricane!",
+      "overview": "<p>Unless you live in the Eastern half of the United States, the Caribbean, or a country bordering the Pacific Ocean like the Philippines, you likely have not seen or heard about hurricanes. These storms form over and come off the oceans. They are not land-born events. If you have seen or heard of them, you probably know of their fierce winds and pouring rains. </p><p>What are they? How do they form? Where do they come from?</p>",
+      "what": "<p>Hurricanes are huge, spinning storms that form over the oceans. They are rotating storms with organized thunderstorms. To be a hurricane, a tropical cyclone (or storm) must have windspeeds of at least 74 miles per hour. Weaker hurricanes with winds below 74 miles per hour are called tropical storms (minimum wind speeds 39 miles per hour). Hurricanes have three main parts: the eye, the eye wall, and the rainbands.</p><p> The eye is the calm center of the storm. Sometimes, there is even blue sky! Surrounding the eye, however, is the roughest part of the storm: the eyewall. The eyewall is where the winds and rainfall are most concentrated, so it is the stormiest part. The rainbands are windy and rainy, but the strength depends on which part of the rainband. The further from the storm they are, the weaker they are.</p>",
       "how": "",
       "facts": "",
       "imgTile": "./imgs/weatherPics/hurricane.jpg",
-      "img1": "./imgs/summaryPics/hurricaneStrength.jpg",
-      "img2": "./imgs/summaryPics/hurricaneDiagram.png",
-      "img3": ""
+      "img1": "https://github.com/Tauriel1202/stormwatchers/blob/master/public/imgs/summaryPics/hurricaneDiagram.png?raw=true",
+      "img2": "https://github.com/Tauriel1202/stormwatchers/blob/master/public/imgs/summaryPics/hurricaneStrength.jpg?raw=true",
+      "srcs": ""
     },
     "lightning": {
       "what": "",
