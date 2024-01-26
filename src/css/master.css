@@ -294,8 +294,9 @@ h2 {
   padding: 1em;
 }
 
-.tile:nth-last-of-type(4) .imgDiv {
-  width: 14.6em;
+.tile .imgDiv {
+/* .tile:nth-last-of-type(4) .imgDiv { */
+  width: 12em;
   padding: 0;
 }
 
@@ -390,7 +391,7 @@ h2 {
 }
 
 .deets .imgDiv {
-  width: 60%;
+  /* width: 90%; */
   height: auto;
   margin: 2em auto;
 }
