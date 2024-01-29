@@ -1,0 +1,19 @@
+{
+  "prep": {
+    "Hurricanes": {
+      "before": "useful text",
+      "during": "hurricane time!",
+      "after": "goodbye!"
+    },
+    "Thunderstorms": {
+      "before": "",
+      "during": "",
+      "after": ""
+    },
+    "Tornadoes": {
+      "before": "",
+      "during": "",
+      "after": ""
+    }
+  }
+}

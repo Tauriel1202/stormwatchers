@@ -15,12 +15,12 @@ class App extends React.Component {
     };
   }
 
-  // componentDidMount() {
-  //   axios.get("http://localhost:2024/weatherAPI").then((jsObject) => {
-  //     this.setState({ weatherData: jsObject.data });
-  //     console.log(jsObject.data);
-  //   });
-  // }
+  componentDidMount() {
+    axios.get("http://localhost:2024/weatherAPI").then((jsObject) => {
+      this.setState({ weatherData: jsObject.data });
+      console.log(jsObject.data);
+    });
+  }
 
   randomLegend() {
     // random tips
@@ -62,7 +62,7 @@ class App extends React.Component {
       } else {
         forecastImg =
           this.state.weatherData[day][dNumber].weather[0].description;
-        forecastImg = forecastImg.replace(/light |heavy |moderate /g, "");
+        forecastImg = forecastImg.replace(/light |heavy |moderate |partly |mostly |overcast /g, "");
 
         current = toTitleCase(
           this.state.weatherData[day][dNumber].weather[0].description
@@ -134,7 +134,7 @@ class App extends React.Component {
               </p>
             </div>
           </div>
-          {/* <div className="forecast">
+          <div className="forecast">
             <div className="weatherTile">
               <div className="bigNsmall">
                 <div className="imgDiv">
@@ -189,7 +189,7 @@ class App extends React.Component {
                 <p>Humidity: {dForecast2[1]}%</p>
               </div>
             </div>
-          </div> */}
+          </div>
           <div className="sats">
             <p>
               <a href="https://zoom.earth/">🌎 Zoom Earth Satellite</a>

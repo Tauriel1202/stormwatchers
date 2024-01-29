@@ -439,6 +439,63 @@ h2 {
 /*#endregion UNTILED*/
 
 /*#endregion WEATHER*/
+/*#region PREP*/
+.prep label {
+  width: 50%;
+  display: flex;
+  text-align: center;
+  margin: auto;
+}
+
+.prep select {
+  border: 4px outset var(--accents);
+  display: block;
+  padding: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.prepContent{
+  background-color: var(--lightgrey);
+  border: 3.5px outset var(--stormblue);
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 1em;
+  row-gap: 1em;
+  padding: 1em;
+}
+
+.prepContent h3 {
+  text-decoration: underline;
+}
+
+.before {
+  background-color: var(--yellow);
+  border: 3.5px outset var(--yellow);
+  padding: 1em;
+}
+
+.during {
+  background-color: var(--grey);
+  color: var(--lightgrey);
+  border: 3.5px outset var(--grey);
+  padding: 1em;
+}
+
+.after {
+  background-color: var(--stormblue);
+  color: var(--lightgrey);
+  border: 3.5px outset var(--stormblue);
+  padding: 1em;
+}
+
+.noType {
+  text-align: center;
+  grid-column: 1 / 4;
+  padding: 1em;
+}
+
+/*#endregion PREP*/
 
 /*#region FOOTER*/
 footer {
