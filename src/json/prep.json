@@ -1,19 +1,19 @@
 {
   "prep": {
     "Hurricanes": {
-      "before": "useful text",
-      "during": "hurricane time!",
-      "after": "goodbye!"
+      "before": "<ul class='hBefore'><li> Watch the track of the hurricane in question to see where it is headed.</li><li> Have an in-house preparedness kit that includes:<ul class='hHouse'><li> Flashlights and batteries</li><li> 6 gallons per person of water</li><li> Unrefrigerated food for a week</li></ul></li><li> Create a backpack emergency kit, so you are prepared if you have to leave your house. Some things to add to it would be:<ul class='hBackpack'><li> Extra clothes</li><li> Flashlights and batteries</li><li> A blanket and pillow</li><li> Important documents and journals</li><li> Packable food</li><li> A couple of water bottles</li><li> Things like toothpaste, brushes, contacts/glasses…</li><li> Entertainment: games, toys, books</li></ul></li><li> Tie outdoor objects down or bring them inside.</li><li> Pay attention to watches and warnings.</li><li> If you are told to evacuate, do so.</li></ul>",
+      "during": "<ul class='hDuring'><li> Stay inside!</li><li> Stay away from windows.</li><li> Keep flashlights close in case the power goes out.</li><li> If the eye passes over, it could be calm. This does not mean it is over! The eyewall on the coming side will have strong winds.</li><li> Stay on low floors unless floodwaters do not allow you to.</li></ul>",
+      "after": "<ul class='hAfter'><li>Be careful when you go outside.</li><li>Look out for downed wires, branches, and other fallen hazards.</li><li>Be careful of floodwaters.</li><li>If you evacuated, when you come home let your parents make sure the house is safe before going inside.</li></ul>"
     },
     "Thunderstorms": {
-      "before": "",
-      "during": "",
-      "after": ""
+      "before": "<ul class='tBefore'><li>Find out if strong winds are expected with the storm. If they are, help your parents tie down any loose outdoor items or bring them inside.</li><li>Check your flashlights and batteries.</li><li>Go inside of a building if possible.</li><li>If you are in a car, that is fine as long as it has an actual roof.</li></ul>",
+      "during": "<ul class='tDuring'><li>Stay inside.</li><li>If you are outside, try to find shelter as soon as possible.</li><li>Avoid running water and electrical outlet.</li></ul>",
+      "after": "<ul class='tAfter'><li>Wait at least 30 minutes after the last lightning and thunder before going outside.</li><li>Be careful of fallen objects.</li><li>Be careful of flooding.</li></ul>"
     },
     "Tornadoes": {
-      "before": "",
-      "during": "",
-      "after": ""
+      "before": "<ul class='toBefore'><li>Pay attention to watches and warnings.</li><li>Tie down or bring outdoor objects inside, so they do not blow away.</li><li>Prepare a store of food for a couple of days.</li><li>Have 6 gallons of water per person.</li><li>Gather helmets for each person.</li><li>Check flashlights and batteries.</li><li>Gather books, games, something to do.</li><li>Go inside a sturdy building.</li></ul>",
+      "during": "<ul class='toDuring'><li>Go to lowest floor and most interior room.</li><li>Wear your helmet.</li><li>Wait for alerts to pass.</li><li>Stay away from windows.</li></ul>",
+      "after": "<ul class='toAfter'><li>Be careful of debris—fallen branches and anything else lying around.</li><li>Stay away from electrical wires.</li><li>Wear sturdy shoes during clean up.</li><li>Keep an eye on alerts even after.</li></ul>"
     }
   }
 }

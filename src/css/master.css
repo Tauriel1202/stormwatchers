@@ -444,14 +444,18 @@ h2 {
   width: 50%;
   display: flex;
   text-align: center;
-  margin: auto;
+  margin: 1em auto;
+}
+
+.prep label:not(select){
+  padding-left: 1em;
 }
 
 .prep select {
-  border: 4px outset var(--accents);
+  border: 2.5px outset var(--accents);
   display: block;
   padding: 0.5em;
-  margin-bottom: 0.5em;
+  margin: auto;
 }
 
 .prepContent{
@@ -460,7 +464,7 @@ h2 {
   text-align: center;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  column-gap: 1em;
+  column-gap: 0.3em;
   row-gap: 1em;
   padding: 1em;
 }
@@ -495,6 +499,64 @@ h2 {
   padding: 1em;
 }
 
+.prepTypeContent {
+  text-align: left;
+  margin: 0.2em;
+}
+
+.prepTypeContent li {
+  margin: 1em auto;
+}
+
+.prepTypeContent ul {
+  margin: 1em 1em;
+}
+
+/*#region MARKERS*/
+.hDuring li::marker {
+  content: '🌀 ';
+}
+
+.hBefore li:not(li ul li)::marker {
+  content: '🔦 ';
+}
+
+.hHouse li::marker {
+  content: '🏡 ';
+}
+
+.hBackpack li::marker {
+  content: '🎒 ';
+}
+
+.hAfter li::marker {
+  content: '⛅ ';
+}
+
+.tBefore li::marker {
+  content: '☁ ';
+}
+
+.tDuring li::marker {
+  content: '⚡ ';
+}
+
+.tAfter li::marker {
+  content: '⛅';
+}
+
+.toBefore li::marker {
+  content: '☔ ';
+}
+
+.toDuring li::marker {
+  content: '🌪 ';
+}
+
+.toAfter li::marker {
+  content: '⛅ ';
+}
+/*#endregion MARKERS*/
 /*#endregion PREP*/
 
 /*#region FOOTER*/

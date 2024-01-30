@@ -31,6 +31,18 @@
     {
       "subject": "💦 Water Safety 💦",
       "tip": "Bacteria levels in bodies of water rise after a storm because rain washes pollutants into them. They return to their normal level after about 72 hours (3 days)."
+    },
+    {
+      "subject": "🟡 General Safety 🟡",
+      "tip": "Watches, warnings, and advisories are different things. A watch means a certain of weather is possible but not observed, and some details like location and timing are not yet determined. Warnings are for events that pose a risk to life and property.A warning means either the weather event has been spotted or the hazard is very likely.An advisory are less serious and dangerous warnings. They provide updates and notes of caution that are safer if followed."
+    },
+    {
+      "subject": "⚡ Lightning Safety ⚡",
+      "tip": "If you can hear thunder, the storm is close enough for you to be struck by lightning. Go inside!"
+    },
+    {
+      "subject":"⚡ Lightning Safety ⚡",
+      "tip": "There are no safe places outside during a thunderstorm."
     }
   ]
 }

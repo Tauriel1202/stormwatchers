@@ -25,11 +25,18 @@ class Prep extends React.Component {
 
     if (this.state.stormType !== "Select a Storm!") {
       console.log(this.state.stormType, PrepJSON.prep[stormType][prepType]);
-      return <div className={prepType}>
-        <h3>{toTitleCase(prepType)} the Storm</h3>
-        {PrepJSON.prep[this.state.stormType][prepType]}
-        </div>;
-    } else if (prepType === 'before'){
+      return (
+        <div className={prepType}>
+          <h3>{toTitleCase(prepType)} the Storm</h3>
+          <div
+            className="prepTypeContent"
+            dangerouslySetInnerHTML={{
+              __html: PrepJSON.prep[this.state.stormType][prepType],
+            }}
+          ></div>
+        </div>
+      );
+    } else if (prepType === "before") {
       return (
         <div className="noType">
           <p>
@@ -43,8 +50,8 @@ class Prep extends React.Component {
 
   render() {
     let prepBefore = this.prepPage("before");
-    let prepDuring = this.prepPage('during');
-    let prepAfter = this.prepPage('after');
+    let prepDuring = this.prepPage("during");
+    let prepAfter = this.prepPage("after");
     console.log(this.state.stormType);
 
     return (
@@ -52,12 +59,15 @@ class Prep extends React.Component {
         <Header />
         <main className="prep">
           <h2>Weather Preparation</h2>
-          <label>Choose a Storm Type: <select onChange={this.prepType}>
-            <option>Select a Storm!</option>
-            <option>Hurricanes</option>
-            <option>Thunderstorms</option>
-            <option>Tornadoes</option>
-          </select></label>
+          <label>
+            Choose a Storm Type:{" "}
+            <select onChange={this.prepType}>
+              <option>Select a Storm!</option>
+              <option>Hurricanes</option>
+              <option>Thunderstorms</option>
+              <option>Tornadoes</option>
+            </select>
+          </label>
           <div className="prepContent">
             {prepBefore}
             {prepDuring}
