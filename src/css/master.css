@@ -436,6 +436,11 @@ h2 {
   font-weight: 100;
   font-size: 0.9em;
 }
+
+.textImgs img {
+  max-width: 25px;
+  height: auto;
+}
 /*#endregion UNTILED*/
 
 /*#endregion WEATHER*/
@@ -512,7 +517,12 @@ h2 {
   margin: 1em 1em;
 }
 
+/*#endregion PREP*/
 /*#region MARKERS*/
+.mistyFacts li::marker {
+  content: '💦 ';
+}
+
 .hDuring li::marker {
   content: '🌀 ';
 }
@@ -557,7 +567,6 @@ h2 {
   content: '⛅ ';
 }
 /*#endregion MARKERS*/
-/*#endregion PREP*/
 
 /*#region FOOTER*/
 footer {
