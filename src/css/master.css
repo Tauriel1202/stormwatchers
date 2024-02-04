@@ -305,6 +305,10 @@ h2 {
 }
 /*#endregion TILES*/
 /*#region UNTILED*/
+.hImgs a {
+  font-size: 14px;
+}
+
 .weather {
   max-width: none;
 }
@@ -441,6 +445,7 @@ h2 {
   max-width: 25px;
   height: auto;
 }
+
 /*#endregion UNTILED*/
 
 /*#endregion WEATHER*/
@@ -519,6 +524,10 @@ h2 {
 
 /*#endregion PREP*/
 /*#region MARKERS*/
+.hImgs li::marker {
+  content: '🌀 ';
+}
+
 .mistyFacts li::marker {
   content: '💦 ';
 }
