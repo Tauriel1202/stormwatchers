@@ -64,6 +64,7 @@ class Prep extends React.Component {
             <select onChange={this.prepType}>
               <option>Select a Storm!</option>
               <option>Hurricanes</option>
+              <option>Snowstorms</option>
               <option>Thunderstorms</option>
               <option>Tornadoes</option>
             </select>

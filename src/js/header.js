@@ -9,8 +9,8 @@ function Header() {
         <div className="headerContent">
           <div className="imgDiv">
             <img
-              src="https://github.com/Tauriel1202/stormwatchers/blob/master/public/imgs/icons/logoPlaceholder.png?raw=true"
-              alt="Stormwatchers: Kids logo"
+              src="https://raw.githubusercontent.com/Tauriel1202/stormwatchers/3dd29b403a4b9a9caa68d77c4a89a549510f48bc/public/imgs/icons/logoOffical.png"
+              alt='stormwatchers: kids logo'
               width="100"
               height="100"
             />
