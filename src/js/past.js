@@ -12,32 +12,21 @@ function Past() {
       <main className="past">
         <h2>Past Weather Data</h2>
         <p>
-          We can use graphs to learn about weather. They can show us patterns
-          that occur or how a certain weather criteria like precipitation or
-          temperature change over time. From these patterns, we can see if
-          temperatures are rising or falling over multiple years, whether the
-          amount a snow is decreasing or if it just has a cycle, and which
-          months are the rainiest. Using graphs, we are able to learn about the
-          past, and that knowledge can help us have an idea about the future.
+          We can use graphs to learn more about weather. They can show us
+          patterns that occur or how a certain weather criteria like
+          precipitation or temperature change over time. From these patterns, we
+          can see if temperatures are rising or falling over multiple years;
+          whether the amount a snow is decreasing or increasing; if certain
+          weather event occurs over a multi-year cycle; and which months are the
+          rainiest. Using graphs, we are able to learn about the past, and that
+          knowledge can help us have an idea about the future.
         </p>
         <section className="temp">
-          <h3>Temperatures Over the Last Ten Years</h3>
+          <h3>Temperatures Over Time</h3>
           <p>
-            In this graph, we are looking at the average temperatures for each
-            of the last ten years. By doing this, we can see whether
-            temperatures have been rising or falling.
+            This graph looks at the monthly temperature for the last five years.
           </p>
-          <p>
-            The x-axis, or the number along the bottom of the chart, are years.
-            The y-axis, on number going up the side of the chart, are
-            temperatures. Each point represents a temperature value. The{" "}
-            <span style={{ color: "red" }}>red</span> line shows us the average
-            maximum temperature over the years. The{" "}
-            <span style={{ background: "yellow" }}>yellow</span> line shows us
-            the average temperature, and the{" "}
-            <span style={{ color: "blue" }}>blue</span> line marks the average
-            minimum.
-          </p>
+          <p></p>
           <TempGraph />
         </section>
         <section className="snow">

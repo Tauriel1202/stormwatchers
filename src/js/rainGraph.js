@@ -3,53 +3,40 @@ import Plot from "react-plotly.js";
 import Past from "../json/bostonPast.json";
 
 class RainGraph extends React.Component {
-  rainfallByMonth(month, year) {
-    let days = Past[year].locations["Boston, MA,USA"].values;
-
-    let oneMonth = days.filter(
-      (x) => new Date(x.datetimeStr).getMonth() === month
-    );
-
-    let rains = oneMonth.map((x) => x.precip);
-
-    const rainsReady = Math.round(rains.reduce((sum, curr) => sum + curr), 1);
-
-    return rainsReady;
-  }
-
-  graphline(years, color) {
-    let monthNames = [
-      "January",
-      "February",
-      "March",
-      "April",
-      "May",
-      "June",
-      "July",
-      "August",
-      "September",
-      "October",
-      "November",
-      "December",
-    ];
-
-    let rains = [];
-    for (let i = 0; i < monthNames.length; i++) {
-      rains.push(this.rainfallByMonth(i, years));
+  rainfallByYear(years) {
+    let yearRain = [];
+    for (let i = 0; i < 365; i++) {
+      let dayRain = Past[years].locations["Boston, MA,USA"].values[i].precip;
+      yearRain.push(dayRain);
     }
 
+    let rainReady = (yearRain.reduce((sum, curr) => sum + curr) / 365).toFixed(
+      2
+    );
+    return rainReady;
+  }
+
+  // for each year run graphline
+  graphline(years, colors) {
+    let rains = [];
+
+    // console.log(this.rainfallByYear(years));
+
     return {
-      x: [...monthNames],
-      y: [...rains],
-      type: "scatter",
-      mode: 'lines',
-      marker: { color: color },
+      x: [years], //one year
+      y: [this.rainfallByYear(years)], //one rainfall value
+      type: "bar",
+      text: [this.rainfallByYear(years)],
+      marker: [...colors],
       name: years,
     };
   }
 
   render() {
+    // gets years from json
+    let colors = ["#007a54", "#0ac6ff", "orange", "#65e77f", "#f764b7"];
     let years = [];
+    let rains = [];
 
     for (let i = 0; i < Object.keys(Past).length; i++) {
       let pastJson = Object.keys(Past)[i];
@@ -57,11 +44,10 @@ class RainGraph extends React.Component {
     }
 
     let graphlines = [];
-    let colors = ["#007a54", "#0ac6ff", "orange", "#65e77f", "#f764b7"];
-
     for (let i = 0; i < years.length; i++) {
       graphlines.push(this.graphline(years[i], colors[i]));
     }
+
     return (
       <Plot
         className="plot"
@@ -69,11 +55,8 @@ class RainGraph extends React.Component {
         layout={{
           width: 500,
           height: 400,
-          autosize: true,
-          title: "Total Rainfall per Month (inches)",
+          title: "Rainfall by Year for Boston, MA (inches)",
         }}
-        style={{ width: "100%", height: "100%" }}
-        useResizeHandler={true}
       />
     );
   }

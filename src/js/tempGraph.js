@@ -72,7 +72,7 @@ class TempGraph extends React.Component {
           width: 500,
           height: 400,
           autosize: true,
-          title: "Temperature Over Time (&deg;F)",
+          title: "Average Monthly Temperatures for Boston, MA (&deg;F)",
         }}
         style={{ width: "100%", height: "100%" }}
         useResizeHandler={true}
