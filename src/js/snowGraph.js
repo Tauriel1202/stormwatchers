@@ -36,23 +36,19 @@ class SnowGraph extends React.Component {
     return {
       x: Object.keys(monthNames),
       y: snows,
-      type: "bars",
-      // mode: "bars",
+      type: "bar",
       marker: { color: color },
       name: years,
     };
   }
 
   render() {
-    // console.log(Past[2022].locations["Boston, MA,USA"]);
-
     let years = [];
 
     for (let i = 0; i < Object.keys(Past).length; i++) {
       let pastJson = Object.keys(Past)[i];
       years.push(pastJson);
     }
-    // console.log(this.temps(2023, "maxt"), "💩");
 
     let graphlines = [];
     let colors = ["#007a54", "#0ac6ff", "orange", "#65e77f", "#f764b7"];
@@ -60,13 +56,12 @@ class SnowGraph extends React.Component {
     for (let i = 0; i < years.length; i++) {
       graphlines.push(this.graphline(years[i], colors[i]));
     }
-    console.log(graphlines, "💩");
 
     return (
       <Plot
         className="plot"
         data={[... graphlines]}
-        layout={{ width: 500, height: 400, title: "Snowfall per Month" }}
+        layout={{ width: 500, height: 400, title: "Snowfall per Month (inches)" }}
       />
     );
   }

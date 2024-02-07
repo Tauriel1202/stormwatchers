@@ -3,6 +3,7 @@ import Header from "./header";
 import Footer from "./footer";
 import TempGraph from "./tempGraph";
 import SnowGraph from "./snowGraph";
+import RainGraph from "./rainGraph";
 
 function Past() {
   return (
@@ -31,8 +32,11 @@ function Past() {
             The y-axis, on number going up the side of the chart, are
             temperatures. Each point represents a temperature value. The{" "}
             <span style={{ color: "red" }}>red</span> line shows us the average
-            maximum temperature over the years. The <span style={{background:'yellow'}}>yellow</span> line shows us the
-            average temperature, and the <span style={{color:'blue'}}>blue</span> line marks the average minimum.
+            maximum temperature over the years. The{" "}
+            <span style={{ background: "yellow" }}>yellow</span> line shows us
+            the average temperature, and the{" "}
+            <span style={{ color: "blue" }}>blue</span> line marks the average
+            minimum.
           </p>
           <TempGraph />
         </section>
@@ -55,7 +59,7 @@ function Past() {
             were the rainiest with ___ inches in _____ and ____ inches in ___.
             ___ was the driest with only ____ inches of rain.
           </p>
-          <TempGraph />
+          <RainGraph />
         </section>
       </main>
       <Footer />

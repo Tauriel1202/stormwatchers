@@ -47,11 +47,13 @@ class App extends React.Component {
     let currentTemp = "Loading...";
     let currentHumidity = "Loading...";
     let forecastImg = "";
+    let re = /light |heavy |moderate |partly |mostly |broken | sky|overcast |few /g
 
     if (day in this.state.weatherData) {
       if (day === "current") {
         forecastImg = this.state.weatherData[day].weather[0].description;
-        forecastImg = forecastImg.replace(/light |heavy |moderate |partly |mostly |broken | sky |overcast /g, "");
+        forecastImg = forecastImg.replace(re, "");
+        console.log(forecastImg, '💩')
 
         current = toTitleCase(
           this.state.weatherData[day].weather[0].description
@@ -62,7 +64,7 @@ class App extends React.Component {
       } else {
         forecastImg =
           this.state.weatherData[day][dNumber].weather[0].description;
-        forecastImg = forecastImg.replace(/light |heavy |moderate |partly |mostly |overcast /g, "");
+        forecastImg = forecastImg.replace(re, "");
 
         current = toTitleCase(
           this.state.weatherData[day][dNumber].weather[0].description

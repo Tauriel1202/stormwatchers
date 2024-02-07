@@ -2,21 +2,19 @@ import React from "react";
 import Plot from "react-plotly.js";
 import Past from "../json/bostonPast.json";
 
-class TempGraph extends React.Component {
-  tempsByMonth(month, year) {
+class RainGraph extends React.Component {
+  rainfallByMonth(month, year) {
     let days = Past[year].locations["Boston, MA,USA"].values;
+
     let oneMonth = days.filter(
       (x) => new Date(x.datetimeStr).getMonth() === month
     );
 
-    let temps = oneMonth.map((x) => x.temp);
+    let rains = oneMonth.map((x) => x.precip);
 
-    const tempsReady = Math.round(
-      temps.reduce((sum, curr) => sum + curr) / temps.length,
-      1
-    );
+    const rainsReady = Math.round(rains.reduce((sum, curr) => sum + curr), 1);
 
-    return tempsReady;
+    return rainsReady;
   }
 
   graphline(years, color) {
@@ -35,16 +33,16 @@ class TempGraph extends React.Component {
       "December",
     ];
 
-    let temps = [];
+    let rains = [];
     for (let i = 0; i < monthNames.length; i++) {
-      temps.push(this.tempsByMonth(i, years));
+      rains.push(this.rainfallByMonth(i, years));
     }
 
     return {
       x: [...monthNames],
-      y: [...temps],
+      y: [...rains],
       type: "scatter",
-      mode: "lines",
+      mode: 'lines',
       marker: { color: color },
       name: years,
     };
@@ -72,7 +70,7 @@ class TempGraph extends React.Component {
           width: 500,
           height: 400,
           autosize: true,
-          title: "Temperature Over Time (&deg;F)",
+          title: "Total Rainfall per Month (inches)",
         }}
         style={{ width: "100%", height: "100%" }}
         useResizeHandler={true}
@@ -81,4 +79,4 @@ class TempGraph extends React.Component {
   }
 }
 
-export default TempGraph;
+export default RainGraph;
