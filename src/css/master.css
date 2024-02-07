@@ -523,6 +523,51 @@ h2 {
 }
 
 /*#endregion PREP*/
+/*#region PAST*/
+.past section {
+  margin: 2em auto;
+  display: grid;
+  grid-column: 1fr 1fr;
+  column-gap: 1em;
+}
+
+.temp h3 {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.temp p {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  margin-top: 1em;
+}
+
+.temp p:nth-of-type(2) {
+  grid-row: 3 / 4;
+}
+
+.temp .plot, .snow .plot, .rain .plot {
+  border: 3px groove var(--accents);
+  grid-column: 2 / 3;
+  grid-row: 1 / 4;
+  margin-bottom: 1em;
+}
+
+.snow h3 {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+.snow p {
+  grid-column: 2 / 3;
+}
+
+.snow .plot {
+  grid-column: 1 / 2;
+}
+
+/*#endregion PAST*/
+
 /*#region MARKERS*/
 .hImgs li::marker {
   content: '🌀 ';
@@ -576,7 +621,6 @@ h2 {
   content: '⛅ ';
 }
 /*#endregion MARKERS*/
-
 /*#region FOOTER*/
 footer {
   background-color: var(--stormblue);

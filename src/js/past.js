@@ -1,7 +1,8 @@
 import React from "react";
 import Header from "./header";
 import Footer from "./footer";
-import Graph from "./graph";
+import TempGraph from "./tempGraph";
+import SnowGraph from "./snowGraph";
 
 function Past() {
   return (
@@ -18,16 +19,24 @@ function Past() {
           months are the rainiest. Using graphs, we are able to learn about the
           past, and that knowledge can help us have an idea about the future.
         </p>
-        <section>
+        <section className="temp">
           <h3>Temperatures Over the Last Ten Years</h3>
           <p>
             In this graph, we are looking at the average temperatures for each
             of the last ten years. By doing this, we can see whether
             temperatures have been rising or falling.
           </p>
-          <Graph/>
+          <p>
+            The x-axis, or the number along the bottom of the chart, are years.
+            The y-axis, on number going up the side of the chart, are
+            temperatures. Each point represents a temperature value. The{" "}
+            <span style={{ color: "red" }}>red</span> line shows us the average
+            maximum temperature over the years. The <span style={{background:'yellow'}}>yellow</span> line shows us the
+            average temperature, and the <span style={{color:'blue'}}>blue</span> line marks the average minimum.
+          </p>
+          <TempGraph />
         </section>
-        <section>
+        <section className="snow">
           <h3>
             Snowfall Totals for December, January, February, and March Over the
             Last Ten Years.
@@ -36,16 +45,9 @@ function Past() {
             Some years, snowfall is heavy; other times, it is very light. Graphs
             can show us whether this is a cycle or a change over time.
           </p>
-          <div className="imgDiv">
-            <img
-              src="https://i1.pickpik.com/photos/717/52/963/rainbow-river-nature-landscape-preview.jpg"
-              alt="precipitation totals per month graph"
-              width="100"
-              height="100"
-            />
-          </div>
+          <SnowGraph />
         </section>
-        <section>
+        <section className="rain">
           <h3>Precipitation Totals per Month for Last Year</h3>
           <p>
             This graph shows us the total amount of rain that fell for each
@@ -53,14 +55,7 @@ function Past() {
             were the rainiest with ___ inches in _____ and ____ inches in ___.
             ___ was the driest with only ____ inches of rain.
           </p>
-          <div className="imgDiv">
-            <img
-              src="https://i1.pickpik.com/photos/717/52/963/rainbow-river-nature-landscape-preview.jpg"
-              alt="precipitation totals per month graph"
-              width="100"
-              height="100"
-            />
-          </div>
+          <TempGraph />
         </section>
       </main>
       <Footer />
