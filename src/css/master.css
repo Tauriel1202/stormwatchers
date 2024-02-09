@@ -54,7 +54,8 @@ header .imgDiv {
   margin: 0.5em;
 }
 
-nav, .headerContent p {
+nav,
+.headerContent p {
   background-color: var(--accents);
   display: flex;
   flex-wrap: wrap;
@@ -295,7 +296,7 @@ h2 {
 }
 
 .tile .imgDiv {
-/* .tile:nth-last-of-type(4) .imgDiv { */
+  /* .tile:nth-last-of-type(4) .imgDiv { */
   width: 12em;
   padding: 0;
 }
@@ -457,7 +458,7 @@ h2 {
   margin: 1em auto;
 }
 
-.prep label:not(select){
+.prep label:not(select) {
   padding-left: 1em;
 }
 
@@ -468,7 +469,7 @@ h2 {
   margin: auto;
 }
 
-.prepContent{
+.prepContent {
   background-color: var(--lightgrey);
   border: 3.5px outset var(--stormblue);
   text-align: center;
@@ -524,106 +525,117 @@ h2 {
 
 /*#endregion PREP*/
 /*#region PAST*/
+.past {
+  background-color: var(--lightgrey);
+  border-left: 3px ridge var(--stormblue);
+  border-right: 3px ridge var(--stormblue);
+  padding: 1em 3em;
+}
+
 .past section {
-  margin: 2em auto 5em;
+  margin: 2em auto 3em;
   display: grid;
   grid-column: 1fr 1fr;
   column-gap: 1em;
 }
 
-.temp h3 {
-  grid-column: 1 / 2;
+.past p:not(section p) {
+  margin: 1em auto;
+}
+
+.temp h3,
+.snow h3,
+.rain h3 {
+  border-bottom: 3px dashed var(--stormblue);
+  padding: 0 3em;
+  margin: 0 auto 1em;
+  grid-column: 1 / 3;
   grid-row: 1 / 2;
 }
 
-.temp p {
-  grid-column: 1 / 2;
-  grid-row: 2 / 3;
-  margin-top: 1em;
+.temp p,
+.snow p,
+.rain p {
+  margin: 1em;
 }
 
-.temp p:nth-of-type(2) {
-  grid-row: 3 / 4;
+.temp p:last-of-type,
+.snow p:last-of-type,
+.rain p:last-of-type {
+  grid-column: 1 / 3;
 }
 
-.temp .plot, .snow .plot, .rain .plot {
+.plot {
+  background-color: white;
+}
+
+.temp .plot,
+.snow .plot,
+.rain .plot {
   border: 3px groove var(--accents);
   grid-column: 2 / 3;
-  grid-row: 1 / 4;
+  grid-row: 2 / 4;
   margin-bottom: 1em;
 }
 
-.snow h3 {
-  grid-column: 2 / 3;
-  grid-row: 1 / 2;
-}
-
-.snow p {
-  grid-column: 2 / 3;
-  margin-top: 1em;
-}
-
 .snow .plot {
+  max-width: 508px;
   grid-column: 1 / 2;
-}
-
-.rain p {
-  margin-top: 1em;
 }
 
 /*#endregion PAST*/
 
 /*#region MARKERS*/
 .hImgs li::marker {
-  content: '🌀 ';
+  content: "🌀 ";
 }
 
 .mistyFacts li::marker {
-  content: '💦 ';
+  content: "💦 ";
 }
 
 .hDuring li::marker {
-  content: '🌀 ';
+  content: "🌀 ";
 }
 
 .hBefore li:not(li ul li)::marker {
-  content: '🔦 ';
+  content: "🔦 ";
 }
 
 .hHouse li::marker {
-  content: '🏡 ';
+  content: "🏡 ";
 }
 
 .hBackpack li::marker {
-  content: '🎒 ';
+  content: "🎒 ";
 }
 
 .hAfter li::marker {
-  content: '⛅ ';
+  content: "⛅ ";
 }
 
 .tBefore li::marker {
-  content: '☁ ';
+  content: "☁ ";
 }
 
 .tDuring li::marker {
-  content: '⚡ ';
+  content: "⚡ ";
 }
 
 .tAfter li::marker {
-  content: '⛅';
+  content: "⛅";
 }
 
 .toBefore li::marker {
-  content: '☔ ';
+  content: "☔ ";
 }
 
 .toDuring li::marker {
-  content: '🌪 ';
+  content: "🌪 ";
 }
 
 .toAfter li::marker {
-  content: '⛅ ';
+  content: "⛅ ";
 }
 /*#endregion MARKERS*/
 /*#region FOOTER*/
@@ -662,6 +674,10 @@ footer .imgDiv {
     max-width: 700px;
     display: flex;
     flex-wrap: wrap;
+  }
+
+  .past section {
+    display: unset;
   }
 }
 /*#endregion MED version*/
@@ -705,11 +721,11 @@ footer .imgDiv {
   }
 
   .headerContent button::before {
-    content: '≡';
+    content: "≡";
   }
-  
+
   button.on {
-    content: '❎';
+    content: "❎";
   }
 
   header nav li {
@@ -735,7 +751,7 @@ footer .imgDiv {
 
   .weatherTile .weatherData {
     display: none;
-  } 
+  }
 
   .weatherTile {
     padding: 0 auto;
@@ -744,6 +760,10 @@ footer .imgDiv {
 
   .home {
     display: unset;
+  }
+
+  .plot {
+    max-width: 320px;
   }
 }
 /*#endregion SMALL version*/
