@@ -586,6 +586,22 @@ h2 {
 /*#endregion PAST*/
 
 /*#region MARKERS*/
+.hail li::marker {
+  content: '🧊 ';
+}
+
+.sBefore li::marker {
+  content: "⛅ ";
+}
+
+.sDuring li::marker {
+  content: "❄ ";
+}
+
+.sAfter li::marker {
+  content: "⛄ ";
+}
+
 .hImgs li::marker {
   content: "🌀 ";
 }

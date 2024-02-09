@@ -5,6 +5,11 @@
       "during": "<ul class='hDuring'><li> Stay inside!</li><li> Stay away from windows.</li><li> Keep flashlights close in case the power goes out.</li><li> If the eye passes over, it could be calm. This does not mean it is over! The eyewall on the coming side will have strong winds.</li><li> Stay on low floors unless floodwaters do not allow you to.</li></ul>",
       "after": "<ul class='hAfter'><li>Be careful when you go outside.</li><li>Look out for downed wires, branches, and other fallen hazards.</li><li>Be careful of floodwaters.</li><li>If you evacuated, when you come home let your parents make sure the house is safe before going inside.</li></ul>"
     },
+    "Snowstorms": {
+      "before": "<ul class='sBefore'><li>Have enough unrefrigerated food to last a week.</li><li>Have 6 gallons of water for each person.</li><li>Gather flashlights and batteries</li><li>If you leave the house, bring along a winter with that includes<ul><li>a hat and gloves</li><li>a coat or warm jacket</li><li>a warm, packable blanket</li><li>snacks</li><li>water</li><li>flashlight</li></ul></li></ul>",
+      "during": "<ul class='sDuring'><li>Stay warm!</li><li>If you go out, be careful not to get lost. It can be hard to see through the snow.</li><li>If you go out, dress warmly with wind chill in mind.</li></ul>",
+      "after": "<ul class='sAfter'><li>Be careful of ice.</li><li>If you go out, dress warmly.</li><li>Help shovel any snow that needs shoveling.</li><li>Enjoy! Snow is fun!</li></ul>"
+    },
     "Thunderstorms": {
       "before": "<ul class='tBefore'><li>Find out if strong winds are expected with the storm. If they are, help your parents tie down any loose outdoor items or bring them inside.</li><li>Check your flashlights and batteries.</li><li>Go inside of a building if possible.</li><li>If you are in a car, that is fine as long as it has an actual roof.</li></ul>",
       "during": "<ul class='tDuring'><li>Stay inside.</li><li>If you are outside, try to find shelter as soon as possible.</li><li>Avoid running water and electrical outlet.</li></ul>",

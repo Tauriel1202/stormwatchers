@@ -48,11 +48,17 @@ class Prep extends React.Component {
     }
   }
 
+  stormType(){
+    for (let i = 0; i < Object.keys(PrepJSON.prep).length; i++){
+      return <option>{Object.keys(PrepJSON.prep)[i]}</option>
+    }
+  }
+
   render() {
     let prepBefore = this.prepPage("before");
     let prepDuring = this.prepPage("during");
     let prepAfter = this.prepPage("after");
-    console.log(this.state.stormType);
+    // console.log(Object.keys(PrepJSON.prep).length);
 
     return (
       <>
@@ -60,8 +66,10 @@ class Prep extends React.Component {
         <main className="prep">
           <h2>Weather Preparation</h2>
           <label>
-            Choose a Storm Type:{" "}
+            Choose a Storm Type:
             <select onChange={this.prepType}>
+              {/* <option>Select a Storm!</option> */}
+              {/* {this.stormType()} */}
               <option>Select a Storm!</option>
               <option>Hurricanes</option>
               <option>Snowstorms</option>
