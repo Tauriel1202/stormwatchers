@@ -109,12 +109,12 @@
       "srcs": "<ul class='textImgs'><li><img src='https://github.com/Tauriel1202/stormwatchers/blob/master/public/imgs/icons/Tornado.png?raw=true' alt='tornado icon' width='25' height='25'> National Weather Service (NWS). (2024). <em>Tornadoes – Nature's most violent storms.</em> NOAA. <a href='https://www.weather.gov/ffc/torntext'>https://www.weather.gov/ffc/torntext </a></li><li><img src='https://github.com/Tauriel1202/stormwatchers/blob/master/public/imgs/icons/Tornado.png?raw=true' alt='tornado icon' width='25' height='25'> Goertzel, L. (2024). <em>Tornadoes.</em> National Geographic Kids. <a href='https://kids.nationalgeographic.com/science/article/tornado'>https://kids.nationalgeographic.com/science/article/tornado </a></li><li><img src='https://github.com/Tauriel1202/stormwatchers/blob/master/public/imgs/icons/Tornado.png?raw=true' alt='tornado icon' width='25' height='25'> National Weather Service (NWS). (2024). <em>Tornadoes: Frequently asked questions about the power of nature. NOAA. <a href='https://www.weather.gov/lmk/tornadoesfaq'>https://www.weather.gov/lmk/tornadoesfaq</a></li></ul>"
     },
     "wind": {
-      "what": "",
+      "overview": "<p>Although we cannot see the wind itself, we have all felt it and seen its effects. Slight breezes cool us on summer days and ruffle the grass, flowers, and leaves. Strong gusts push and pull us. They can topple trash cans, down branches, and make the trees wave. The regular medium wind blows our hair and clothes. It also carries leaves and other lightweight things like beach balls.</p><p>What is wind? How is it formed?</p>",
+      "what": "<p>Wind is the movement of air from one place to another. It is not visible like rain or any other weather event. We are only able to see its effects and feel its strength. Wind has many effects and a variety of strengths.</p><p>The effects of wind are based on its strength. Gentle breezes do not have much effect besides cooling us on a summer day. Strong breezes or light wind tease flowers and rustle leaves. This wind might even be strong enough for a small or light kite. Medium winds like in the fall blow leaves and small sticks. Strong winds can blow down branches and tip empty trash cans. Gales, which are very strong wind that come with storms, can have many damaging effects depending on the strength and type of storm.</p><p>Along with its effects on nature and the world around us, wind also affects us. In the summer, we enjoy its effects as it cools us. In the fall and winter, however, wind chills us. Wind lowers the temperature of the air. This is called wind chill. Wind chill needs two main ingredients in order to be cool us enough to be called wind chill: temperatures below 50&deg;F and wind speeds of at least 5 miles per hour. There is a formula for it, and it is displayed below. You might want to put it into a calculator!</p>",
       "how": "",
       "facts": "",
-      "formula": "",
       "imgTile": "./imgs/weatherPics/wind.jpg",
-      "img1": "",
+      "img1": "https://www.weather.gov/images/safety/windchill21.gif",
       "img2": "",
       "img3": ""
     }
