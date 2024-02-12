@@ -47,13 +47,14 @@ class App extends React.Component {
     let currentTemp = "Loading...";
     let currentHumidity = "Loading...";
     let forecastImg = "";
-    let re = /light |heavy |moderate |partly |mostly |broken | sky|overcast |few /g
+    let re =
+      /light |heavy |moderate |partly |mostly |broken | sky|overcast |few |scattered /g;
 
     if (day in this.state.weatherData) {
       if (day === "current") {
         forecastImg = this.state.weatherData[day].weather[0].description;
         forecastImg = forecastImg.replace(re, "");
-        console.log(forecastImg, '💩')
+        console.log(forecastImg, "💩");
 
         current = toTitleCase(
           this.state.weatherData[day].weather[0].description
@@ -137,6 +138,7 @@ class App extends React.Component {
             </div>
           </div>
           <div className="forecast">
+            <h3>Forecast</h3>
             <div className="weatherTile">
               <div className="bigNsmall">
                 <div className="imgDiv">
@@ -191,6 +193,15 @@ class App extends React.Component {
                 <p>Humidity: {dForecast2[1]}%</p>
               </div>
             </div>
+          </div>
+          <div className="formula">
+            <h3>🔢➡ Weather Conversions ➡🔢</h3>
+            <p>Fahrenheit = (Celsius * 1.8) + 32</p>
+            <p>Celsius = (Fahrenheit - 32) / 1.8</p>
+            <p>
+              Wind chill = 35.74 + 0.6215(Temperature) – 35.75(Windspeed
+              <sup>0.16</sup>) + 0.4275(Temperature)(Windspeed<sup>0.16</sup>)
+            </p>
           </div>
           <div className="sats">
             <p>
