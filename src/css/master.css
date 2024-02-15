@@ -233,6 +233,7 @@ h2 {
 }
 
 .weatherTile {
+  max-height: 180px;
   background-color: white;
   border: 3.5px outset var(--accents);
   text-align: center;
@@ -240,8 +241,11 @@ h2 {
 }
 
 .weatherTile .imgDiv {
+  max-height: 70px;
+  /* width: auto; */
   width: 85px;
   height: auto;
+  padding-bottom: 0.5em;
   margin: 0.5em auto;
 }
 
@@ -615,6 +619,10 @@ h2 {
 /*#endregion PAST*/
 
 /*#region MARKERS*/
+.wind li::marker {
+  content: '🍃 ';
+}
+
 .hail li::marker {
   content: '🧊 ';
 }

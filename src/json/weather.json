@@ -41,11 +41,12 @@
       "srcs": "<ul class='hImgs'><li>National Geographic. (2024). <em>Hurricane.</em> National Geographic Society.<a href='https://education.nationalgeographic.org/resource/hurricane/'>https://education.nationalgeographic.org/resource/hurricane/ </a></li><li>National Oceanic and Atmospheric Administration (NOAA). (2023, August 24). <em>How do hurricanes form?</em> NOAA. <a  href='https://oceanservice.noaa.gov/facts/how-hurricanes-form.html#:~:text=Warm%20ocean%20waters%20and%20thunderstorms,enhancing%20shower%20and%20thunderstorm%20activity.'>https://oceanservice.noaa.gov/facts/how-hurricanes-form.html#:~:text=Warm%20ocean%20waters%20and%20thunderstorms,enhancing%20shower%20and%20thunderstorm%20activity.</a> </li><li>National Geographic Kids. (n.d.). <em>Ten facts about hurricanes!</em> National Geographic. <a href='https://www.natgeokids.com/uk/discover/geography/physical-geography/hurricanes/'>https://www.natgeokids.com/uk/discover/geography/physical-geography/hurricanes/</a></li></ul>"
     },
     "lightning": {
-      "what": "",
+      "overview": "<p>At some point in your life, you have likely seen lightning. It lights up the sky during thunderstorms. It flashes making the clouds light up. It streaks across the sky. Sometimes, it forks. Every so often, it strikes something like a tree, the ground, or something else. Lightning can be fun to watch, but it is also dangerous and should be watched from inside a safe building, house, or car.</p><p>What is lightning? Where does it come from?</p>",
+      "what": "<p>Lightning is an electrical charge. It is a much stronger and dangerous version of static electricity which you can create by rubbing against something like carpet and then touching someone or something else. You can feel the transfer of electricity as a small zap or shock. Lightning does this on a much larger scale. It can zap too, but its shocks can by harmful or deadly. If you see lightning or hear thunder, <strong>GO INSIDE NOW! </strong></p><p>There are three types of lightning: intracloud (or inside the cloud), cloud-to-cloud, and cloud-to-ground. Intracloud happens inside the storm cloud. Cloud-to-cloud is when lightning strikes from one cloud to another. Cloud-to-ground is the most dangerous (they can all be dangerous though!) because it strikes the ground. It usually hits tall objects like skyscrapers and trees, but it can also strike the open field, people, and other things.</p>",
       "how": "",
       "facts": "",
       "imgTile": "./imgs/weatherPics/lightning.jpg",
-      "img1": "",
+      "img1": "https://upload.wikimedia.org/wikipedia/commons/7/78/Lightning_%28128955981%29.jpeg",
       "img2": "",
       "img3": ""
     },
