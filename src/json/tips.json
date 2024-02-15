@@ -9,6 +9,10 @@
       "tip": "Stay away from windows!"
     },
     {
+      "subject": "🌪 Tornado Safety 🌪",
+      "tip": "Tornado watch or warning? Seek shelter inside a building on the lowest interior room."
+    },
+    {
       "subject": "🌊 Beach safety 🌊",
       "tip": "Storms out at sea can create large waves that crash on the shore. Be aware of weather and ocean conditions when playing in the ocean."
     },
@@ -29,6 +33,14 @@
       "tip": "Light colored fabrics reflect the sun's rays and keep you cooler."
     },
     {
+      "subject": "🥵 Heat Safety 🥵",
+      "tip": "During a Heat Advisory (or anytime it is hot), drink plenty of water and stay in the shade (or in the water)."
+    },
+    {
+      "subject": "💦 Water Safety 💦",
+      "tip": "Water is reflective. This means the sun's ray bounce back. That reflectiveness can give you a sunburn. If you are going to be playing in the water, remember to use sunblock."
+    },
+    {
       "subject": "💦 Water Safety 💦",
       "tip": "Bacteria levels in bodies of water rise after a storm because rain washes pollutants into them. They return to their normal level after about 72 hours (3 days)."
     },
@@ -41,8 +53,12 @@
       "tip": "If you can hear thunder, the storm is close enough for you to be struck by lightning. Go inside!"
     },
     {
-      "subject":"⚡ Lightning Safety ⚡",
+      "subject": "⚡ Lightning Safety ⚡",
       "tip": "There are no safe places outside during a thunderstorm."
+    },
+    {
+      "subject": "⚡ Lightning Safety ⚡",
+      "tip": "If you are caught outside in a thunderstorm, seek shelter immediately. If there is none, crouch down low to the ground away from tall objects and other people."
     }
   ]
 }

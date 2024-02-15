@@ -619,6 +619,10 @@ h2 {
 /*#endregion PAST*/
 
 /*#region MARKERS*/
+.lightning li::marker {
+  content: '⚡ ';
+}
+
 .wind li::marker {
   content: '🍃 ';
 }
