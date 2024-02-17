@@ -2,7 +2,8 @@
   "lstorms": {
     "floods": {},
     "hurricanes": {
-      "Andrew": {
+      "Florida_Keys": {
+        "overview": "",
         "landfall": {
           "cat": "",
           "date": "",
@@ -15,9 +16,19 @@
           "windspeedMax": "",
           "pressureMax": ""
         },
-        "facts": ""
+        
+        "impact": {
+          "casualties": "",
+          "injuries": "",
+          "homeDestroyed": "",
+          "cost": ""
+        },
+        "facts": "",
+        "img1": "",
+        "img2": ""
       },
       "Galveston": {
+        "overview": "",
         "landfall": {
           "cat": "",
           "date": "",
@@ -30,9 +41,19 @@
           "windspeedMax": "",
           "pressureMax": ""
         },
-        "facts": ""
+        
+        "impact": {
+          "casualties": "",
+          "injuries": "",
+          "homeDestroyed": "",
+          "cost": ""
+        },
+        "facts": "",
+        "img1": "",
+        "img2": ""
       },
       "Harvey": {
+        "overview": "",
         "landfall": {
           "cat": "",
           "date": "",
@@ -45,9 +66,19 @@
           "windspeedMax": "",
           "pressureMax": ""
         },
-        "facts": ""
+        
+        "impact": {
+          "casualties": "",
+          "injuries": "",
+          "homeDestroyed": "",
+          "cost": ""
+        },
+        "facts": "",
+        "img1": "",
+        "img2": ""
       },
       "Ian": {
+        "overview": "",
         "landfall": {
           "cat": "",
           "date": "",
@@ -60,24 +91,19 @@
           "windspeedMax": "",
           "pressureMax": ""
         },
-        "facts": ""
-      },
-      "Ike": {
-        "landfall": {
-          "cat": "",
-          "date": "",
-          "loc": "",
-          "windspeed": "",
-          "pressure": ""
+        
+        "impact": {
+          "casualties": "",
+          "injuries": "",
+          "homeDestroyed": "",
+          "cost": ""
         },
-        "max": {
-          "catMax": "",
-          "windspeedMax": "",
-          "pressureMax": ""
-        },
-        "facts": ""
+        "facts": "",
+        "img1": "",
+        "img2": ""
       },
       "Katrina": {
+        "overview": "",
         "landfall": {
           "cat": "",
           "date": "",
@@ -90,9 +116,19 @@
           "windspeedMax": "",
           "pressureMax": ""
         },
-        "facts": ""
+        
+        "impact": {
+          "casualties": "",
+          "injuries": "",
+          "homeDestroyed": "",
+          "cost": ""
+        },
+        "facts": "",
+        "img1": "",
+        "img2": ""
       },
-      "Maria": {
+      "Patricia": {
+        "overview": "",
         "landfall": {
           "cat": "",
           "date": "",
@@ -105,9 +141,19 @@
           "windspeedMax": "",
           "pressureMax": ""
         },
-        "facts": ""
+        
+        "impact": {
+          "casualties": "",
+          "injuries": "",
+          "homeDestroyed": "",
+          "cost": ""
+        },
+        "facts": "",
+        "img1": "",
+        "img2": ""
       },
       "Sandy": {
+        "overview": "",
         "landfall": {
           "cat": "",
           "date": "",
@@ -120,22 +166,95 @@
           "windspeedMax": "",
           "pressureMax": ""
         },
-        "facts": ""
+        
+        "impact": {
+          "casualties": "",
+          "injuries": "",
+          "homeDestroyed": "",
+          "cost": ""
+        },
+        "facts": "",
+        "img1": "",
+        "img2": ""
       }
     },
     "snow": {
-      "stormName": {
+      "Great Blizzard": {
+        "overview": "",
         "date": "",
-        "snowAmountIN": ""
+        "snowAmountIN": "",
+        "impact": {
+          "cost": "",
+          "powerOutages": ""
+        },
+        "facts": ""
+      },
+      "Blizzard of '78": {
+        "overview": "",
+        "date": "",
+        "snowAmountIN": "",
+        "impact": {
+          "cost": "",
+          "powerOutages": ""
+        },
+        "facts": ""
+      },
+      "Blizzard of the Century": {
+        "overview": "",
+        "date": "",
+        "snowAmountIN": "",
+        "impact": {
+          "cost": "",
+          "powerOutages": ""
+        },
+        "facts": ""
       }
     },
     "tornadoes": {
       "Tri-State": {
+        "overview": "",
         "date": "",
         "loc": "",
         "duration": "",
         "windspeed": "",
-        "ef-rating": ""
+        "ef-rating": "",
+        "impact": {
+          "casualties": "",
+          "injuries": "",
+          "homeDestroyed": "",
+          "cost": ""
+        },
+        "facts": ""
+      },
+      "2011 Super Outbreak": {
+        "overview": "",
+        "date": "",
+        "loc": "",
+        "duration": "",
+        "windspeed": "",
+        "ef-rating": "",
+        "impact": {
+          "casualties": "",
+          "injuries": "",
+          "homeDestroyed": "",
+          "cost": ""
+        },
+        "facts": ""
+      },
+      "El-Reno, Oklahoma": {
+        "overview": "",
+        "date": "",
+        "loc": "",
+        "duration": "",
+        "windspeed": "",
+        "ef-rating": "",
+        "impact": {
+          "casualties": "",
+          "injuries": "",
+          "homeDestroyed": "",
+          "cost": ""
+        },
+        "facts": ""
       }
     }
   }

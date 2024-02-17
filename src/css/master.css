@@ -560,8 +560,7 @@ h2 {
 /*#region PAST*/
 .past {
   background-color: var(--lightgrey);
-  border-left: 3px ridge var(--stormblue);
-  border-right: 3px ridge var(--stormblue);
+  border: 3.5px outset var(--stormblue);
   padding: 1em 3em;
 }
 
@@ -619,6 +618,14 @@ h2 {
 /*#endregion PAST*/
 
 /*#region MARKERS*/
+.tstorms li::marker {
+  content: '⚡ ';
+}
+
+.fog li::marker {
+  content: '🌫 ';
+}
+
 .lightning li::marker {
   content: '⚡ ';
 }
