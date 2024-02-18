@@ -30,13 +30,15 @@ class App extends React.Component {
     let storms = [];
     for (let storm in lJson.lstorms) {
       for (let i = 0; i < Object.keys(lJson.lstorms[storm]).length; i++) {
-        console.log(Object.keys(lJson.lstorms[storm])[i]);
+        // console.log(Object.keys(lJson.lstorms[storm])[i]);
         storms.push(Object.keys(lJson.lstorms[storm])[i]);
       }
     }
-    const randLegendIdx = Math.floor(Math.random() * storms.length);
-    const randLegendValue = storms[randLegendIdx];
-    const randImg = randValue.img;
+    const randLegendIdx = Math.floor(Math.random() * storms.length); //legend idx
+    const randLegendValue = storms[randLegendIdx]; //legend name
+
+    const randLegendTypeIdx = Math.floor(Math.random() * Object.keys(lJson.lstorms).length);
+    const randLegendType = Object.keys(lJson.lstorms)[randLegendTypeIdx];
 
     return [randTipIdx, randValue, randLegendIdx, randLegendValue];
   }
@@ -54,7 +56,6 @@ class App extends React.Component {
       if (day === "current") {
         forecastImg = this.state.weatherData[day].weather[0].description;
         forecastImg = forecastImg.replace(re, "");
-        console.log(forecastImg, "💩");
 
         current = toTitleCase(
           this.state.weatherData[day].weather[0].description
@@ -88,6 +89,7 @@ class App extends React.Component {
     let dForecast = this.getForecast("daily", 1);
     let dForecast2 = this.getForecast("daily", 2);
     let randomLegend = this.randomLegend();
+    // console.log(lJson.lstorms[randomLegend[4]][randomLegend[3]].facts);
 
     // build html for page
     return (
@@ -115,10 +117,7 @@ class App extends React.Component {
               <div className="cloudLayer">
                 <h3>Legendary Storm Spotlight</h3>
                 <h4> ~ {randomLegend[3]} ~ </h4>
-                <p className="fact">
-                  Did you know that Katrina was one of the costliest storms? It
-                  flooded New Orleans and other SOuthern states!
-                </p>
+                <p className="fact">{randomLegend[3].facts}</p>
                 <p className="linkP">
                   <a>Visit Storm!</a>
                 </p>

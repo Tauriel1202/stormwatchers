@@ -3,29 +3,25 @@
     "floods": {},
     "hurricanes": {
       "Florida_Keys": {
-        "overview": "",
         "landfall": {
-          "cat": "",
-          "date": "",
-          "loc": "",
-          "windspeed": "",
-          "pressure": ""
+          "cat": "5",
+          "date": "September 2, 1935",
+          "loc": "Florida Keys",
+          "windspeed": "186 mph",
+          "pressure": "892 mb",
+          "storm surge": "18-20 feet"
         },
         "max": {
-          "catMax": "",
-          "windspeedMax": "",
-          "pressureMax": ""
+          "catMax": "5",
+          "windspeedMax": "possible 200 mph",
+          "pressureMax": "892 mb"
         },
-        
         "impact": {
-          "casualties": "",
-          "injuries": "",
-          "homeDestroyed": "",
-          "cost": ""
+          "casualties": "409",
+          "injuries": "unknown",
+          "cost": "$6,000,000"
         },
-        "facts": "",
-        "img1": "",
-        "img2": ""
+        "facts": "<ul class='h'><li>This storm was the first hurricane in recorded United States history to make landfall as a category five hurricane! It caused massive damage and wiped out much of the Keys.</li><li>The Florida Keys hurricane of 1935 is also called the Labor Day hurricane as it arrived on September 2, 1935 (Labor Day). It was one of the fastest travelling hurricanes as it crossed the Atlantic at more than 50 miles per hour.</li><li>The Florida Keys recorded pressure of 892 was the lowest actually recorded over land. It is currently holds the recorded for third lowest pressure. </li></ul>"
       },
       "Galveston": {
         "overview": "",
@@ -41,64 +37,14 @@
           "windspeedMax": "",
           "pressureMax": ""
         },
-        
+
         "impact": {
           "casualties": "",
           "injuries": "",
-          "homeDestroyed": "",
+          "homesDestroyed": "",
           "cost": ""
         },
-        "facts": "",
-        "img1": "",
-        "img2": ""
-      },
-      "Harvey": {
-        "overview": "",
-        "landfall": {
-          "cat": "",
-          "date": "",
-          "loc": "",
-          "windspeed": "",
-          "pressure": ""
-        },
-        "max": {
-          "catMax": "",
-          "windspeedMax": "",
-          "pressureMax": ""
-        },
-        
-        "impact": {
-          "casualties": "",
-          "injuries": "",
-          "homeDestroyed": "",
-          "cost": ""
-        },
-        "facts": "",
-        "img1": "",
-        "img2": ""
-      },
-      "Ian": {
-        "overview": "",
-        "landfall": {
-          "cat": "",
-          "date": "",
-          "loc": "",
-          "windspeed": "",
-          "pressure": ""
-        },
-        "max": {
-          "catMax": "",
-          "windspeedMax": "",
-          "pressureMax": ""
-        },
-        
-        "impact": {
-          "casualties": "",
-          "injuries": "",
-          "homeDestroyed": "",
-          "cost": ""
-        },
-        "facts": "",
+        "facts": "💩",
         "img1": "",
         "img2": ""
       },
@@ -116,14 +62,14 @@
           "windspeedMax": "",
           "pressureMax": ""
         },
-        
+
         "impact": {
           "casualties": "",
           "injuries": "",
-          "homeDestroyed": "",
+          "homesDestroyed": "",
           "cost": ""
         },
-        "facts": "",
+        "facts": "💩",
         "img1": "",
         "img2": ""
       },
@@ -141,19 +87,18 @@
           "windspeedMax": "",
           "pressureMax": ""
         },
-        
+
         "impact": {
           "casualties": "",
           "injuries": "",
-          "homeDestroyed": "",
+          "homesDestroyed": "",
           "cost": ""
         },
-        "facts": "",
+        "facts": "💩",
         "img1": "",
         "img2": ""
       },
       "Sandy": {
-        "overview": "",
         "landfall": {
           "cat": "",
           "date": "",
@@ -166,14 +111,38 @@
           "windspeedMax": "",
           "pressureMax": ""
         },
-        
+
         "impact": {
           "casualties": "",
           "injuries": "",
-          "homeDestroyed": "",
+          "homesDestroyed": "",
           "cost": ""
         },
-        "facts": "",
+        "facts": "💩",
+        "img1": "",
+        "img2": ""
+      },
+      "Wilma": {
+        "landfall": {
+          "cat": "",
+          "date": "",
+          "loc": "",
+          "windspeed": "",
+          "pressure": ""
+        },
+        "max": {
+          "catMax": "",
+          "windspeedMax": "",
+          "pressureMax": ""
+        },
+
+        "impact": {
+          "casualties": "",
+          "injuries": "",
+          "homesDestroyed": "",
+          "cost": ""
+        },
+        "facts": "💩",
         "img1": "",
         "img2": ""
       }
@@ -221,7 +190,7 @@
         "impact": {
           "casualties": "",
           "injuries": "",
-          "homeDestroyed": "",
+          "homesDestroyed": "",
           "cost": ""
         },
         "facts": ""
@@ -236,7 +205,7 @@
         "impact": {
           "casualties": "",
           "injuries": "",
-          "homeDestroyed": "",
+          "homesDestroyed": "",
           "cost": ""
         },
         "facts": ""
@@ -251,7 +220,7 @@
         "impact": {
           "casualties": "",
           "injuries": "",
-          "homeDestroyed": "",
+          "homesDestroyed": "",
           "cost": ""
         },
         "facts": ""

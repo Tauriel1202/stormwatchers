@@ -129,9 +129,10 @@ h2 {
   margin-bottom: 1em;
 }
 
-/* Tip Tile */
+/*#region Tip Tile */
 .tips {
   padding-bottom: 1em;
+  height: 15em;
 }
 
 .tips h3 {
@@ -149,7 +150,7 @@ h2 {
 .tips p {
   padding: 1em;
 }
-
+/*#endregion TIP TILE*/
 /*#region SPOTLIGHT*/
 .highlightedStorm {
   background-image: url("../../public/imgs/storms/katrina.jpg");
@@ -189,7 +190,7 @@ h2 {
   margin: auto;
 }
 /*#endregion SPOTLIGHT*/
-/* Report Tile */
+/*#region Report Tile */
 .report {
   padding: 1em;
 }
@@ -207,7 +208,7 @@ h2 {
   color: var(--black);
   text-decoration: none;
 }
-
+/*#endregion Report tile*/
 /* Prints Tile */
 .prints {
   padding: 1em;
@@ -220,7 +221,7 @@ h2 {
 /*#region FORECAST*/
 .forecast {
   /* max-height: 45em; */
-  height: 675px;
+  /* height: 675px; */
   background-color: var(--lightgrey);
   border: 3.5px outset var(--grey);
   grid-column: 2 / 3;
@@ -237,6 +238,7 @@ h2 {
   background-color: white;
   border: 3.5px outset var(--accents);
   text-align: center;
+  padding: 1em;
   margin: 1em;
 }
 
