@@ -15,3 +15,13 @@ export function checkPlural(string) {
     return <span>is {string}</span>;
   }
 }
+
+export function stormType(json, dict) {    
+  return Object.keys(json[dict]).map((sType, i) => {
+    return (
+      <option key={sType}>
+        {toTitleCase(sType)}
+      </option>
+    )
+  })
+}

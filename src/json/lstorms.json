@@ -1,20 +1,19 @@
 {
   "lstorms": {
-    "floods": {},
     "hurricanes": {
-      "Florida_Keys": {
+      "Florida Keys": {
         "landfall": {
-          "cat": "5",
+          "category": "5",
           "date": "September 2, 1935",
-          "loc": "Florida Keys",
+          "location": "Florida Keys",
           "windspeed": "186 mph",
           "pressure": "892 mb",
           "storm surge": "18-20 feet"
         },
         "max": {
-          "catMax": "5",
-          "windspeedMax": "possible 200 mph",
-          "pressureMax": "892 mb"
+          "Max Category": "5",
+          "Max Windspeed": "possible 200 mph",
+          "Max Pressure": "892 mb"
         },
         "impact": {
           "casualties": "409",
@@ -26,16 +25,16 @@
       "Galveston": {
         "overview": "",
         "landfall": {
-          "cat": "",
+          "category": "",
           "date": "",
-          "loc": "",
+          "location": "",
           "windspeed": "",
           "pressure": ""
         },
         "max": {
-          "catMax": "",
-          "windspeedMax": "",
-          "pressureMax": ""
+          "Max Category": "",
+          "Max Windspeed": "",
+          "Max Pressure": ""
         },
 
         "impact": {
@@ -51,16 +50,16 @@
       "Katrina": {
         "overview": "",
         "landfall": {
-          "cat": "",
+          "category": "",
           "date": "",
-          "loc": "",
+          "location": "",
           "windspeed": "",
           "pressure": ""
         },
         "max": {
-          "catMax": "",
-          "windspeedMax": "",
-          "pressureMax": ""
+          "Max Category": "",
+          "Max Windspeed": "",
+          "Max Pressure": ""
         },
 
         "impact": {
@@ -76,16 +75,16 @@
       "Patricia": {
         "overview": "",
         "landfall": {
-          "cat": "",
+          "category": "",
           "date": "",
-          "loc": "",
+          "location": "",
           "windspeed": "",
           "pressure": ""
         },
         "max": {
-          "catMax": "",
-          "windspeedMax": "",
-          "pressureMax": ""
+          "Max Category": "",
+          "Max Windspeed": "",
+          "Max Pressure": ""
         },
 
         "impact": {
@@ -100,16 +99,16 @@
       },
       "Sandy": {
         "landfall": {
-          "cat": "",
+          "category": "",
           "date": "",
-          "loc": "",
+          "location": "",
           "windspeed": "",
           "pressure": ""
         },
         "max": {
-          "catMax": "",
-          "windspeedMax": "",
-          "pressureMax": ""
+          "Max Category": "",
+          "Max Windspeed": "",
+          "Max Pressure": ""
         },
 
         "impact": {
@@ -124,16 +123,16 @@
       },
       "Wilma": {
         "landfall": {
-          "cat": "",
+          "category": "",
           "date": "",
-          "loc": "",
+          "location": "",
           "windspeed": "",
           "pressure": ""
         },
         "max": {
-          "catMax": "",
-          "windspeedMax": "",
-          "pressureMax": ""
+          "Max Category": "",
+          "Max Windspeed": "",
+          "Max Pressure": ""
         },
 
         "impact": {
@@ -183,7 +182,7 @@
       "Tri-State": {
         "overview": "",
         "date": "",
-        "loc": "",
+        "location": "",
         "duration": "",
         "windspeed": "",
         "ef-rating": "",
@@ -198,7 +197,7 @@
       "2011 Super Outbreak": {
         "overview": "",
         "date": "",
-        "loc": "",
+        "location": "",
         "duration": "",
         "windspeed": "",
         "ef-rating": "",
@@ -213,7 +212,7 @@
       "El-Reno, Oklahoma": {
         "overview": "",
         "date": "",
-        "loc": "",
+        "location": "",
         "duration": "",
         "windspeed": "",
         "ef-rating": "",
