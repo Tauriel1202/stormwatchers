@@ -6,6 +6,7 @@ import Footer from "../js/footer";
 import React from "react";
 import axios from "axios";
 import { toTitleCase } from "./functions";
+import {MathJaxContext, MathJax} from "better-react-mathjax"
 
 class App extends React.Component {
   constructor() {
@@ -38,7 +39,6 @@ class App extends React.Component {
     const randLegendValue = storms[randLegendIdx]; //legend name
 
     const randLegendTypeIdx = Math.floor(Math.random() * Object.keys(lJson.lstorms).length);
-    const randLegendType = Object.keys(lJson.lstorms)[randLegendTypeIdx];
 
     return [randTipIdx, randValue, randLegendIdx, randLegendValue];
   }
@@ -85,6 +85,10 @@ class App extends React.Component {
   }
 
   render() {
+    const config = {
+      loader: { load:["input/asciimath"]}
+    }
+
     let cForecast = this.getForecast("current");
     let dForecast = this.getForecast("daily", 1);
     let dForecast2 = this.getForecast("daily", 2);
@@ -197,6 +201,16 @@ class App extends React.Component {
             <h3>🔢➡ Weather Conversions ➡🔢</h3>
             <p>Fahrenheit = (Celsius * 1.8) + 32</p>
             <p>Celsius = (Fahrenheit - 32) / 1.8</p>
+            
+            <MathJaxContext config={config}>
+              {/* <MathJax>
+                {"`frac(10)(4x) approx 2^(12)`"}
+              </MathJax> */}
+              <MathJax>
+                {"windchill `= 35.74 + 0.6215(`temperature`) - 35.75(`windspeed`)^0.16 + 0.4275(`temperature`)(`windspeed`)^0.16`"}
+              </MathJax>
+            </MathJaxContext>
+            
             <p>
               Wind chill = 35.74 + 0.6215(Temperature) – 35.75(Windspeed
               <sup>0.16</sup>) + 0.4275(Temperature)(Windspeed<sup>0.16</sup>)

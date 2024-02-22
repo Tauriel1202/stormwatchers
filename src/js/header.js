@@ -27,9 +27,9 @@ function Header() {
             </a>
           </div>
             <button
-              onClick={() => {
+              onClick={(e) => {
                 document.querySelector("nav").classList.toggle("on");
-                this.classList.toggle("on");
+                e.target.classList.toggle("on");
               }}
             ></button>
         </div>

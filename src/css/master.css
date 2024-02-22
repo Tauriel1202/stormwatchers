@@ -90,9 +90,6 @@ header button {
   display: none;
 }
 
-.on {
-  background-color: yellow;
-}
 
 /*#endregion HEADER*/
 /*#region HOME */
@@ -620,14 +617,21 @@ label {
 /*#endregion PAST*/
 /*#region LSTORMS*/
 .lstorms {
+  max-width: 1080px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   column-gap: 1em;
   row-gap: 1em;
 }
 
+.lstorms h2 {
+  grid-column: 1 / 4;
+}
+
 .lstorms label {
-  grid-column: 1 / 3;
+  grid-column: 1 / 4;
+  display: flex;
+  justify-content: center;
   padding: 1em;
   margin: 1em auto;
 }
@@ -653,7 +657,7 @@ label {
 }
 
 .hurricanes div {
-  background-color: var(--yellow);
+  background-color: var(--lightgrey);
   color: var(--grey);
   border: 2px inset var(--yellow);
   padding: 1em;
@@ -670,7 +674,8 @@ label {
 }
 
 .facts li {
-  padding: 1em;
+  list-style-type: none;
+  margin: 1em;
 }
 
 /*#endregion LSTORMS*/
@@ -807,16 +812,27 @@ footer .imgDiv {
 @media only screen and (max-width: 480px) {
   main {
     background-color: yellow;
+    margin: 2%;
   }
 
-  .headerContent {
-    display: unset;
+  .headerContent, footer {
+    text-align: center;
+    display: block;
     margin: auto;
   }
 
-  header .imgDiv:first-of-type {
+  header .imgDiv:first-of-type, footer .imgDiv {
     max-width: none;
     margin: 1em auto;
+  }
+
+  footer .imgDiv {
+    padding-top: 1em;
+  }
+
+  .footerText {
+    padding-bottom: 3em;
+    margin: 0;
   }
 
   h1 {
@@ -831,14 +847,23 @@ footer .imgDiv {
     width: 100%;
     text-align: center;
     padding: 0;
-    display: grid;
+    display: none;
+  }
+
+  .on {
+    display: block;
   }
 
   .smallNav {
-    display: unset;
+    padding: 1em;
+    display: block;
   }
 
   .headerContent button {
+    background-color: var(--accents);
+    font-size: 1.5em;
+    width: 100%;
+    padding: 0.5em;
     display: inline;
   }
 
@@ -846,7 +871,7 @@ footer .imgDiv {
     content: "≡";
   }
 
-  button.on {
+  button.on::before {
     content: "❎";
   }
 
@@ -863,12 +888,22 @@ footer .imgDiv {
     grid-column: 1 / 3;
     grid-row: 1 / 2;
 
-    display: flex;
+    display: grid;
     /* margin: auto; */
   }
 
+  .forecast h3 {
+    grid-column: 1 / 4;
+  }
+
   .forecast .imgDiv {
-    height: 85px;
+    width: 100%;
+  }
+
+  .bigNsmall {
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1fr 0.5fr;
   }
 
   .weatherTile .weatherData {
@@ -886,6 +921,23 @@ footer .imgDiv {
 
   .plot {
     max-width: 320px;
+  }
+
+  .prep label {
+    text-align: left;
+    display: grid;
+  }
+
+  .prep select {
+    margin: 0;
+  }
+
+  .prepContent {
+    display: block;
+  }
+
+  .prepContent div {
+    margin: 1em 0;
   }
 }
 /*#endregion SMALL version*/

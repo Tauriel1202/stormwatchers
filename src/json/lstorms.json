@@ -2,7 +2,7 @@
   "lstorms": {
     "hurricanes": {
       "Florida Keys": {
-        "landfall": {
+        "details": {
           "category": "5",
           "date": "September 2, 1935",
           "location": "Florida Keys",
@@ -24,7 +24,7 @@
       },
       "Galveston": {
         "overview": "",
-        "landfall": {
+        "details": {
           "category": "",
           "date": "",
           "location": "",
@@ -49,7 +49,7 @@
       },
       "Katrina": {
         "overview": "",
-        "landfall": {
+        "details": {
           "category": "",
           "date": "",
           "location": "",
@@ -74,7 +74,7 @@
       },
       "Patricia": {
         "overview": "",
-        "landfall": {
+        "details": {
           "category": "",
           "date": "",
           "location": "",
@@ -98,7 +98,7 @@
         "img2": ""
       },
       "Sandy": {
-        "landfall": {
+        "details": {
           "category": "",
           "date": "",
           "location": "",
@@ -122,7 +122,7 @@
         "img2": ""
       },
       "Wilma": {
-        "landfall": {
+        "details": {
           "category": "",
           "date": "",
           "location": "",
@@ -146,11 +146,12 @@
         "img2": ""
       }
     },
-    "snow": {
+    "snowstorms": {
       "Great Blizzard": {
-        "overview": "",
-        "date": "",
-        "snowAmountIN": "",
+        "details": {
+          "date": "",
+          "snowAmountIN": ""
+        },
         "impact": {
           "cost": "",
           "powerOutages": ""
@@ -158,9 +159,10 @@
         "facts": ""
       },
       "Blizzard of '78": {
-        "overview": "",
-        "date": "",
-        "snowAmountIN": "",
+        "details": {
+          "date": "",
+          "snowAmountIN": ""
+        },
         "impact": {
           "cost": "",
           "powerOutages": ""
@@ -168,9 +170,10 @@
         "facts": ""
       },
       "Blizzard of the Century": {
-        "overview": "",
-        "date": "",
-        "snowAmountIN": "",
+        "details": {
+          "date": "",
+          "snowAmountIN": ""
+        },
         "impact": {
           "cost": "",
           "powerOutages": ""
@@ -180,12 +183,13 @@
     },
     "tornadoes": {
       "Tri-State": {
-        "overview": "",
-        "date": "",
-        "location": "",
-        "duration": "",
-        "windspeed": "",
-        "ef-rating": "",
+        "details": {
+          "date": "",
+          "location": "",
+          "duration": "",
+          "windspeed": "",
+          "ef-rating": ""
+        },
         "impact": {
           "casualties": "",
           "injuries": "",
@@ -195,12 +199,13 @@
         "facts": ""
       },
       "2011 Super Outbreak": {
-        "overview": "",
-        "date": "",
-        "location": "",
-        "duration": "",
-        "windspeed": "",
-        "ef-rating": "",
+        "details": {
+          "date": "",
+          "location": "",
+          "duration": "",
+          "windspeed": "",
+          "ef-rating": ""
+        },
         "impact": {
           "casualties": "",
           "injuries": "",
@@ -210,12 +215,13 @@
         "facts": ""
       },
       "El-Reno, Oklahoma": {
-        "overview": "",
-        "date": "",
-        "location": "",
-        "duration": "",
-        "windspeed": "",
-        "ef-rating": "",
+        "details": {
+          "date": "",
+          "location": "",
+          "duration": "",
+          "windspeed": "",
+          "ef-rating": ""
+        },
         "impact": {
           "casualties": "",
           "injuries": "",
