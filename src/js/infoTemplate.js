@@ -23,7 +23,9 @@ function InfoTemplate() {
   let usableJSON = weatherJSON.weatherSummaries[stateWeatherType];
   // let img1 = require(`${usableJSON.img1}`);
   let img1 = usableJSON.img1;
+
   let img2 = usableJSON.img2;
+  
 
   let img3;
   if (usableJSON.img3) {
@@ -53,14 +55,12 @@ function InfoTemplate() {
             </h4>
             {Object.keys(weatherJSON.weatherSummaries).map((wType, i) => {
               return (
-                <>
                   <h4 key={wType + i}>
                     <a href={`/weather/summary?weatherType=${wType}`}>
                       {toTitleCase(wType)}
                     </a>
                     {wType === stateWeatherType && miniNav()}
                   </h4>
-                </>
               );
             })}
           </aside>

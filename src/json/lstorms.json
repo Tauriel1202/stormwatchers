@@ -17,44 +17,41 @@
         },
         "impact": {
           "casualties": "409",
-          "injuries": "unknown",
+          "homesDestroyed": "all structures in the area",
           "cost": "$6,000,000"
         },
         "facts": "<ul class='h'><li>This storm was the first hurricane in recorded United States history to make landfall as a category five hurricane! It caused massive damage and wiped out much of the Keys.</li><li>The Florida Keys hurricane of 1935 is also called the Labor Day hurricane as it arrived on September 2, 1935 (Labor Day). It was one of the fastest travelling hurricanes as it crossed the Atlantic at more than 50 miles per hour.</li><li>The Florida Keys recorded pressure of 892 was the lowest actually recorded over land. It is currently holds the recorded for third lowest pressure. </li></ul>"
       },
       "Galveston": {
-        "overview": "",
         "details": {
-          "category": "",
-          "date": "",
-          "location": "",
-          "windspeed": "",
-          "pressure": ""
+          "category": "4",
+          "date": "September 8, 1900",
+          "location": "Galveston, Texas, Eastern Texas",
+          "windspeed": "135 mph",
+          "pressure": "967 mb",
+          "storm surge": "8-15 ft"
         },
         "max": {
-          "Max Category": "",
-          "Max Windspeed": "",
-          "Max Pressure": ""
+          "Max Category": "4",
+          "Max Windspeed": "967 mph",
+          "Max Pressure": "931 mb"
         },
 
         "impact": {
-          "casualties": "",
-          "injuries": "",
-          "homesDestroyed": "",
-          "cost": ""
+          "casualties": "8,000",
+          "homesDestroyed": "3,600",
+          "cost": "$617,000,000"
         },
-        "facts": "💩",
-        "img1": "",
-        "img2": ""
+        "facts": "<ul class='h'><li>Galveston was the deadliest natural disaster in United States history. It is the third deadliest of all Atlantic hurricanes.</li><li>Storm surge played a big part in the Galveston Hurricane. With heights between 8 and 15 feet, the water flooded the city and beyond.</li><li>After Galveston, the city built a seawall to protect from flooding. They also raised the city higher. </li><li>This hurricane showed the need for tropical storms and hurricane warnings. The National Weather Service (NWS) responded to this and began issuing them when needed.</li></ul>"
       },
       "Katrina": {
-        "overview": "",
         "details": {
           "category": "",
           "date": "",
           "location": "",
           "windspeed": "",
-          "pressure": ""
+          "pressure": "",
+          "storm surge": ""
         },
         "max": {
           "Max Category": "",
@@ -64,13 +61,10 @@
 
         "impact": {
           "casualties": "",
-          "injuries": "",
           "homesDestroyed": "",
           "cost": ""
         },
-        "facts": "💩",
-        "img1": "",
-        "img2": ""
+        "facts": "<ul><li>abc</li></ul>"
       },
       "Patricia": {
         "overview": "",
@@ -93,7 +87,7 @@
           "homesDestroyed": "",
           "cost": ""
         },
-        "facts": "💩",
+        "facts": "<ul><li>abc</li></ul>",
         "img1": "",
         "img2": ""
       },
@@ -117,7 +111,7 @@
           "homesDestroyed": "",
           "cost": ""
         },
-        "facts": "💩",
+        "facts": "<ul><li>abc</li></ul>",
         "img1": "",
         "img2": ""
       },
@@ -141,7 +135,7 @@
           "homesDestroyed": "",
           "cost": ""
         },
-        "facts": "💩",
+        "facts": "<ul><li>abc</li></ul>",
         "img1": "",
         "img2": ""
       }
@@ -156,7 +150,7 @@
           "cost": "",
           "powerOutages": ""
         },
-        "facts": ""
+        "facts": "<ul><li>abc</li></ul>"
       },
       "Blizzard of '78": {
         "details": {
@@ -167,7 +161,7 @@
           "cost": "",
           "powerOutages": ""
         },
-        "facts": ""
+        "facts": "<ul><li>abc</li></ul>"
       },
       "Blizzard of the Century": {
         "details": {
@@ -178,7 +172,7 @@
           "cost": "",
           "powerOutages": ""
         },
-        "facts": ""
+        "facts": "<ul><li>abc</li></ul>"
       }
     },
     "tornadoes": {
@@ -196,7 +190,7 @@
           "homesDestroyed": "",
           "cost": ""
         },
-        "facts": ""
+        "facts": "<ul><li>abc</li></ul>"
       },
       "2011 Super Outbreak": {
         "details": {
@@ -212,7 +206,7 @@
           "homesDestroyed": "",
           "cost": ""
         },
-        "facts": ""
+        "facts": "<ul><li>abc</li></ul>"
       },
       "El-Reno, Oklahoma": {
         "details": {
@@ -228,7 +222,7 @@
           "homesDestroyed": "",
           "cost": ""
         },
-        "facts": ""
+        "facts": "<ul><li>abc</li></ul>"
       }
     }
   }

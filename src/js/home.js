@@ -5,8 +5,8 @@ import Header from "../js/header";
 import Footer from "../js/footer";
 import React from "react";
 import axios from "axios";
-import { toTitleCase } from "./functions";
-import {MathJaxContext, MathJax} from "better-react-mathjax"
+import { stormType, toTitleCase } from "./functions";
+import { MathJaxContext, MathJax } from "better-react-mathjax";
 
 class App extends React.Component {
   constructor() {
@@ -19,28 +19,37 @@ class App extends React.Component {
   componentDidMount() {
     axios.get("http://localhost:2024/weatherAPI").then((jsObject) => {
       this.setState({ weatherData: jsObject.data });
-      console.log(jsObject.data);
     });
   }
 
-  randomLegend() {
+  randomTip() {
     // random tips
     const randTipIdx = Math.floor(Math.random() * tipJson.tips.length);
     const randValue = tipJson.tips[randTipIdx];
-    // random Legend
-    let storms = [];
-    for (let storm in lJson.lstorms) {
-      for (let i = 0; i < Object.keys(lJson.lstorms[storm]).length; i++) {
-        // console.log(Object.keys(lJson.lstorms[storm])[i]);
-        storms.push(Object.keys(lJson.lstorms[storm])[i]);
-      }
+
+    return randValue;
+  }
+
+  legend() {
+    const json = Object.keys(lJson.lstorms);
+    const randTypeIdx = Math.floor(Math.random() * json.length); //storm type indexes
+    const stormTypes = json[randTypeIdx]; //storm type names
+
+    const randStormIdx = Math.floor(
+      Math.random() * Object.keys(lJson.lstorms[stormTypes]).length
+    ); //name index
+    const stormNames = Object.keys(lJson.lstorms[stormTypes])[randStormIdx];
+
+    const allFacts = lJson.lstorms[stormTypes][stormNames].facts;
+    const matches = [...allFacts.matchAll(/>[a-zA-Z \d.?,\(\)!]+</g)];
+    const randFactIdx = Math.floor(Math.random() * matches.length);
+    let randFact = matches[randFactIdx];
+
+    if (randFact) {
+      randFact = randFact[0].slice(1, -1);
     }
-    const randLegendIdx = Math.floor(Math.random() * storms.length); //legend idx
-    const randLegendValue = storms[randLegendIdx]; //legend name
 
-    const randLegendTypeIdx = Math.floor(Math.random() * Object.keys(lJson.lstorms).length);
-
-    return [randTipIdx, randValue, randLegendIdx, randLegendValue];
+    return randFact;
   }
 
   getForecast(day, dNumber) {
@@ -85,15 +94,13 @@ class App extends React.Component {
   }
 
   render() {
-    const config = {
-      loader: { load:["input/asciimath"]}
-    }
+    // const config = {
+    //   loader: { load: ["input/asciimath"] },
+    // };
 
     let cForecast = this.getForecast("current");
     let dForecast = this.getForecast("daily", 1);
     let dForecast2 = this.getForecast("daily", 2);
-    let randomLegend = this.randomLegend();
-    // console.log(lJson.lstorms[randomLegend[4]][randomLegend[3]].facts);
 
     // build html for page
     return (
@@ -105,23 +112,14 @@ class App extends React.Component {
             <div className="tips">
               <h3>Weather Tip</h3>
               <div className="tipTop">
-                {/* <div className="imgDiv">
-                <img
-                  // src={require(randomLegend[1].img)}
-                  // alt={randomLegend[1].subject}
-                  width={25}
-                  height={25}
-                />
-              </div> */}
-                <h4>{randomLegend[1].subject}</h4>
+                <h4>{this.randomTip().subject}</h4>
               </div>
-              <p>{randomLegend[1].tip}</p>
+              <p>{this.randomTip().tip}</p>
             </div>
             <div className="highlightedStorm">
               <div className="cloudLayer">
                 <h3>Legendary Storm Spotlight</h3>
-                <h4> ~ {randomLegend[3]} ~ </h4>
-                <p className="fact">{randomLegend[3].facts}</p>
+                <p className="fact">{this.legend()}</p>
                 <p className="linkP">
                   <a>Visit Storm!</a>
                 </p>
@@ -201,16 +199,16 @@ class App extends React.Component {
             <h3>🔢➡ Weather Conversions ➡🔢</h3>
             <p>Fahrenheit = (Celsius * 1.8) + 32</p>
             <p>Celsius = (Fahrenheit - 32) / 1.8</p>
-            
-            <MathJaxContext config={config}>
+
+            {/* <MathJaxContext config={config}>
               {/* <MathJax>
                 {"`frac(10)(4x) approx 2^(12)`"}
               </MathJax> */}
-              <MathJax>
+            {/* <MathJax>
                 {"windchill `= 35.74 + 0.6215(`temperature`) - 35.75(`windspeed`)^0.16 + 0.4275(`temperature`)(`windspeed`)^0.16`"}
               </MathJax>
-            </MathJaxContext>
-            
+            </MathJaxContext> */}
+
             <p>
               Wind chill = 35.74 + 0.6215(Temperature) – 35.75(Windspeed
               <sup>0.16</sup>) + 0.4275(Temperature)(Windspeed<sup>0.16</sup>)

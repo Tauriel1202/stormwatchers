@@ -69,40 +69,7 @@ class Lstorms extends React.Component {
     );
   }
 
-  // tornadoes() {
-  //   return Object.keys(lJson.lstorms.tornadoes).map((i) => {
-  //     let json = lJson.lstorms.tornadoes[i]; //single storm
-  //     let stormName = i; // name of storm
-
-  //     console.log(json);
-
-  //     return (
-  //       <div className="tornadoes">
-  //         <h3>{i}</h3>
-  //         <div className="stormDeets">
-  //           <h4>Storm Details</h4>
-  //           <ul>{}</ul>
-  //         </div>
-  //         <div className="impact">
-  //           <h4>Impact</h4>
-  //         </div>
-  //       </div>
-  //     );
-  //   });
-  // }
-
-  // snowstorms() {}
-
   stormChoice() {
-    console.log("💩");
-    console.log(this.state.stormType);
-
-    // if (this.state.stormType === "Hurricanes") {
-    //   return <>{this.hurricanes()}</>;
-    // } else if (this.state.stormType === "Tornadoes") {
-    //   return <>{this.tornadoes()}</>;
-    // } else if (this.state.stormType === "Blizzards") {
-    //   return <>{this.snowstorms()}</>;
     if (this.state.stormType !== "Choose a storm type!") {
       return <>{this.storm()}</>;
     } else {
@@ -123,7 +90,7 @@ class Lstorms extends React.Component {
         <main className="lstorms">
           <h2>Legendary Storms</h2>
           <label>
-            Select a type to see its legendary storms:
+            <span>Select a type:</span>
             <select className="select" onChange={this.stormType}>
               <option>Choose a Storm Type!</option>
               {stormType(lJson, "lstorms")}

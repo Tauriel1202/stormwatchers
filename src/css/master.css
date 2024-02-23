@@ -54,7 +54,7 @@ header .imgDiv {
   margin: 0.5em;
 }
 
-nav,
+nav ul,
 .headerContent p {
   background-color: var(--accents);
   display: flex;
@@ -74,6 +74,7 @@ nav li {
 }
 
 nav li a {
+  color: var(--black);
   text-decoration: none;
   padding: 1em;
 }
@@ -389,7 +390,9 @@ h2 {
 }
 
 .summaryDiv aside nav a {
+  background-color: var(--lightgrey);
   color: var(--grey);
+  border: 2.5px inset var(--stormblue);
 }
 
 .summaryDiv aside h4:last-of-type {
@@ -636,9 +639,21 @@ label {
   margin: 1em auto;
 }
 
+.lstorms label span {
+  margin-top: 1em;
+}
+
 .lstorms select {
   border: 3.5px outset var(--accents);
+  padding: 1em;
   margin: 0 1em;
+}
+
+.lstorms .noType {
+  width: 820px;
+  background-color: var(--lightgrey);
+  border: 2.5px outset var(--grey);
+  margin: 1em auto;
 }
 
 .hurricanes {

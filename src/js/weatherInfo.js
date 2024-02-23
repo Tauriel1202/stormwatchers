@@ -20,7 +20,7 @@ class Weather extends React.Component {
         <div key={wType} className="tile">
           <a href={`/weather/summary?weatherType=${wType}`}>
             <div className="imgDiv">
-              <img src={a} alt={wType} width={100} height={100} />
+              <img src={a} alt={i} width={100} height={100} />
             </div>
             <h4>{toTitleCase(wType)}</h4>
           </a>
