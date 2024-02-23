@@ -684,6 +684,7 @@ label {
 }
 
 .facts div {
+  height: 25em;
   border: none;
   padding: 0;
 }

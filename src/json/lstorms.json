@@ -46,74 +46,68 @@
       },
       "Katrina": {
         "details": {
-          "category": "",
-          "date": "",
-          "location": "",
-          "windspeed": "",
-          "pressure": "",
-          "storm surge": ""
+          "category": "3",
+          "date": "August 29, 2005",
+          "location": "Southeast Louisana",
+          "windspeed": "130 mph",
+          "pressure": "920 mb",
+          "storm surge": "25-28 ft"
         },
         "max": {
-          "Max Category": "",
-          "Max Windspeed": "",
-          "Max Pressure": ""
+          "Max Category": "5",
+          "Max Windspeed": "175 mph",
+          "Max Pressure": "902 mb"
         },
 
         "impact": {
-          "casualties": "",
-          "homesDestroyed": "",
-          "cost": ""
+          "casualties": "1,833",
+          "homesDestroyed": "800,000",
+          "cost": "$195,000,000,000"
         },
-        "facts": "<ul><li>abc</li></ul>"
+        "facts": "<ul class='h'><li>Katrina holds the record for the costliest hurricane to make landfall in the United States. </li><li>A large part of the damage in Louisiana came from flooding. While the storm surge played a big part, the flooding was worsened by the collapse of the levees (built up walls designed to prevent flooding). It is estimated that 80% of New Orleans was underwater.</li><li>Katrina made landfall more than once. The first time it made landfall as a tropical storm in Southeast Florida (near Miami). The second time it hit Southeastern Louisiana as a category 3 hurricane. The third (and last time) hurricane Katrina passed through the Mississippi Gulf Coast. It was still a category 3.</li></ul>"
       },
       "Patricia": {
-        "overview": "",
         "details": {
-          "category": "",
-          "date": "",
-          "location": "",
-          "windspeed": "",
-          "pressure": ""
+          "category": "4",
+          "date": "October 23, 2015",
+          "location": "Jalisco, Mexico",
+          "windspeed": "150 mph",
+          "pressure": "932 mb",
+          "storm surge": "unknown"
         },
         "max": {
-          "Max Category": "",
-          "Max Windspeed": "",
-          "Max Pressure": ""
+          "Max Category": "5",
+          "Max Windspeed": "215 mph",
+          "Max Pressure": "872 mb"
         },
 
         "impact": {
-          "casualties": "",
-          "injuries": "",
-          "homesDestroyed": "",
-          "cost": ""
+          "casualties": "6",
+          "homesDestroyed": "10,000",
+          "cost": "325,000,000"
         },
-        "facts": "<ul><li>abc</li></ul>",
-        "img1": "",
-        "img2": ""
+        "facts": "<ul class='h'><li>Patricia holds the record for the strongest sustained windspeed. It is also the most intense or strongest hurricane in the Western hemisphere.</li><li>This storm rapidly intensified (strengthened) over 24 hours. The winds increased from 85 to 205 miles per hour. Patricia is one of the most quickly intensifying storms.</li><li>Although this storm had incredible windspeeds and a quick strengthening, it weakened quickly. Despite its rapid decrease in strength, it still struck Mexico as a category 4 hurricane.</li></ul>"
       },
       "Sandy": {
         "details": {
-          "category": "",
-          "date": "",
-          "location": "",
-          "windspeed": "",
-          "pressure": ""
+          "category": "1, 2, 1",
+          "date": "October 24, 2012, October 25, October 19, 2012",
+          "location": "Jamaica, Cuba and Carribean, Southern New Jersey ",
+          "windspeed": "85mph, 110mph, 80mph",
+          "pressure": "972mb, 954mb, 945mb"
         },
         "max": {
-          "Max Category": "",
-          "Max Windspeed": "",
-          "Max Pressure": ""
+          "Max Category": "2",
+          "Max Windspeed": "110 mph",
+          "Max Pressure": "940 mb"
         },
 
         "impact": {
-          "casualties": "",
-          "injuries": "",
+          "casualties": "147",
           "homesDestroyed": "",
-          "cost": ""
+          "cost": "$86,500,000,000"
         },
-        "facts": "<ul><li>abc</li></ul>",
-        "img1": "",
-        "img2": ""
+        "facts": "<ul><li>abc</li></ul>"
       },
       "Wilma": {
         "details": {
@@ -131,13 +125,10 @@
 
         "impact": {
           "casualties": "",
-          "injuries": "",
           "homesDestroyed": "",
-          "cost": ""
+          "cost": "$29,300,000,000"
         },
-        "facts": "<ul><li>abc</li></ul>",
-        "img1": "",
-        "img2": ""
+        "facts": "<ul><li>abc</li></ul>"
       }
     },
     "snowstorms": {
