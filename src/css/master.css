@@ -187,6 +187,10 @@ h2 {
   padding: 0.7em;
   margin: auto;
 }
+
+.fact {
+  margin: 2em 1em 0 ;
+}
 /*#endregion SPOTLIGHT*/
 /*#region Report Tile */
 .report {
@@ -695,6 +699,30 @@ label {
 }
 
 /*#endregion LSTORMS*/
+/*#region ACCOUNT*/
+.buttons {
+  background-color: var(--lightgrey);
+  border: 2.5px solid var(--stormblue);
+  /* display: grid;
+  grid-template-columns: 1fr; */
+}
+
+.buttons div {
+  width: 10em;
+  margin: auto;
+  display: grid;
+}
+
+.buttons button{
+  width: 10em;
+  background-color: rgb(9, 209, 9);
+  border: 2.5px outset rgb(9, 209, 9);
+  border-radius: 10px;
+  font-size: 1.2em;
+  padding: 0.5em;
+
+}
+/*#endregion ACCOUNT*/
 
 /*#region MARKERS*/
 .tstorms li::marker {
