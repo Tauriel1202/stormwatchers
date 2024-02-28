@@ -91,7 +91,6 @@ header button {
   display: none;
 }
 
-
 /*#endregion HEADER*/
 /*#region HOME */
 main {
@@ -189,7 +188,7 @@ h2 {
 }
 
 .fact {
-  margin: 2em 1em 0 ;
+  margin: 2em 1em 0;
 }
 /*#endregion SPOTLIGHT*/
 /*#region Report Tile */
@@ -700,6 +699,12 @@ label {
 
 /*#endregion LSTORMS*/
 /*#region ACCOUNT*/
+.account,
+.formMain {
+  width: 500px;
+  margin: 2em auto;
+}
+
 .buttons {
   background-color: var(--lightgrey);
   border: 2.5px solid var(--stormblue);
@@ -708,20 +713,120 @@ label {
 }
 
 .buttons div {
-  width: 10em;
+  width: 80%;
   margin: auto;
   display: grid;
 }
 
-.buttons button{
+.buttons a {
   width: 10em;
   background-color: rgb(9, 209, 9);
+  color: var(--black);
   border: 2.5px outset rgb(9, 209, 9);
   border-radius: 10px;
+  text-decoration: none;
+  text-align: center;
   font-size: 1.2em;
   padding: 0.5em;
-
+  margin: 1em auto;
 }
+
+.formMain,
+.account {
+  background-color: var(--lightgrey);
+  border: 2.5px solid var(--stormblue);
+}
+
+.myaccount {
+  padding: 1em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 1em;
+}
+
+.myaccount p {
+  margin-top: 0.5em;
+  grid-column: 1 / 2;
+}
+
+.myaccount button {
+  background-color: var(--yellow);
+  border: 3.5px outset var(--yellow);
+  border-radius: 10px;
+  padding: 0.8em;
+}
+
+.myaccount h2 {
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+}
+
+.myaccount button:first-of-type {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+.myaccount button:nth-of-type(2) {
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+}
+
+.myaccount button:nth-of-type(3) {
+  margin-bottom: 1.5em;
+}
+
+.myaccount strong {
+  padding-right: 1em;
+}
+
+.myaccount button:nth-of-type(4),
+.myaccount button:last-of-type {
+  width: 50%;
+  margin: 1em auto;
+  grid-column: 1 / 3;
+}
+
+.myaccount span {
+  border-bottom: 3.5px double var(--stormblue);
+  margin: 1em 0;
+  grid-column: 1 / 3;
+}
+
+.myaccount .leave {
+  background-color: var(--grey);
+  color: var(--lightgrey);
+  border: 3.5px inset var(--grey);
+}
+
+.myaccount .hazard {
+  background-color: red;
+  color: var(--lightgrey);
+  border: 3.5px outset red;
+}
+
+.formMain label {
+  text-align: left;
+  display: grid;
+}
+
+.formMain input {
+  border-radius: 5px;
+  padding: 0.5em;
+}
+
+.formMain input:required {
+  border-left: 3.5px solid var(--accents);
+}
+
+.formMain button {
+  background-color: rgb(9, 209, 9);
+  border: 2px outset rgb(9, 209, 9);
+  border-radius: 10px;
+  font-size: 1em;
+  padding: 0.5em;
+  margin: 1em 18%;
+}
+
 /*#endregion ACCOUNT*/
 
 /*#region MARKERS*/
@@ -757,7 +862,8 @@ label {
   content: "⛄ ";
 }
 
-.hImgs li::marker, .h li::marker {
+.hImgs li::marker,
+.h li::marker {
   content: "🌀 ";
 }
 
@@ -859,13 +965,15 @@ footer .imgDiv {
     margin: 2%;
   }
 
-  .headerContent, footer {
+  .headerContent,
+  footer {
     text-align: center;
     display: block;
     margin: auto;
   }
 
-  header .imgDiv:first-of-type, footer .imgDiv {
+  header .imgDiv:first-of-type,
+  footer .imgDiv {
     max-width: none;
     margin: 1em auto;
   }
