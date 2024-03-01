@@ -686,6 +686,10 @@ label {
   list-style-type: none;
 }
 
+.landfall {
+  height: 10em;
+}
+
 .facts div {
   height: 25em;
   border: none;
@@ -735,6 +739,12 @@ label {
 .account {
   background-color: var(--lightgrey);
   border: 2.5px solid var(--stormblue);
+  border-radius: 20px;
+}
+
+.buttons {
+  border-radius: 20px;
+  border: none;
 }
 
 .myaccount {
@@ -815,7 +825,13 @@ label {
 }
 
 .formMain input:required {
-  border-left: 3.5px solid var(--accents);
+  border: 2px solid var(--accents);
+  border-left: 5px solid var(--accents);
+}
+
+.formMain input:invalid {
+  border: 2px solid red;
+  border-left: 5px solid red;
 }
 
 .formMain button {

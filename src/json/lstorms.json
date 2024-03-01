@@ -17,8 +17,9 @@
         },
         "impact": {
           "casualties": "409",
-          "homesDestroyed": "all structures in the area",
-          "cost": "$6,000,000"
+          "houses destroyed": "all structures in the area",
+          "cost": "at least $6 million",
+          "cost in today's dollars": "at least $133 million"
         },
         "facts": "<ul class='h'><li>This storm was the first hurricane in recorded United States history to make landfall as a category five hurricane! It caused massive damage and wiped out much of the Keys.</li><li>The Florida Keys hurricane of 1935 is also called the Labor Day hurricane as it arrived on September 2, 1935 (Labor Day). It was one of the fastest travelling hurricanes as it crossed the Atlantic at more than 50 miles per hour.</li><li>The Florida Keys recorded pressure of 892 was the lowest actually recorded over land. It is currently holds the recorded for third lowest pressure. </li></ul>"
       },
@@ -39,15 +40,16 @@
 
         "impact": {
           "casualties": "8,000",
-          "homesDestroyed": "3,600",
-          "cost": "$617,000,000"
+          "houses destroyed": "3,600",
+          "cost": "$20 million",
+          "cost in today's dollars": "$734 million"
         },
         "facts": "<ul class='h'><li>Galveston was the deadliest natural disaster in United States history. It is the third deadliest of all Atlantic hurricanes.</li><li>Storm surge played a big part in the Galveston Hurricane. With heights between 8 and 15 feet, the water flooded the city and beyond.</li><li>After Galveston, the city built a seawall to protect from flooding. They also raised the city higher. </li><li>This hurricane showed the need for tropical storms and hurricane warnings. The National Weather Service (NWS) responded to this and began issuing them when needed.</li></ul>"
       },
       "Katrina": {
         "details": {
           "category": "3, 3",
-          "date": "August 29, 2005, August 29, 2005",
+          "date": "August 29, 2005 | August 29, 2005",
           "location": "Southeast Louisana, Louisiana/Mississipi border",
           "windspeed": "130 mph, 130mph",
           "pressure": "920 mb, 920mb",
@@ -61,8 +63,9 @@
 
         "impact": {
           "casualties": "1,833",
-          "homesDestroyed": "800,000",
-          "cost": "$195,000,000,000"
+          "houses destroyed": "800,000",
+          "cost": "$125 billion",
+          "cost in today's dollars": "$195 billion"
         },
         "facts": "<ul class='h'><li>Katrina holds the record for the costliest hurricane to make landfall in the United States. </li><li>A large part of the damage in Louisiana came from flooding. While the storm surge played a big part, the flooding was worsened by the collapse of the levees (built up walls designed to prevent flooding). It is estimated that 80% of New Orleans was underwater.</li><li>Katrina made landfall more than once. The first time it made landfall as a tropical storm in Southeast Florida (near Miami). The second time it hit Southeastern Louisiana as a category 3 hurricane. The third (and last time) hurricane Katrina passed through the Mississippi Gulf Coast. It was still a category 3.</li></ul>"
       },
@@ -80,18 +83,18 @@
           "Max Windspeed": "215 mph",
           "Max Pressure": "872 mb"
         },
-
         "impact": {
           "casualties": "6",
-          "homesDestroyed": "10,000",
-          "cost": "325,000,000"
+          "houses destroyed": "10,000",
+          "cost": "462.8 million",
+          "cost in today's dollars": "$595 million"
         },
         "facts": "<ul class='h'><li>Patricia holds the record for the strongest sustained windspeed. It is also the most intense or strongest hurricane in the Western hemisphere.</li><li>This storm rapidly intensified (strengthened) over 24 hours. The winds increased from 85 to 205 miles per hour. Patricia is one of the most quickly intensifying storms.</li><li>Although this storm had incredible windspeeds and a quick strengthening, it weakened quickly. Despite its rapid decrease in strength, it still struck Mexico as a category 4 hurricane.</li></ul>"
       },
       "Sandy": {
         "details": {
           "category": "1, 2, 1",
-          "date": "October 24, 2012, October 25, October 19, 2012",
+          "date": "October 24, 2012 | October 25, 2012 | October 19, 2012",
           "location": "Jamaica, Cuba and Carribean, Southern New Jersey ",
           "windspeed": "85mph, 110mph, 80mph",
           "pressure": "972mb, 954mb, 945mb"
@@ -104,29 +107,31 @@
 
         "impact": {
           "casualties": "147",
-          "homesDestroyed": "",
-          "cost": "$86,500,000,000"
+          "houses destroyed": "",
+          "cost": "$70 billion",
+          "cost in today's dollars": "$93 billion"
         },
-        "facts": "<ul><li>abc</li></ul>"
+        "facts": "<ul class='h'><li>Hurricane Sandy is not the strongest or deadliest hurricane, but it <em>does</em> hold the record for the large hurricane in diameter. It was 1,150 miles wide!</li><li>Hurricane Sandy arrived during a full moon and high tide. These conditions along with Sandy’s storm surge caused massive flooding across New Jersey and the other New England states.</li><li>Unlike most hurricanes which turn Northeastward, Sandy turned West and headed inland across New England and into Canada.</li></ul>"
       },
       "Wilma": {
         "details": {
-          "category": "",
-          "date": "",
-          "location": "",
-          "windspeed": "",
-          "pressure": ""
+          "category": "3",
+          "date": "October 24, 2005",
+          "location": "Southwest Florida",
+          "windspeed": "120 mph",
+          "pressure": "892 mb"
         },
         "max": {
-          "Max Category": "",
-          "Max Windspeed": "",
-          "Max Pressure": ""
+          "Max Category": "5",
+          "Max Windspeed": "185 mph",
+          "Max Pressure": "882 mb"
         },
 
         "impact": {
           "casualties": "",
-          "homesDestroyed": "",
-          "cost": "$29,300,000,000"
+          "houses destroyed": "",
+          "cost": "$29 billion",
+          "cost in today's dollars": "$45 billion"
         },
         "facts": "<ul><li>abc</li></ul>"
       }
@@ -178,7 +183,7 @@
         "impact": {
           "casualties": "",
           "injuries": "",
-          "homesDestroyed": "",
+          "houses destroyed": "",
           "cost": ""
         },
         "facts": "<ul><li>abc</li></ul>"
@@ -194,7 +199,7 @@
         "impact": {
           "casualties": "",
           "injuries": "",
-          "homesDestroyed": "",
+          "houses destroyed": "",
           "cost": ""
         },
         "facts": "<ul><li>abc</li></ul>"
@@ -210,7 +215,7 @@
         "impact": {
           "casualties": "",
           "injuries": "",
-          "homesDestroyed": "",
+          "houses destroyed": "",
           "cost": ""
         },
         "facts": "<ul><li>abc</li></ul>"

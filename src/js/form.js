@@ -14,8 +14,6 @@ class Form extends React.Component {
     };
   }
 
-  // console.log(props.signedIn);
-
   accountForm() {
     console.log(this.state.formType);
     if (this.state.formType === "login") {
@@ -33,7 +31,7 @@ class Form extends React.Component {
               />
             </label>
             <label>
-              Password:{" "}
+              Password:
               <input type="password" name="pwd" className="pwd" required />
             </label>
             <button
@@ -58,12 +56,18 @@ class Form extends React.Component {
                 name="username"
                 className="username"
                 placeholder="myusername123"
-                required
+                required="required"
               />
             </label>
             <label>
-              Create a password using letters AND numbers: *
-              <input type="password" name="pwd" className="pwd" required />
+              Create a password using a mix of lowercase letters, UPPERCASE letters and numbers: *
+              <input
+                type="password"
+                name="pwd"
+                className="pwd"
+                required
+                pattern="^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])([a-zA-Z0-9]{8,16})$"
+              />
             </label>
             <label>
               Recovery Email:
@@ -92,17 +96,20 @@ class Form extends React.Component {
       data[input.getAttribute("name")] = input.value;
     }
 
-    if (method === "create") {
+    if (method === "create" && data.username !== "" && data.pwd !== "") {
       axios.post(`http://localhost:2024/account/create`, data).then(() => {
         Cookies.setCookie("username", data.username);
       });
-    } else {
-      Cookies.setCookie("username", data.username);
-    }
 
-    let a = document.createElement("a");
-    a.href = "/account";
-    a.click();
+      let a = document.createElement("a");
+      a.href = "/account";
+      a.click();
+    } else if (method === "login" && data.username !== "" && data.pwd !== "") {
+      Cookies.setCookie("username", data.username);
+      let a = document.createElement("a");
+      a.href = "/account";
+      a.click();
+    }
   }
 
   render() {
