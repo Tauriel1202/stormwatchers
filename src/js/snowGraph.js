@@ -60,7 +60,7 @@ class SnowGraph extends React.Component {
     return (
       <Plot
         className="plot"
-        data={[... graphlines]}
+        data={[...graphlines]}
         layout={{ width: 500, height: 400, title: "Snowfall per Month for Anchorage, AK (inches)" }}
       />
     );

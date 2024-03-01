@@ -18,10 +18,6 @@ class RainGraph extends React.Component {
 
   // for each year run graphline
   graphline(years, colors) {
-    let rains = [];
-
-    // console.log(this.rainfallByYear(years));
-
     return {
       x: [years], //one year
       y: [this.rainfallByYear(years)], //one rainfall value
@@ -36,7 +32,6 @@ class RainGraph extends React.Component {
     // gets years from json
     let colors = ["#007a54", "#0ac6ff", "orange", "#65e77f", "#f764b7"];
     let years = [];
-    let rains = [];
 
     for (let i = 0; i < Object.keys(Past).length; i++) {
       let pastJson = Object.keys(Past)[i];

@@ -46,11 +46,11 @@
       },
       "Katrina": {
         "details": {
-          "category": "3",
-          "date": "August 29, 2005",
-          "location": "Southeast Louisana",
-          "windspeed": "130 mph",
-          "pressure": "920 mb",
+          "category": "3, 3",
+          "date": "August 29, 2005, August 29, 2005",
+          "location": "Southeast Louisana, Louisiana/Mississipi border",
+          "windspeed": "130 mph, 130mph",
+          "pressure": "920 mb, 920mb",
           "storm surge": "25-28 ft"
         },
         "max": {
