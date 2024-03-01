@@ -128,12 +128,12 @@
         },
 
         "impact": {
-          "casualties": "",
-          "houses destroyed": "",
+          "casualties": "52",
+          "houses destroyed": "60",
           "cost": "$29 billion",
           "cost in today's dollars": "$45 billion"
         },
-        "facts": "<ul><li>abc</li></ul>"
+        "facts": "<ul class='h'><ul><li>Hurricane Wilma holds the record for the most intense hurricane as measured by pressure. It has the lowest pressure recorded for a hurricane in the Atlantic with a reading of 882 millibars. </li><li>As the 21<sup>st</sup> named storm in 2005, Wilma broke the record for the most hurricanes in a season.</li><li>Wilma was the last major hurricane to make landfall on the contiguous United States (48 US states that touch) for several years. The next major hurricane to strike occurred 2017 (Hurricane Harvey, category: 4), ending a period of no major hurricanes to hit the US that lasted 11 years and 10 months. </li></ul></ul>"
       }
     },
     "snowstorms": {
@@ -174,17 +174,18 @@
     "tornadoes": {
       "Tri-State": {
         "details": {
-          "date": "",
-          "location": "",
-          "duration": "",
-          "windspeed": "",
-          "ef-rating": ""
+          "date": "March 18, 1925",
+          "location": "Missouri, Illinois, Indiana",
+          "duration": "3 hours and 30 minutes",
+          "path length": "219 miles",
+          "windspeed": "greater than 300 mph",
+          "ef-rating": "5"
         },
         "impact": {
-          "casualties": "",
-          "injuries": "",
-          "houses destroyed": "",
-          "cost": ""
+          "casualties": "695",
+          "houses destroyed": "15,000",
+          "cost": "$16.5 million",
+          "cost in today's dollars": "$286.6 million"
         },
         "facts": "<ul><li>abc</li></ul>"
       },

@@ -690,6 +690,10 @@ label {
   height: 10em;
 }
 
+.impact {
+  height: 9em;
+}
+
 .facts div {
   height: 25em;
   border: none;
