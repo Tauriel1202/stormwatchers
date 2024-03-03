@@ -648,6 +648,7 @@ label {
 
 .lstorms select {
   border: 3.5px outset var(--accents);
+  border-radius: 10px;
   padding: 1em;
   margin: 0 1em;
 }
@@ -687,7 +688,7 @@ label {
 }
 
 .landfall {
-  height: 10em;
+  height: 13em;
 }
 
 .impact {
@@ -850,15 +851,13 @@ label {
 /*#endregion ACCOUNT*/
 
 /*#region MARKERS*/
-.tstorms li::marker {
-  content: "⚡ ";
-}
-
 .fog li::marker {
   content: "🌫 ";
 }
 
-.lightning li::marker {
+.tstorms li::marker,
+.lightning li::marker,
+.tDuring li::marker {
   content: "⚡ ";
 }
 
@@ -870,7 +869,9 @@ label {
   content: "🧊 ";
 }
 
-.sBefore li::marker {
+.sBefore li::marker,
+.hAfter li::marker,
+.tAfter li::marker {
   content: "⛅ ";
 }
 
@@ -883,16 +884,13 @@ label {
 }
 
 .hImgs li::marker,
-.h li::marker {
+.h li::marker,
+.hDuring li::marker {
   content: "🌀 ";
 }
 
 .mistyFacts li::marker {
   content: "💦 ";
-}
-
-.hDuring li::marker {
-  content: "🌀 ";
 }
 
 .hBefore li:not(li ul li)::marker {
@@ -907,27 +905,16 @@ label {
   content: "🎒 ";
 }
 
-.hAfter li::marker {
-  content: "⛅ ";
-}
-
 .tBefore li::marker {
   content: "☁ ";
-}
-
-.tDuring li::marker {
-  content: "⚡ ";
-}
-
-.tAfter li::marker {
-  content: "⛅";
 }
 
 .toBefore li::marker {
   content: "☔ ";
 }
 
-.toDuring li::marker {
+.toDuring li::marker,
+.t li::marker {
   content: "🌪 ";
 }
 

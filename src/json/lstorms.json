@@ -187,15 +187,15 @@
           "cost": "$16.5 million",
           "cost in today's dollars": "$286.6 million"
         },
-        "facts": "<ul><li>abc</li></ul>"
+        "facts": "<ul class='t'><li>The Tri-State Tornado crossed three states lines over the course of its life. These included Missouri, Illinois, and Indiana.</li><li>This was and still is the deadliest tornado in United States history. It also holds the record for the second deadliest tornado in world history.</li><li>The tornado was one of the longest-lasting tornadoes. Most last from 10-30 minutes. The Tri-State Tornado lastest 3 and a half hours!</li></ul>"
       },
       "2011 Super Outbreak": {
         "details": {
-          "date": "",
-          "location": "",
-          "duration": "",
-          "windspeed": "",
-          "ef-rating": ""
+          "date": "April 25-28, 2011",
+          "location": "Southeastern and some inner Eastern United States",
+          "duration": "4 days, although actual tornadoes were shorter",
+          "windspeed": "about 200 mph",
+          "ef-rating": "0-5, most were ef-0 or ef-1, only a few were ef-5"
         },
         "impact": {
           "casualties": "",
