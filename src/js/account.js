@@ -2,6 +2,7 @@ import React from "react";
 import Header from "./header";
 import Footer from "./footer";
 import Cookies from "./cookie";
+import axios from "axios";
 
 class Account extends React.Component {
   constructor(props) {
@@ -30,6 +31,24 @@ class Account extends React.Component {
     );
   }
 
+  deleteAccount() {
+    // return <div className="popup">
+    //   <h4>Are you sure you want to delete your account?</h4>
+    //   <button>Cancel</button>
+    //   <form method="post">
+    //     <label>Type your username here: <input</label>
+    //   </form>
+    // </div>
+    let si = Cookies.getCookie('username');
+    console.log(si)
+    axios.delete("http://localhost:2024/account/delete", si).then(() => {
+      Cookies.setCookie('username', '');
+      let a = document.createElement("a");
+      a.href = "/account";
+      a.click();
+    });
+  }
+
   myaccount() {
     return (
       <div className="myaccount">
@@ -53,7 +72,9 @@ class Account extends React.Component {
         >
           Logout
         </button>
-        <button className="hazard">Delete Account</button>
+        <button className="hazard" onClick={this.deleteAccount}>
+          Delete Account
+        </button>
       </div>
     );
   }
