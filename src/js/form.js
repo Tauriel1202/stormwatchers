@@ -10,6 +10,7 @@ class Form extends React.Component {
     super(props);
     this.state = {
       formType: new URLSearchParams(window.location.search).get("formType"),
+      profPic: new URLSearchParams(window.location.search).get("profPic"),
       signedIn: false,
       error: false,
     };
@@ -78,6 +79,13 @@ class Form extends React.Component {
               Recovery Email:
               <input type="email" name="email" className="email" />
             </label>
+            <input
+              type="hidden"
+              name="profPic"
+              className="pic"
+              value={this.state.profPic}
+            />
+
             <button
               onClick={(e) => {
                 this.postForm(e, "create");
@@ -130,6 +138,12 @@ class Form extends React.Component {
                 placeholder="myOldUserName"
               />
             </label>
+            <input
+              type="hidden"
+              name="profPic"
+              className="pic"
+              value={this.state.profPic}
+            />
             <button
               onClick={(e) => {
                 this.postForm(e, "edit");

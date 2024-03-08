@@ -883,12 +883,12 @@ button:hover {
 .selectPic {
   background-color: var(--stormblue);
   border: 3.5px outset var(--stormblue);
-  border-radius: 5px;
+  border-radius: 20px;
   width: 500px;
   height: 500px;
+  top: -3px;
+  left: -3px;
   position: absolute;
-  left: 0;
-  top: 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }

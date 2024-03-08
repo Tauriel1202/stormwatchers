@@ -12,6 +12,7 @@ class Account extends React.Component {
       signedIn: Cookies.getCookie("username"),
       dataUsername: "",
       dataEmail: "",
+      profPic: "logoOfficial_xsmall",
       runMe: true,
       picClicked: false,
     };
@@ -23,7 +24,11 @@ class Account extends React.Component {
         <h2>Account</h2>
         <div>
           <a href="/account/form?formType=login">Log in!</a>
-          <a href="/account/form?formType=create">Create an Account!</a>
+          <a
+            href={`/account/form?formType=create&profPic=${this.state.profPic}`}
+          >
+            Create an Account!
+          </a>
           {/* <button onClick={() => this.setState({ formType: "login" })}>
             Log in!
           </button>
@@ -41,7 +46,6 @@ class Account extends React.Component {
     axios
       .post("http://localhost:2024/account/delete", { username: si })
       .then(() => {
-        console.log("💩💩💩💩💩");
         Cookies.setCookie("username", "");
         let a = document.createElement("a");
         a.href = "/account";
@@ -61,6 +65,7 @@ class Account extends React.Component {
         this.setState({
           dataUsername: accountData.data.username,
           dataEmail: accountData.data.email,
+          profPic: accountData.data.profPic,
           runMe: false,
         }); //username values
 
@@ -71,21 +76,33 @@ class Account extends React.Component {
   }
 
   changePic() {
-    let profImgs = ["logoOfficial", "Snow", "waterIcon", "listImgRainbow"];
+    let profImgs = [
+      "logoOfficial_xsmall",
+      "Snow",
+      "waterIcon",
+      "listImgRainbow",
+      "lightningIcon",
+    ];
 
     return (
       <div className="selectPic">
         {profImgs.map((img) => {
           console.log(img);
           return (
-            <div key={img} className="singleImg">
+            <button
+              key={img}
+              className="singleImg"
+              onClick={() => {
+                this.setState({ profPic: img, picClicked: false });
+              }}
+            >
               <img
-                src={`../imgs/icons/${img}.png`}
+                src={`../imgs/icons/${img}.webp`}
                 alt={img}
                 width={100}
                 height={100}
               />
-            </div>
+            </button>
           );
         })}
       </div>
@@ -103,7 +120,7 @@ class Account extends React.Component {
 
     return (
       <div className="myaccount">
-        <h2>My Account {this.state.picClicked.toString()}</h2>
+        <h2>My Account</h2>
         {this.state.picClicked && this.changePic()}
         <button
           className="pic"
@@ -113,7 +130,7 @@ class Account extends React.Component {
         >
           <div className="profPic">
             <img
-              src="../imgs/icons/listImgRainbow.png"
+              src={`../imgs/icons/${this.state.profPic}.webp`}
               alt="profile"
               width={25}
               height={25}
@@ -134,7 +151,10 @@ class Account extends React.Component {
           </p>
         </div>
 
-        <a href="/account/form?formType=edit" className="edit">
+        <a
+          href={`/account/form?formType=edit&profPic=${this.state.profPic}`}
+          className="edit"
+        >
           Edit Account
         </a>
         {/* <button>Change Password</button> */}
