@@ -32,39 +32,56 @@ class Account extends React.Component {
   }
 
   deleteAccount() {
-    // return <div className="popup">
-    //   <h4>Are you sure you want to delete your account?</h4>
-    //   <button>Cancel</button>
-    //   <form method="post">
-    //     <label>Type your username here: <input</label>
-    //   </form>
-    // </div>
-    let si = Cookies.getCookie('username');
-    console.log(si)
-    axios.delete("http://localhost:2024/account/delete", si).then(() => {
-      Cookies.setCookie('username', '');
-      let a = document.createElement("a");
-      a.href = "/account";
-      a.click();
+    let si = Cookies.getCookie("username");
+    console.log(si);
+    axios
+      .post("http://localhost:2024/account/delete", { username: si })
+      .then(() => {
+        console.log("💩💩💩💩💩");
+        Cookies.setCookie("username", "");
+        let a = document.createElement("a");
+        a.href = "/account";
+        a.click();
+      });
+  }
+
+  fetchUserData() {
+    let currentUser = Cookies.getCookie("username");
+    console.log(currentUser);
+    axios.get("http://localhost:2024/account", currentUser).then((e) => {
+      console.log(e.data);
     });
   }
 
   myaccount() {
+    // this.fetchUserData();
     return (
       <div className="myaccount">
         <h2>My Account</h2>
-        <p>
-          <strong>Username: </strong>Galadriel
-        </p>
-        <p>
-          <strong>Password: </strong> ********
-        </p>
-        <p>
-          <strong>Email: </strong>ladyoflight@lorien.elf
-        </p>
-        <button>Change Username</button>
-        <button>Change Password</button>
-        <button>Change Email</button>
+        <div className="profPic">
+          <img
+            src="../imgs/icons/listImgRainbow.png"
+            alt="profile"
+            width={25}
+            height={25}
+          />
+        </div>
+        <div className="info">
+          <p>
+            <strong>Username: </strong>Galadriel
+          </p>
+          <p>
+            <strong>Password: </strong> ********
+          </p>
+          <p>
+            <strong>Email: </strong>ladyoflight@lorien.elf
+          </p>
+        </div>
+        <a href="/account/form?formType=edit" className="edit">
+          Edit Account
+        </a>
+        {/* <button>Change Password</button> */}
+        {/* <button>Change Email</button> */}
         <span></span>
         <button
           className="leave"

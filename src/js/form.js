@@ -16,11 +16,11 @@ class Form extends React.Component {
   }
 
   accountForm() {
-    console.log(this.state.formType);
     if (this.state.formType === "login") {
       return (
         <>
           <h2>Login</h2>
+          {this.state.error && <p>Username or Password incorrect.</p>}
           <form className="login" method="post">
             <label>
               Username:
@@ -88,6 +88,58 @@ class Form extends React.Component {
           </form>
         </>
       );
+    } else if (this.state.formType === "edit") {
+      return (
+        <>
+          <h2>Edit Account</h2>
+          {this.state.error && (
+            <p className="wrong">Username or Email already exists.</p>
+          )}
+          <form className="create" method="POST">
+            <label>
+              Username: *
+              <input
+                type="text"
+                name="username"
+                className="username"
+                placeholder="myusername123"
+                required="required"
+              />
+            </label>
+            <label>
+              Password using a mix of lowercase letters, UPPERCASE letters and
+              numbers: *
+              <input
+                type="password"
+                name="pwd"
+                className="pwd"
+                required
+                // pattern="^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])([a-zA-Z0-9]{8,16})$"
+              />
+            </label>
+            <label>
+              Recovery Email:
+              <input type="email" name="email" className="email" />
+            </label>
+            <label>
+              Retype Old Username to approve these changes:
+              <input
+                type="text"
+                name="oldName"
+                className="oldName"
+                placeholder="myOldUserName"
+              />
+            </label>
+            <button
+              onClick={(e) => {
+                this.postForm(e, "edit");
+              }}
+            >
+              Update Account!
+            </button>
+          </form>
+        </>
+      );
     }
   }
 
@@ -103,7 +155,7 @@ class Form extends React.Component {
 
     if (method === "create" && data.username !== "" && data.pwd !== "") {
       axios.post(`http://localhost:2024/account/create`, data).then((e) => {
-        console.log(e.data)
+        console.log(e.data);
         if (e.data.includes("username")) {
           this.setState({ error: true });
         } else {
@@ -114,10 +166,29 @@ class Form extends React.Component {
         }
       });
     } else if (method === "login" && data.username !== "" && data.pwd !== "") {
-      Cookies.setCookie("username", data.username);
-      let a = document.createElement("a");
-      a.href = "/account";
-      a.click();
+      axios.post("http://localhost:2024/account/login", data).then((e) => {
+        console.log(e.data);
+        if (e.data.includes("username") || e.data.includes("password")) {
+          this.setState({ error: true });
+        } else {
+          Cookies.setCookie("username", data.username);
+          let a = document.createElement("a");
+          a.href = "/account";
+          a.click();
+        }
+      });
+    } else if (method === "edit" && data.username !== "" && data.pwd !== "") {
+      axios.post(`http://localhost:2024/account/edit`, data).then((e) => {
+        console.log(e.data);
+        if (e.data.includes("username")) {
+          this.setState({ error: true });
+        } else {
+          Cookies.setCookie("username", data.username);
+          let a = document.createElement("a");
+          a.href = "/account";
+          a.click();
+        }
+      });
     }
   }
 
