@@ -10,6 +10,10 @@ class Account extends React.Component {
     this.state = {
       formType: "",
       signedIn: Cookies.getCookie("username"),
+      dataUsername: "",
+      dataEmail: "",
+      runMe: true,
+      picClicked: false,
     };
   }
 
@@ -48,35 +52,88 @@ class Account extends React.Component {
   fetchUserData() {
     let currentUser = Cookies.getCookie("username");
     console.log(currentUser);
-    axios.get("http://localhost:2024/account", currentUser).then((e) => {
-      console.log(e.data);
-    });
+
+    axios
+      .post("http://localhost:2024/account", { username: currentUser })
+      .then((accountData) => {
+        console.log(Object.keys(accountData.data));
+
+        this.setState({
+          dataUsername: accountData.data.username,
+          dataEmail: accountData.data.email,
+          runMe: false,
+        }); //username values
+
+        // for (let i = 1; i < Object.keys(accountData.data).length; i++) {
+        //   let dataNames = Object.keys(accountData.data)[i]; //data names
+        // }
+      });
+  }
+
+  changePic() {
+    let profImgs = ["logoOfficial", "Snow", "waterIcon", "listImgRainbow"];
+
+    return (
+      <div className="selectPic">
+        {profImgs.map((img) => {
+          console.log(img);
+          return (
+            <div key={img} className="singleImg">
+              <img
+                src={`../imgs/icons/${img}.png`}
+                alt={img}
+                width={100}
+                height={100}
+              />
+            </div>
+          );
+        })}
+      </div>
+    );
+  }
+
+  setPicClicked(value) {
+    this.setState({ picClicked: value });
   }
 
   myaccount() {
-    // this.fetchUserData();
+    if (this.state.runMe) {
+      let userData = this.fetchUserData();
+    }
+
     return (
       <div className="myaccount">
-        <h2>My Account</h2>
-        <div className="profPic">
-          <img
-            src="../imgs/icons/listImgRainbow.png"
-            alt="profile"
-            width={25}
-            height={25}
-          />
-        </div>
+        <h2>My Account {this.state.picClicked.toString()}</h2>
+        {this.state.picClicked && this.changePic()}
+        <button
+          className="pic"
+          onClick={() => {
+            this.setPicClicked(true);
+          }}
+        >
+          <div className="profPic">
+            <img
+              src="../imgs/icons/listImgRainbow.png"
+              alt="profile"
+              width={25}
+              height={25}
+            />
+          </div>
+        </button>
         <div className="info">
           <p>
-            <strong>Username: </strong>Galadriel
+            <strong>Username: </strong>
+            {this.state.dataUsername}
           </p>
           <p>
-            <strong>Password: </strong> ********
+            <strong>Password: </strong>********
           </p>
           <p>
-            <strong>Email: </strong>ladyoflight@lorien.elf
+            <strong>Email: </strong>
+            {this.state.dataEmail}
           </p>
         </div>
+
         <a href="/account/form?formType=edit" className="edit">
           Edit Account
         </a>
