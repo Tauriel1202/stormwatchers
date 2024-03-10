@@ -75,29 +75,45 @@ class Account extends React.Component {
       });
   }
 
+  updateImg(img) {
+    axios
+      .post("http://localhost:2024/account/updateImg", {
+        profPic: img,
+        oldPic: this.state.profPic,
+      })
+      .then(() => {
+        this.setState({ profPic: img, picClicked: false });
+      });
+  }
+
   changePic() {
     let profImgs = [
-      "logoOfficial_xsmall",
-      "Snow",
-      "waterIcon",
-      "listImgRainbow",
-      "lightningIcon",
+      "logoOfficial_small",
+      "Binoculars_xsmall",
+      "Cloud_xsmall",
+      "Hurricane_xsmall",
+      "Lightning_xsmall",
+      "Rainbow_xsmall",
+      "Raindrop2_xsmall",
+      "Snowflake2_xsmall",
+      "Sun_xsmall",
+      "Tornado_xsmall",
     ];
 
     return (
       <div className="selectPic">
+        <h3>Choose an Avatar</h3>
         {profImgs.map((img) => {
-          console.log(img);
           return (
             <button
               key={img}
               className="singleImg"
               onClick={() => {
-                this.setState({ profPic: img, picClicked: false });
+                this.updateImg(img);
               }}
             >
               <img
-                src={`../imgs/icons/${img}.webp`}
+                src={`../imgs/profPics/${img}.webp`}
                 alt={img}
                 width={100}
                 height={100}
@@ -130,7 +146,7 @@ class Account extends React.Component {
         >
           <div className="profPic">
             <img
-              src={`../imgs/icons/${this.state.profPic}.webp`}
+              src={`../imgs/profPics/${this.state.profPic}.webp`}
               alt="profile"
               width={25}
               height={25}

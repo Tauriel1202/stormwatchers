@@ -766,9 +766,10 @@ label {
 }
 
 .myaccount .profPic {
+  background-color: var(--black);
   width: 12em;
   max-height: 120px;
-  border: 3.5px outset var(--accents);
+  border: 5px outset var(--accents);
   border-radius: 10em;
   overflow: hidden;
   padding: 1em 0;
@@ -798,9 +799,16 @@ button:hover {
   border-radius: 10px;
 }
 
-.myaccount h2 {
+.myaccount h2,
+.selectPic h3 {
   grid-column: 1 / 3;
   grid-row: 1 / 2;
+}
+
+.selectPic h3 {
+  color: var(--lightgrey);
+  font-size: 1.5em;
+  padding: 1em;
 }
 
 .myaccount .edit {
@@ -813,10 +821,6 @@ button:hover {
   padding: 0.6em 0;
   grid-column: 2 / 3;
   grid-row: 3 / 4;
-}
-
-.myaccount button:nth-of-type(3) {
-  margin-bottom: 1.5em;
 }
 
 .myaccount strong {
@@ -891,10 +895,14 @@ button:hover {
   position: absolute;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  row-gap: 1em;
+  overflow-y: scroll;
 }
 
 .singleImg {
-  width: 10em;
+  background-color: black;
+  width: 15em;
+  height: 12em;
   height: auto;
   margin: auto;
 }
