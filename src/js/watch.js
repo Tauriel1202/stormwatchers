@@ -42,10 +42,29 @@ class Watch extends React.Component {
             />
           </div>
         </div>
-        <div className="buttons">
-          <button onClick={() => {}}>Update</button>
-          <button>Delete</button>
-        </div>
+        {this.state.signedIn && (
+          <div className="buttons">
+            <button
+              className="update"
+              onClick={() => {
+                this.setState({ formOn: true });
+              }}
+            >
+              Update
+            </button>
+            <button className="hazard">Delete</button>
+          </div>
+        )}
+        {!this.state.signedIn && (
+          <div className="buttons">
+            <button disabled className="update">
+              Update
+            </button>
+            <button disabled className="delete">
+              Delete
+            </button>
+          </div>
+        )}
       </div>
     );
   }
@@ -124,18 +143,19 @@ class Watch extends React.Component {
       return (
         <span>
           <button
-            onClick={() => {
-              this.setState({ error: true });
-            }}
+            disabled
+            // onClick={() => {
+            //   this.setState({ error: true });
+            // }}
           >
             Post a Weather Event!
           </button>
-          {this.state.error && (
+          {/* {this.state.error && (
             <p>
               Only signed-in users can post events.
               <a href="./account">Log in here!</a>
             </p>
-          )}
+          )} */}
         </span>
       );
     }
@@ -147,6 +167,12 @@ class Watch extends React.Component {
         <Header />
         <main className="watch">
           <div className="top">
+            {!this.state.signedIn && (
+              <p className="banner">
+                Post, update, and delete actions are turned off. -
+                <a href="./account"> Sign in here</a> to enable them.
+              </p>
+            )}
             <h2>Weather Event Reports</h2>
             {!this.state.formOn && this.buttons()}
           </div>

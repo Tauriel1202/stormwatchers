@@ -1,0 +1,109 @@
+/*#region setup*/
+:root {
+  --accents: #00ccf5ff;
+  --black: #010114ff;
+  --grey: #173753ff;
+  --lightgrey: #e3eced;
+  --stormblue: #005d8fff;
+  --yellow: #fffec1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+/*#endregion setup*/
+/* #region alignment*/
+h2,
+h3,
+h4,
+.tips,
+.report,
+.prints,
+.cloudLayer,
+.weatherTile,
+.formula,
+.sats,
+label,
+.prepContent,
+.noType,
+.buttons a,
+.myaccount .edit,
+.top p,
+.postDeets p,
+.headerContent,
+footer,
+header nav {
+  text-align: center;
+}
+
+.prepTypeContent,
+.formMain label,
+.postForm label,
+.prep label {
+  text-align: left;
+}
+/*#endregion alignment*/
+/*#region PAINTED*/
+nav ul,
+.headerContent p,
+.report p,
+.forecast h3,
+.deets h3,
+.headerContent button {
+  background-color: var(--accents);
+}
+
+.myaccount .profPic {
+  background-color: black;
+}
+
+.during,
+.leave {
+  background-color: var(--grey);
+}
+
+.tips,
+.report,
+.prints,
+.linkP a,
+.forecast,
+.formula,
+.title h4,
+.summaryDiv aside h4,
+.summaryDiv aside nav a,
+.deets,
+.prepContent,
+.past,
+.lstorms .noType,
+.hurricanes div,
+.buttons,
+.formMain,
+.account,
+.pic,
+.posts,
+.postForm {
+  background-color: var(--lightgrey);
+}
+
+header,
+.tips h3,
+.summaryDiv aside,
+.summaryDiv aside h4,
+.after,
+.hurricanes,
+.selectPic,
+footer {
+  background-color: var(--stormblue);
+}
+
+finishMe {
+  background-color: var(--yellow);
+}
+
+/*#endregion PAINTED*/
