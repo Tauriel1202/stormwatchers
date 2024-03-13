@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <label>Pick an img<input type="file" name="img" /></label>
+
+    <canvas id="myCanvas" width="250" height="160"> </canvas>
+    <script>
+      const canvas = document.querySelector("#myCanvas");
+      const ctx = canvas.getContext("2d");
+      const input = document.querySelector("input");
+
+      input.onchange = function (e) {
+        console.log(e);
+        let img = new Image();
+        img.src = URL.createObjectURL(e.target.files[0]);
+        img.onload = function () {
+          let aspect = this.height/canvas.height;
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+          ctx.drawImage(img, 0, 0, canvas.width*aspect, canvas.height);
+          let data = ctx.getImageData(0, 0, canvas.width, canvas.height);
+          console.log(data)
+        };
+        console.log(img.src);
+      };
+    </script>
+  </body>
+</html>

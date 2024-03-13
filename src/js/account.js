@@ -12,7 +12,7 @@ class Account extends React.Component {
       signedIn: Cookies.getCookie("username"),
       dataUsername: "",
       dataEmail: "",
-      profPic: "logoOfficial_xsmall",
+      profPic: "logoOfficial_small",
       runMe: true,
       picClicked: false,
     };

@@ -1,8 +1,17 @@
 import React from "react";
+import Cookies from "./cookie";
 // import accountImg from "../imgs/icons/accountImg.png";
 // import logo from "../imgs/icons/logoPlaceholder.png";
 
-function Header() {
+class Header extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      signedIn: Cookies.getCookie('username')
+    }
+  }
+  
+  render(){
   return (
     <>
       <header>
@@ -19,7 +28,7 @@ function Header() {
           <div className="imgDiv">
             <a href="/account">
               <img
-                src="https://github.com/Tauriel1202/stormwatchers/blob/master/public/imgs/icons/accountImg.png?raw=true"
+                src='../imgs/icons/Rain.png'
                 alt="account"
                 width="100"
                 height="100"
@@ -63,7 +72,7 @@ function Header() {
         </nav>
       </header>
     </>
-  );
+  );}
 }
 
 export default Header;
