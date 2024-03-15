@@ -102,8 +102,65 @@ footer {
   background-color: var(--stormblue);
 }
 
-finishMe {
+header nav li:hover,
+.before,
+.myaccount .edit {
   background-color: var(--yellow);
 }
 
+header,
+.tips h3,
+.summaryDiv aside,
+.summaryDiv aside a,
+.all a,
+.during,
+.after,
+.hurricanes,
+.selectPic h3,
+.myaccount .leave,
+.myaccount .hazard,
+.banner,
+button.hazard,
+.watch .leave,
+footer {
+  color: var(--lightgrey);
+}
+
+nav li,
+nav li a,
+.report a,
+.summaryDiv aside h3,
+.buttons a {
+  color: var(--black);
+}
+
+.tile h4,
+.summaryDiv aside nav a,
+.deets span,
+.hurricanes div {
+  color: var(--grey);
+}
+
+.banner a {
+  color: var(--yellow);
+}
+
 /*#endregion PAINTED*/
+/*#region padding*/
+header .imgDiv:first-of-type,
+footer .imgDiv,
+.tips h3,
+.highlightedStorm h3,
+.formula p,
+.prep select,
+.hurricanes h3,
+.buttons a,
+.formMain input,
+.formMain button,
+.posts .postUser,
+.postForm input:not(.eventPic),
+.postForm textarea,
+.banner {
+  padding: 0.5em;
+}
+/*#endregion padding*/
