@@ -25,6 +25,7 @@ class Lstorms extends React.Component {
         let landfallDeets = json[sName].details; //landfall info
         let maxDeets = json[sName].max; //max info
         let impactDeets = json[sName].impact; //impact info
+        let note = json[sName].note; //notes
 
         console.log(json[sName], landfallDeets);
 
@@ -36,6 +37,14 @@ class Lstorms extends React.Component {
               </li>
             );
           });
+        }
+
+        function noteFunc(note) {
+          if (note !== '') {
+            return <p>{note}</p>;
+          } else {
+            return <p className="noStyle"></p>
+          }
         }
 
         return (
@@ -62,6 +71,7 @@ class Lstorms extends React.Component {
               <div
                 dangerouslySetInnerHTML={{ __html: json[sName].facts }}
               ></div>
+              {noteFunc(note)}
             </div>
           </div>
         );

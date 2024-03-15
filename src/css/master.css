@@ -696,9 +696,23 @@ label {
 }
 
 .facts div {
-  height: 25em;
+  /* height: 25em; */
   border: none;
   padding: 0;
+}
+
+.facts {
+  height: 30em;
+}
+
+.facts p {
+  background-color: var(--yellow);
+  padding: 1em;
+  margin-bottom: 1em;
+}
+
+.facts .noStyle {
+  display: none;
 }
 
 .facts li {

@@ -21,7 +21,8 @@
           "cost": "at least $6 million",
           "cost in today's dollars": "at least $133 million"
         },
-        "facts": "<ul class='h'><li>This storm was the first hurricane in recorded United States history to make landfall as a category five hurricane! It caused massive damage and wiped out much of the Keys.</li><li>The Florida Keys hurricane of 1935 is also called the Labor Day hurricane as it arrived on September 2, 1935 (Labor Day). It was one of the fastest travelling hurricanes as it crossed the Atlantic at more than 50 miles per hour.</li><li>The Florida Keys recorded pressure of 892 was the lowest actually recorded over land. It is currently holds the recorded for third lowest pressure. </li></ul>"
+        "facts": "<ul class='h'><li>This storm was the first hurricane in recorded United States history to make landfall as a category five hurricane! It caused massive damage and wiped out much of the Keys.</li><li>The Florida Keys hurricane of 1935 is also called the Labor Day hurricane as it arrived on September 2, 1935 (Labor Day). It was one of the fastest travelling hurricanes as it crossed the Atlantic at more than 50 miles per hour.</li><li>The Florida Keys recorded pressure of 892 was the lowest actually recorded over land. It is currently holds the recorded for third lowest pressure. </li></ul>",
+        "note": ""
       },
       "Galveston": {
         "details": {
@@ -44,7 +45,8 @@
           "cost": "$20 million",
           "cost in today's dollars": "$734 million"
         },
-        "facts": "<ul class='h'><li>Galveston was the deadliest natural disaster in United States history. It is the third deadliest of all Atlantic hurricanes.</li><li>Storm surge played a big part in the Galveston Hurricane. With heights between 8 and 15 feet, the water flooded the city and beyond.</li><li>After Galveston, the city built a seawall to protect from flooding. They also raised the city higher. </li><li>This hurricane showed the need for tropical storms and hurricane warnings. The National Weather Service (NWS) responded to this and began issuing them when needed.</li></ul>"
+        "facts": "<ul class='h'><li>Galveston was the deadliest natural disaster in United States history. It is the third deadliest of all Atlantic hurricanes.</li><li>Storm surge played a big part in the Galveston Hurricane. With heights between 8 and 15 feet, the water flooded the city and beyond.</li><li>After Galveston, the city built a seawall to protect from flooding. They also raised the city higher. </li><li>This hurricane showed the need for tropical storms and hurricane warnings. The National Weather Service (NWS) responded to this and began issuing them when needed.</li></ul>",
+        "note": ""
       },
       "Katrina": {
         "details": {
@@ -67,7 +69,8 @@
           "cost": "$125 billion",
           "cost in today's dollars": "$195 billion"
         },
-        "facts": "<ul class='h'><li>Katrina holds the record for the costliest hurricane to make landfall in the United States. </li><li>A large part of the damage in Louisiana came from flooding. While the storm surge played a big part, the flooding was worsened by the collapse of the levees (built up walls designed to prevent flooding). It is estimated that 80% of New Orleans was underwater.</li><li>Katrina made landfall more than once. The first time it made landfall as a tropical storm in Southeast Florida (near Miami). The second time it hit Southeastern Louisiana as a category 3 hurricane. The third (and last time) hurricane Katrina passed through the Mississippi Gulf Coast. It was still a category 3.</li></ul>"
+        "facts": "<ul class='h'><li>Katrina holds the record for the costliest hurricane to make landfall in the United States. </li><li>A large part of the damage in Louisiana came from flooding. While the storm surge played a big part, the flooding was worsened by the collapse of the levees (built up walls designed to prevent flooding). It is estimated that 80% of New Orleans was underwater.</li><li>Katrina made landfall more than once. The first time it made landfall as a tropical storm in Southeast Florida (near Miami). The second time it hit Southeastern Louisiana as a category 3 hurricane. The third (and last time) hurricane Katrina passed through the Mississippi Gulf Coast. It was still a category 3.</li></ul>",
+        "note": ""
       },
       "Patricia": {
         "details": {
@@ -89,7 +92,8 @@
           "cost": "462.8 million",
           "cost in today's dollars": "$595 million"
         },
-        "facts": "<ul class='h'><li>Patricia holds the record for the strongest sustained windspeed. It is also the most intense or strongest hurricane in the Western hemisphere.</li><li>This storm rapidly intensified (strengthened) over 24 hours. The winds increased from 85 to 205 miles per hour. Patricia is one of the most quickly intensifying storms.</li><li>Although this storm had incredible windspeeds and a quick strengthening, it weakened quickly. Despite its rapid decrease in strength, it still struck Mexico as a category 4 hurricane.</li></ul>"
+        "facts": "<ul class='h'><li>Patricia holds the record for the strongest sustained windspeed. It is also the most intense or strongest hurricane in the Western hemisphere.</li><li>This storm rapidly intensified (strengthened) over 24 hours. The winds increased from 85 to 205 miles per hour. Patricia is one of the most quickly intensifying storms.</li><li>Although this storm had incredible windspeeds and a quick strengthening, it weakened quickly. Despite its rapid decrease in strength, it still struck Mexico as a category 4 hurricane.</li></ul>",
+        "note": ""
       },
       "Sandy": {
         "details": {
@@ -111,7 +115,8 @@
           "cost": "$70 billion",
           "cost in today's dollars": "$93 billion"
         },
-        "facts": "<ul class='h'><li>Hurricane Sandy is not the strongest or deadliest hurricane, but it <em>does</em> hold the record for the large hurricane in diameter. It was 1,150 miles wide!</li><li>Hurricane Sandy arrived during a full moon and high tide. These conditions along with Sandy’s storm surge caused massive flooding across New Jersey and the other New England states.</li><li>Unlike most hurricanes which turn Northeastward, Sandy turned West and headed inland across New England and into Canada.</li></ul>"
+        "facts": "<ul class='h'><li>Hurricane Sandy is not the strongest or deadliest hurricane, but it <em>does</em> hold the record for the large hurricane in diameter. It was 1,150 miles wide!</li><li>Hurricane Sandy arrived during a full moon and high tide. These conditions along with Sandy’s storm surge caused massive flooding across New Jersey and the other New England states.</li><li>Unlike most hurricanes which turn Northeastward, Sandy turned West and headed inland across New England and into Canada.</li></ul>",
+        "note": ""
       },
       "Wilma": {
         "details": {
@@ -133,42 +138,63 @@
           "cost": "$29 billion",
           "cost in today's dollars": "$45 billion"
         },
-        "facts": "<ul class='h'><ul><li>Hurricane Wilma holds the record for the most intense hurricane as measured by pressure. It has the lowest pressure recorded for a hurricane in the Atlantic with a reading of 882 millibars. </li><li>As the 21<sup>st</sup> named storm in 2005, Wilma broke the record for the most hurricanes in a season.</li><li>Wilma was the last major hurricane to make landfall on the contiguous United States (48 US states that touch) for several years. The next major hurricane to strike occurred 2017 (Hurricane Harvey, category: 4), ending a period of no major hurricanes to hit the US that lasted 11 years and 10 months. </li></ul></ul>"
+        "facts": "<ul class='h'><ul><li>Hurricane Wilma holds the record for the most intense hurricane as measured by pressure. It has the lowest pressure recorded for a hurricane in the Atlantic with a reading of 882 millibars. </li><li>As the 21<sup>st</sup> named storm in 2005, Wilma broke the record for the most hurricanes in a season.</li><li>Wilma was the last major hurricane to make landfall on the contiguous United States (48 US states that touch) for several years. The next major hurricane to strike occurred 2017 (Hurricane Harvey, category: 4), ending a period of no major hurricanes to hit the US that lasted 11 years and 10 months. </li></ul></ul>",
+        "note": ""
       }
     },
     "snowstorms": {
-      "Great Blizzard": {
+      "Great Blizzard of '88": {
         "details": {
-          "date": "",
-          "snowAmountIN": ""
+          "date": "March 12 - 14, 1888",
+          "location": "East Coast: Maine to Maryland, East Canada",
+          "duration": "3 days",
+          "total snow amount": "40-60 inches",
+          "windspeed": "40-60 mph",
+          "lowest temperature": "6°F"
         },
         "impact": {
-          "cost": "",
-          "powerOutages": ""
+          "casualties": "400",
+          "powerOutages": "trains and telegraph shut down",
+          "cost": "at least $20 million",
+          "cost in today's dollars": "$810 million"
         },
-        "facts": "<ul><li>abc</li></ul>"
+        "facts": "<ul><li>The Great Blizzard has a few different names. These include the Great Blizzard of 1888, the Great Blizzard of ’88, the Great White Blizzard, and the Great White Hurricane.</li><li>This snowstorm set the record for the most severe (snowiest) blizzard in recorded United States history with up to 50 inches of snow dropped over 3 days. Some of the snow drifts were 30 feet tall where the wind blew them!</li><li>The blizzard was one of the most unusual blizzards in American history because of its high snow totals, strong winds, lateness in the season, and impact on the people. It was also unexpected because the days prior had been warmer and rainy.</ li></ul>",
+        "note": ""
       },
       "Blizzard of '78": {
         "details": {
-          "date": "",
-          "snowAmountIN": ""
+          "date": "March 12 - 14, 1888",
+          "location": "",
+          "duration": "",
+          "total snow amount (in)": "",
+          "windspeed": "",
+          "lowest temperature": ""
         },
         "impact": {
-          "cost": "",
-          "powerOutages": ""
+          "casualties": "",
+          "powerOutages": "",
+          "cost": ""
         },
-        "facts": "<ul><li>abc</li></ul>"
+        "facts": "<ul><li>abc</li></ul>",
+        "note": ""
       },
       "Blizzard of the Century": {
         "details": {
-          "date": "",
-          "snowAmountIN": ""
+          "date": "March 12 - 14, 1993",
+          "location": "the East Coast from Florida to Maine and as far West as western Alabama, Tennesee, and Kentucky",
+          "duration": "3 days",
+          "total snow amount": "depends on the place",
+          "windspeed": "120 mph",
+          "lowest temperature": "-12°F"
         },
         "impact": {
-          "cost": "",
-          "powerOutages": ""
+          "casualties": "270",
+          "powerOutages": "10 million people",
+          "cost": "5.5 billion",
+          "cost in today's dollars": " 11.6 billion"
         },
-        "facts": "<ul><li>abc</li></ul>"
+        "facts": "<ul><li>abc</li></ul>",
+        "note": ""
       }
     },
     "tornadoes": {
@@ -187,39 +213,44 @@
           "cost": "$16.5 million",
           "cost in today's dollars": "$286.6 million"
         },
-        "facts": "<ul class='t'><li>The Tri-State Tornado crossed three states lines over the course of its life. These included Missouri, Illinois, and Indiana.</li><li>This was and still is the deadliest tornado in United States history. It also holds the record for the second deadliest tornado in world history.</li><li>The tornado was one of the longest-lasting tornadoes. Most last from 10-30 minutes. The Tri-State Tornado lastest 3 and a half hours!</li></ul>"
+        "facts": "<ul class='t'><li>The Tri-State Tornado crossed three states lines over the course of its life. These included Missouri, Illinois, and Indiana.</li><li>This was and still is the deadliest tornado in United States history. It also holds the record for the second deadliest tornado in world history.</li><li>The tornado was one of the longest-lasting tornadoes. Most last from 10-30 minutes. The Tri-State Tornado lastest 3 and a half hours!</li></ul>",
+        "note": ""
       },
       "2011 Super Outbreak": {
         "details": {
           "date": "April 25-28, 2011",
           "location": "Southeastern and some inner Eastern United States",
-          "duration": "4 days, although actual tornadoes were shorter",
+          "duration": "4 days, although actual tornadoes were much shorter-lived",
+          "path length": "total length: about 3,200 miles, single paths were much shorter",
           "windspeed": "about 200 mph",
           "ef-rating": "0-5, most were ef-0 or ef-1, only a few were ef-5"
         },
         "impact": {
-          "casualties": "",
-          "injuries": "",
-          "houses destroyed": "",
-          "cost": ""
+          "casualties": "330",
+          "houses destroyed": "there are no specific total number, but some sources say about 5000",
+          "cost": "$10.2 billion",
+          "cost in today's dollars": "13,8 billion"
         },
-        "facts": "<ul><li>abc</li></ul>"
+        "facts": "<ul class='t'><ul><li>The 2011 Super Tornado Outbreak broke the record for the most continuous tornadoes during an outbreak. The four-day event produced over 300 tornadoes.</li><li>This event affected over 15 states with the tracks of around 200 tornadoes counted in the Southeast.</li><li>Tornadoes most commonly form in ‘Tornado Alley,’ which includes Texas, Oklahoma, Kansas, Nebraska, South Dakota, eastern Colorado, and Iowa. However, the tornado outbreak occurred mostly outside of this region (except for Texas), showing that EF-4 and 5 tornadoes can form outside of Tornado Alley.</li></ul></ul>",
+        "note": "*This is a collection of tornadoes not a specific tornado event."
       },
-      "El-Reno, Oklahoma": {
+      "2011 Joplin Tornado": {
         "details": {
-          "date": "",
-          "location": "",
-          "duration": "",
-          "windspeed": "",
-          "ef-rating": ""
+          "date": "May 22, 2011",
+          "location": "Joplin, Missouri",
+          "duration": "38 minutes",
+          "path length": "22 miles",
+          "windspeed": "more than 200 mph",
+          "ef-rating": "5"
         },
         "impact": {
-          "casualties": "",
-          "injuries": "",
-          "houses destroyed": "",
-          "cost": ""
+          "casualties": "158",
+          "houses destroyed": "8000",
+          "cost": "2.8 billion",
+          "cost in today's dollars": "3.8 billion"
         },
-        "facts": "<ul><li>abc</li></ul>"
+        "facts": "<ul class='t'><ul><li>This tornado was so destructive that it created a 6-mile scar through the town. It took about three years to rebuild, and the trees have still not all come back. </li><li>The 2011 Joplin tornado is ranked as one of the deadliest tornadoes in United States history. It currently holds the record for seventh-deadliest.</li><li>The 2011 Joplin tornado also holds the record for the costliest tornado in the Unites States at $2.8 billion dollars in 2011.</li></ul></ul>",
+        "note": ""
       }
     }
   }
