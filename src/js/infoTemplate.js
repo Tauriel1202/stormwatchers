@@ -49,18 +49,18 @@ function InfoTemplate() {
       <main className="weather">
         <div className="summaryDiv" key={stateWeatherType}>
           <aside>
-            <h3>Navigation</h3>
-            <h4 className="all">
+            <h2>Navigation</h2>
+            <h3 className="all">
               <a href="/weather">All Weather Types</a>
-            </h4>
+            </h3>
             {Object.keys(weatherJSON.weatherSummaries).map((wType, i) => {
               return (
-                  <h4 key={wType + i}>
+                  <h3 key={wType + i}>
                     <a href={`/weather/summary?weatherType=${wType}`}>
                       {toTitleCase(wType)}
                     </a>
                     {wType === stateWeatherType && miniNav()}
-                  </h4>
+                  </h3>
               );
             })}
           </aside>

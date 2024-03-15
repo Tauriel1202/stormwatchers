@@ -101,7 +101,8 @@
           "date": "October 24, 2012 | October 25, 2012 | October 19, 2012",
           "location": "Jamaica, Cuba and Carribean, Southern New Jersey ",
           "windspeed": "85mph, 110mph, 80mph",
-          "pressure": "972mb, 954mb, 945mb"
+          "pressure": "972mb, 954mb, 945mb",
+          "storm surge": "11-14 ft"
         },
         "max": {
           "Max Category": "2",
@@ -124,7 +125,8 @@
           "date": "October 24, 2005",
           "location": "Southwest Florida",
           "windspeed": "120 mph",
-          "pressure": "892 mb"
+          "pressure": "892 mb",
+          "storm surge": "4-8 ft, although some places may have had 10 ft"
         },
         "max": {
           "Max Category": "5",

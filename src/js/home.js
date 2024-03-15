@@ -121,7 +121,7 @@ class App extends React.Component {
                 <h3>Legendary Storm Spotlight</h3>
                 <p className="fact">{this.legend()}</p>
                 <p className="linkP">
-                  <a>Visit Storm!</a>
+                  <a href='./lstorm'>Visit Storm!</a>
                 </p>
               </div>
             </div>
