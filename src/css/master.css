@@ -58,6 +58,7 @@ nav ul,
 .headerContent p {
   background-color: var(--accents);
   display: flex;
+  /* you are here*/
   flex-wrap: wrap;
   padding: 0 0.5em;
 }
@@ -298,8 +299,7 @@ h2 {
   margin: 2.5% auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-column: 1em;
-  grid-row: 1em;
+
 }
 
 .tile {
@@ -577,7 +577,6 @@ label {
 .past section {
   margin: 2em auto 3em;
   display: grid;
-  grid-column: 1fr 1fr;
   column-gap: 1em;
 }
 
@@ -853,15 +852,13 @@ button:hover {
   background-color: var(--grey);
   color: var(--lightgrey);
   border: 3.5px inset var(--grey);
-  /* grid-column: 1 / 3; */
-  /* grid-row: 6 / 7; */
+
 }
 
 .myaccount .hazard {
   background-color: red;
   color: var(--lightgrey);
   border: 3.5px outset red;
-  /* grid-row: 7 / 8; */
 }
 
 .formMain label {
@@ -911,7 +908,6 @@ button:hover {
 .singleImg {
   background-color: black;
   width: 15em;
-  height: 12em;
   height: auto;
   margin: auto;
 }
@@ -1107,7 +1103,7 @@ button.hazard {
   content: "❄ ";
 }
 
-.sAfter li::marker {
+.sAfter li::marker, .s li::marker {
   content: "⛄ ";
 }
 

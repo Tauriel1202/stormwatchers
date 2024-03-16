@@ -160,30 +160,31 @@
           "cost": "at least $20 million",
           "cost in today's dollars": "$810 million"
         },
-        "facts": "<ul><li>The Great Blizzard has a few different names. These include the Great Blizzard of 1888, the Great Blizzard of ’88, the Great White Blizzard, and the Great White Hurricane.</li><li>This snowstorm set the record for the most severe (snowiest) blizzard in recorded United States history with up to 50 inches of snow dropped over 3 days. Some of the snow drifts were 30 feet tall where the wind blew them!</li><li>The blizzard was one of the most unusual blizzards in American history because of its high snow totals, strong winds, lateness in the season, and impact on the people. It was also unexpected because the days prior had been warmer and rainy.</ li></ul>",
+        "facts": "<ul class='s'><li>The Great Blizzard has a few different names. These include the Great Blizzard of 1888, the Great Blizzard of ’88, the Great White Blizzard, and the Great White Hurricane.</li><li>This snowstorm set the record for the most severe (snowiest) blizzard in recorded United States history with up to 50 inches of snow dropped over 3 days. Some of the snow drifts were 30 feet tall where the wind blew them!</li><li>The blizzard was one of the most unusual blizzards in American history because of its high snow totals, strong winds, lateness in the season, and impact on the people. It was also unexpected because the days prior had been warmer and rainy.</ li></ul>",
         "note": ""
       },
       "Blizzard of '78": {
         "details": {
-          "date": "March 12 - 14, 1888",
-          "location": "",
-          "duration": "",
-          "total snow amount (in)": "",
-          "windspeed": "",
-          "lowest temperature": ""
+          "date": "February 5-7, 1978",
+          "location": "New England",
+          "duration": "3 days",
+          "total snow amount": "27 inches",
+          "windspeed": "80-110 mph",
+          "lowest temperature": "0°F"
         },
         "impact": {
-          "casualties": "",
-          "powerOutages": "",
-          "cost": ""
+          "casualties": "99",
+          "powerOutages": "600,000",
+          "cost": "$500 million",
+          "cost in today's dollars": "$2 billion"
         },
-        "facts": "<ul><li>abc</li></ul>",
+        "facts": "<ul class='s'><li>Because the snow accumulated (piled up) over a short amount of time, people were stranded for days in their houses or cars. Some left their cars, and others slept in them until they had to be evacuated. </li><li>The Northeastern United States Blizzard of ’78 broke snowfall records in a couple of New England States. Boston received 27 inches, and Providence had 28 inches.</li><li>This storm showed us the importance of emergency preparedness, so people are prepared when storms hit, and everything stops. It also led to improvements in forecasting as well as emergency responses. </li></ul>",
         "note": ""
       },
       "Blizzard of the Century": {
         "details": {
           "date": "March 12 - 14, 1993",
-          "location": "the East Coast from Florida to Maine and as far West as western Alabama, Tennesee, and Kentucky",
+          "location": "the East Coast, Central United States, and Caribbean",
           "duration": "3 days",
           "total snow amount": "depends on the place",
           "windspeed": "120 mph",
@@ -195,7 +196,7 @@
           "cost": "5.5 billion",
           "cost in today's dollars": " 11.6 billion"
         },
-        "facts": "<ul><li>abc</li></ul>",
+        "facts": "<ul class='s'><li>The Storm of the Century was a large storm that reached all the way from the Caribbean to Eastern Canada. It covered the whole East Coast and stretched as far inland as western Tennessee and Kentucky. </li><li>The storm was forecast days in advance, and when it came, it showed the importance of accurate forecasting. Forecasters knew it would be a large storm that would travel up the coast, which helped reduce some of the impact of the storm. </li><li>To Southeastern United States people, this storm was an unnamed early hurricane because of its strong winds, tornadoes, and storm surge. Some of the winds reached from 100-120 mph, making it a category 2 or 3 hurricane. It also spawned 11 tornadoes, making it unusual for a winter storm. </li></ul>",
         "note": ""
       }
     },
