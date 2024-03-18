@@ -7,11 +7,13 @@ class Header extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      signedIn: Cookies.getCookie('username')
+      signedIn: Cookies.getCookie('username'),
+      userPic: Cookies.getCookie('myImg')
     }
   }
   
   render(){
+    console.log(this.state.userPic)
   return (
     <>
       <header>
@@ -28,7 +30,7 @@ class Header extends React.Component {
           <div className="imgDiv">
             <a href="/account">
               <img
-                src='../imgs/icons/Rain.png'
+                src={`../imgs/profPics/${this.state.userPic}.webp`}
                 alt="account"
                 width="100"
                 height="100"

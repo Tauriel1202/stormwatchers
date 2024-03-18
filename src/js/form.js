@@ -3,7 +3,6 @@ import React from "react";
 import Header from "./header";
 import Footer from "./footer";
 import axios from "axios";
-import { useNavigate, Navigate } from "react-router-dom";
 
 class Form extends React.Component {
   constructor(props) {
@@ -181,7 +180,6 @@ class Form extends React.Component {
       });
     } else if (method === "login" && data.username !== "" && data.pwd !== "") {
       axios.post("http://localhost:2024/account/login", data).then((e) => {
-        console.log(e.data);
         if (e.data.includes("username") || e.data.includes("password")) {
           this.setState({ error: true });
         } else {

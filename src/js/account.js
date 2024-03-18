@@ -47,6 +47,7 @@ class Account extends React.Component {
       .post("http://localhost:2024/account/delete", { username: si })
       .then(() => {
         Cookies.setCookie("username", "");
+        Cookies.setCookie("myImg", "logoOfficial_xsmall");
         let a = document.createElement("a");
         a.href = "/account";
         a.click();
@@ -61,6 +62,7 @@ class Account extends React.Component {
       .post("http://localhost:2024/account", { username: currentUser })
       .then((accountData) => {
         console.log(Object.keys(accountData.data));
+        Cookies.setCookie('myImg', accountData.data.profPic)
 
         this.setState({
           dataUsername: accountData.data.username,
@@ -69,9 +71,8 @@ class Account extends React.Component {
           runMe: false,
         }); //username values
 
-        // for (let i = 1; i < Object.keys(accountData.data).length; i++) {
-        //   let dataNames = Object.keys(accountData.data)[i]; //data names
-        // }
+        console.log(this.state.profPic);
+
       });
   }
 
@@ -82,6 +83,7 @@ class Account extends React.Component {
         oldPic: this.state.profPic,
       })
       .then(() => {
+        Cookies.setCookie("myImg", img);
         this.setState({ profPic: img, picClicked: false });
       });
   }
@@ -178,7 +180,10 @@ class Account extends React.Component {
         <span></span>
         <button
           className="leave"
-          onClick={() => Cookies.deleteCookie("username")}
+          onClick={() => {
+            Cookies.deleteCookie("username");
+            Cookies.deleteCookie("myImg");
+          }}
         >
           Logout
         </button>

@@ -2,76 +2,87 @@ import React from "react";
 import Header from "./header";
 import Footer from "./footer";
 import Cookies from "./cookie";
+import axios from "axios";
 
 class Watch extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       signedIn: Cookies.getCookie("username"),
+      myImg: Cookies.getCookie("myImg"),
       error: false,
       formOn: false,
     };
   }
 
-  getPosts() {
-    return (
-      <div className="posts">
-        <div className="postUser">
-          <div className="imgDiv">
-            <img
-              src="../imgs/profPics/logoOfficial_small.webp"
-              alt="user"
-              width={100}
-              height={100}
-            />
+  displayPosts() {
+    axios.post("http://localhost:2024/stormwatch").then((posts) => {
+      console.log(posts.data);
+
+      for (let i = 0; i < posts.data.length; i++) {
+        console.log(posts.data[i].username);
+        let ettPost = posts.data[i];
+
+        return (
+          <div className="posts">
+            <div className="postUser">
+              <div className="imgDiv">
+                <img
+                  src={`../imgs/profPics/${ettPost.myImg}.webp`}
+                  alt="user"
+                  width={100}
+                  height={100}
+                />
+              </div>
+              <h4>{ettPost.username}</h4>
+            </div>
+            <div className="postDeets">
+              <h3>{ettPost.eventName}</h3>
+              <p>{ettPost.loc}</p>
+              <p className="postDesc">
+                {ettPost.desc}
+              </p>
+              <div className="imgDiv">
+                <img
+                  src={`${ettPost.eventPic}`}
+                  alt={ettPost.eventName}
+                  width={100}
+                  height={100}
+                />
+              </div>
+            </div>
+            {this.state.signedIn && (
+              <div className="buttons">
+                <button
+                  className="update"
+                  onClick={() => {
+                    this.setState({ formOn: true });
+                  }}
+                >
+                  Update
+                </button>
+                <button className="hazard">Delete</button>
+              </div>
+            )}
+            {!this.state.signedIn && (
+              <div className="buttons">
+                <button disabled className="update">
+                  Update
+                </button>
+                <button disabled className="delete">
+                  Delete
+                </button>
+              </div>
+            )}
           </div>
-          <h4>{this.state.signedIn}</h4>
-        </div>
-        <div className="postDeets">
-          <h3>Rainbow</h3>
-          <p>(Milwaukee, Minnesota)</p>
-          <p className="postDesc">
-            A double rainbow over Blue Lake after a rainstorm.
-          </p>
-          <div className="imgDiv">
-            <img
-              src="https://cdn.forumcomm.com/dims4/default/e02a5e5/2147483647/strip/true/crop/1055x703+0+110/resize/840x560!/quality/90/?url=https%3A%2F%2Fforum-communications-production-web.s3.us-west-2.amazonaws.com%2Fbrightspot%2F84%2Fda%2Fffa3058240239da3c5b9f8a15721%2Fnolting-rainbow.jpg"
-              alt={"weather type"}
-              width={100}
-              height={100}
-            />
-          </div>
-        </div>
-        {this.state.signedIn && (
-          <div className="buttons">
-            <button
-              className="update"
-              onClick={() => {
-                this.setState({ formOn: true });
-              }}
-            >
-              Update
-            </button>
-            <button className="hazard">Delete</button>
-          </div>
-        )}
-        {!this.state.signedIn && (
-          <div className="buttons">
-            <button disabled className="update">
-              Update
-            </button>
-            <button disabled className="delete">
-              Delete
-            </button>
-          </div>
-        )}
-      </div>
-    );
+        );
+      }
+    });
   }
 
   postStorm() {
     return (
-      <form method="post" className="postForm">
+      <form className="postForm" method="post">
         <h3>Report a Weather Event</h3>
         <label>
           Weather Event: *
@@ -107,9 +118,12 @@ class Watch extends React.Component {
           Picture of the Weather Event (optional):
           <input type="file" name="eventPic" className="eventPic" />
         </label>
+        <input type="hidden" name="username" value={this.state.signedIn} />
+        <input type="hidden" name="myImg" value={this.state.myImg} />
         <div className="buttons">
           <button
-            onClick={() => {
+            onClick={(e) => {
+              this.addStorm(e);
               this.setState({ formOn: false });
             }}
           >
@@ -126,6 +140,23 @@ class Watch extends React.Component {
         </div>
       </form>
     );
+  }
+
+  addStorm(e) {
+    e.preventDefault();
+    let inputs = document.querySelectorAll("input");
+    let desc = document.querySelector("textarea");
+    let data = {};
+
+    for (let i of inputs) {
+      data[i.getAttribute("name")] = i.value;
+    }
+
+    data[desc.getAttribute("name")] = desc.value;
+
+    axios.post(`http://localhost:2024/stormwatch/postStorm`, data).then((e) => {
+      console.log(e);
+    });
   }
 
   buttons() {
@@ -178,14 +209,7 @@ class Watch extends React.Component {
           </div>
           {this.state.formOn && this.postStorm()}
           {!this.state.formOn && (
-            <div className="stormReports">
-              {this.getPosts()}
-              {this.getPosts()}
-              {this.getPosts()}
-              {this.getPosts()}
-              {this.getPosts()}
-              {this.getPosts()}
-            </div>
+            <div className="stormReports">{this.displayPosts()}</div>
           )}
         </main>
         <Footer />
