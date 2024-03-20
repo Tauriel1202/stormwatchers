@@ -958,6 +958,7 @@ button:hover {
 }
 
 .posts .postUser {
+  height: 60px;
   border-bottom: 2px solid var(--grey);
   padding: 0.5em;
   display: flex;

@@ -9,7 +9,7 @@ class Form extends React.Component {
     super(props);
     this.state = {
       formType: new URLSearchParams(window.location.search).get("formType"),
-      profPic: new URLSearchParams(window.location.search).get("profPic"),
+      profPic: 'logoOfficial_xsmall',
       signedIn: false,
       error: false,
     };
@@ -172,6 +172,7 @@ class Form extends React.Component {
         if (e.data.includes("username")) {
           this.setState({ error: true });
         } else {
+          Cookies.setCookie("myImg", data.profPic);
           Cookies.setCookie("username", data.username);
           let a = document.createElement("a");
           a.href = "/account";

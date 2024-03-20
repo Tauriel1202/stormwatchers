@@ -144,6 +144,7 @@ class Account extends React.Component {
           className="pic"
           onClick={() => {
             this.setPicClicked(true);
+            
           }}
         >
           <div className="profPic">
@@ -181,8 +182,8 @@ class Account extends React.Component {
         <button
           className="leave"
           onClick={() => {
-            Cookies.deleteCookie("username");
             Cookies.deleteCookie("myImg");
+            Cookies.deleteCookie("username");
           }}
         >
           Logout

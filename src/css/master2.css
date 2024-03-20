@@ -680,6 +680,10 @@ label {
   height: 3em;
 }
 
+.posts .postUser {
+  height: 60px;
+}
+
 /*#endregion height*/
 /*#region grid*/
 .imgDiv:nth-of-type(2) {
