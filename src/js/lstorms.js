@@ -27,8 +27,6 @@ class Lstorms extends React.Component {
         let impactDeets = json[sName].impact; //impact info
         let note = json[sName].note; //notes
 
-        console.log(json[sName], landfallDeets);
-
         function stormDeets(deets) {
           return Object.keys(deets).map((i) => {
             return (

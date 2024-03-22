@@ -755,6 +755,193 @@ h2,
   grid-row: 3 / 4;
 }
 /*#endregion grid*/
+/*#region flex*/
+nav ul,
+.headerContent p {
+  flex-wrap: wrap;
+}
+/*#endregion flex*/
+/*#region list + text*/
+nav li,
+.deets ul,
+.deets li,
+.hurricanes ul,
+.facts li {
+  list-style-type: none;
+}
+
+nav li a,
+.highlightedStorm a,
+.report a,
+.summaryDiv aside a,
+.all a,
+.buttons a,
+.myaccount .edit {
+  text-decoration: none;
+}
+
+.prepContent h3 {
+  text-decoration: underline;
+}
+/*#endregion list + text*/
+/*#region borders*/
+.tips,
+.report,
+.prints,
+.highlightedStorm,
+.forecast,
+.during,
+.hurricanes {
+  border: 3.5px outset var(--grey);
+}
+
+.linkP a,
+.summaryDiv aside h3 {
+  border: 3px outset var(--accents);
+}
+
+.weatherTile,
+.tile:hover,
+.summaryDiv aside,
+.lstorms select {
+  border: 3.5px outset var(--accents);
+}
+
+.formula,
+.prepContent,
+.after,
+.past {
+  border: 3.5px outset var(--stormblue);
+}
+
+.tile {
+  border: 3px outset var(--stormblue);
+}
+
+.linkP a,
+.formMain,
+.account,
+.buttons {
+  border-radius: 20px;
+}
+
+.report p {
+  border: 5px solid outset var(--accents);
+}
+
+.report p,
+.tile .img,
+.buttons a,
+.myaccount button:not(.pic),
+.myaccount .edit {
+  border-radius: 10px;
+}
+
+.summaryDiv aside {
+  border-left: none;
+}
+
+.summaryDiv aside h4:hover {
+  border: 2px solid var(--lightgrey);
+}
+
+.summaryDiv aside nav a {
+  border: 2.5px inset var(--stormblue);
+}
+
+.deets span {
+  border-bottom: 3px outset var(--accents);
+}
+
+.deets h3 span,
+.facts div,
+.buttons,
+.pic {
+  border: none;
+}
+
+.weather .miniNav a {
+  border-bottom: 2.5px solid var(--stormblue);
+  border-right: 2.5px solid var(--stormblue);
+}
+
+.all {
+  border-left: 2.5px solid var(--accents);
+  border-top: 2.5px solid var(--accents);
+}
+
+.prep select {
+  border: 2.5px outset var(--accents);
+}
+
+.before,
+.myaccount .edit {
+  border: 3.5px outset var(--yellow);
+}
+
+.temp h3,
+.snow h3,
+.rain h3 {
+  border-bottom: 3px dashed var(--stormblue);
+}
+
+.temp .plot,
+.snow .plot,
+.rain .plot {
+  border: 3px groove var(--accents);
+}
+
+.lstorms .noType {
+  border: 2.5px outset var(--grey);
+}
+
+.hurricanes div {
+  border: 2px inset var(--yellow);
+}
+
+.buttons,
+.formMain,
+.account {
+  border: 2.5px solid var(--stormblue);
+}
+
+.buttons a {
+  border: 2.5px outset rgb(9, 209, 9);
+}
+
+.myaccount .profPic {
+  border: 5px outset var(--accents);
+}
+
+.myaccount .profPic {
+  border-radius: 10em;
+}
+
+.myaccount span {
+  border-bottom: 3.5px double var(--stormblue);
+}
+
+.myaccount .leave {
+  border: 3.5px inset var(--grey);
+}
+
+.myaccount .hazard {
+  border: 3.5px outset red;
+}
+
+.formMain input {
+  border-radius: 5px;
+}
+
+.formMain input:required {
+  border: 2px solid var(--accents);
+}
+
+.formMain input:required {
+  border-left: 5px solid var(--accents);
+
+}
+/*#endregion borders*/
 
 /***** THESE ARE NOT FINISHED JUST MOVED FROM OLD CSS*/
 

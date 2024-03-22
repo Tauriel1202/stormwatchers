@@ -106,7 +106,6 @@ class Watch extends React.Component {
   postStorm() {
     if (this.state.update) {
       let postData = this.state.postClicked;
-      console.log(postData);
 
       return (
         <form className="postForm" method="post">
@@ -257,12 +256,9 @@ class Watch extends React.Component {
 
     // update
     if (this.state.update) {
-      console.log(this.state.postClicked, '💩💩')
-
       axios
         .post("http://localhost:2024/stormwatch/updateStorm", data)
         .then((e) => {
-          console.log(e);
           this.setState({ update: false });
           let a = document.createElement("a");
           a.href = "./stormwatch";
@@ -273,7 +269,6 @@ class Watch extends React.Component {
       axios
         .post(`http://localhost:2024/stormwatch/postStorm`, data)
         .then((e) => {
-          console.log(e);
           let a = document.createElement("a");
           a.href = "./stormwatch";
           a.click();
@@ -284,13 +279,10 @@ class Watch extends React.Component {
 
   //✅
   deletePost(ettPost) {
-    console.log(ettPost);
-
     axios.post(
       "http://localhost:2024/stormwatch/deletePost",
       ettPost
     ).then((e) => {
-      console.log(e)
       let a = document.createElement("a");
           a.href = "./stormwatch";
           a.click();

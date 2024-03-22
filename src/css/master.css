@@ -58,7 +58,6 @@ nav ul,
 .headerContent p {
   background-color: var(--accents);
   display: flex;
-  /* you are here*/
   flex-wrap: wrap;
   padding: 0 0.5em;
 }
@@ -121,6 +120,7 @@ h2 {
 .tips,
 .report,
 .prints {
+  /* you are here*/
   background-color: var(--lightgrey);
   border: 3.5px outset var(--grey);
   text-align: center;
@@ -227,7 +227,6 @@ h2 {
 
 /*#region FORECAST*/
 .forecast {
-
   background-color: var(--lightgrey);
   border: 3.5px outset var(--grey);
   grid-column: 2 / 3;
@@ -317,7 +316,7 @@ h2 {
 }
 
 .tile:hover {
-  border: 3.5px solid var(--accents);
+  border: 3.5px outset var(--accents);
 }
 
 .weather h3 {
@@ -386,7 +385,7 @@ h2 {
 
 .summaryDiv aside h3 {
   background-color: var(--stormblue);
-  border: 3px solid var(--accents);
+  border: 3px outset var(--accents);
   font-size: 1em;
   padding: 0.7em;
 }
@@ -875,6 +874,9 @@ button:hover {
   border: 2px solid var(--accents);
   border-left: 5px solid var(--accents);
 }
+
+
+/*border checking*/
 
 .formMain input:invalid {
   border: 2px solid red;

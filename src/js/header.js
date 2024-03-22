@@ -13,7 +13,6 @@ class Header extends React.Component {
   }
   
   render(){
-    console.log(Cookies.getCookie('myImg'))
   return (
     <>
       <header>
