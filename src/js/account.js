@@ -42,7 +42,6 @@ class Account extends React.Component {
 
   deleteAccount() {
     let si = Cookies.getCookie("username");
-    console.log(si);
     axios
       .post("http://localhost:2024/account/delete", { username: si })
       .then(() => {
@@ -56,12 +55,10 @@ class Account extends React.Component {
 
   fetchUserData() {
     let currentUser = Cookies.getCookie("username");
-    console.log(currentUser);
 
     axios
       .post("http://localhost:2024/account", { username: currentUser })
       .then((accountData) => {
-        console.log(Object.keys(accountData.data));
         Cookies.setCookie('myImg', accountData.data.profPic)
 
         this.setState({
@@ -70,9 +67,6 @@ class Account extends React.Component {
           profPic: accountData.data.profPic,
           runMe: false,
         }); //username values
-
-        console.log(this.state.profPic);
-
       });
   }
 

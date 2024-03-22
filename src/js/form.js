@@ -168,7 +168,6 @@ class Form extends React.Component {
 
     if (method === "create" && data.username !== "" && data.pwd !== "") {
       axios.post(`http://localhost:2024/account/create`, data).then((e) => {
-        console.log(e.data);
         if (e.data.includes("username")) {
           this.setState({ error: true });
         } else {
@@ -192,7 +191,6 @@ class Form extends React.Component {
       });
     } else if (method === "edit" && data.username !== "" && data.pwd !== "") {
       axios.post(`http://localhost:2024/account/edit`, data).then((e) => {
-        console.log(e.data);
         if (e.data.includes("username")) {
           this.setState({ error: true });
         } else {
