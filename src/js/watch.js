@@ -34,7 +34,7 @@ class Watch extends React.Component {
       let ettPost = postJson[onePost];
 
       return (
-        <div className="posts">
+        <div className="posts" key={onePost}>
           <div className="postUser">
             <div className="imgDiv">
               <img
@@ -75,7 +75,14 @@ class Watch extends React.Component {
               >
                 Update
               </button>
-              <button className="hazard">Delete</button>
+              <button
+                className="hazard"
+                onClick={() => {
+                  this.deletePost(ettPost);
+                }}
+              >
+                Delete
+              </button>
             </div>
           )}
           {!this.state.signedIn && (
@@ -99,6 +106,7 @@ class Watch extends React.Component {
   postStorm() {
     if (this.state.update) {
       let postData = this.state.postClicked;
+      console.log(postData);
 
       return (
         <form className="postForm" method="post">
@@ -139,22 +147,13 @@ class Watch extends React.Component {
               type="file"
               name="eventPic"
               className="eventPic"
-              defaultValue={postData.eventPic}
               onChange={this.convertImg}
             />
           </label>
           <input type="hidden" name="username" value={postData.username} />
           <input type="hidden" name="myImg" value={postData.myImg} />
           <input type="hidden" name="b64" value={this.state.b64} />
-          <input
-            type="hidden"
-            name="postId"
-            value={
-              `${postData.username}` +
-              `${postData.eventName}` +
-              `${postData.loc}`
-            }
-          />
+          <input type="hidden" name="old" value={postData.eventName} />
           <div className="buttons">
             <button
               onClick={(e) => {
@@ -167,7 +166,7 @@ class Watch extends React.Component {
             <button
               className="leave"
               onClick={() => {
-                this.setState({ formOn: false });
+                this.setState({ formOn: false, update: false });
               }}
             >
               Cancel
@@ -225,7 +224,6 @@ class Watch extends React.Component {
             <button
               onClick={(e) => {
                 this.addStorm(e);
-                this.setState({ formOn: false });
               }}
             >
               Post Event
@@ -257,19 +255,46 @@ class Watch extends React.Component {
 
     data[desc.getAttribute("name")] = desc.value;
 
+    // update
     if (this.state.update) {
+      console.log(this.state.postClicked, '💩💩')
+
       axios
         .post("http://localhost:2024/stormwatch/updateStorm", data)
         .then((e) => {
           console.log(e);
+          this.setState({ update: false });
+          let a = document.createElement("a");
+          a.href = "./stormwatch";
+          a.click();
         });
     } else {
+      //add
       axios
         .post(`http://localhost:2024/stormwatch/postStorm`, data)
         .then((e) => {
           console.log(e);
+          let a = document.createElement("a");
+          a.href = "./stormwatch";
+          a.click();
+          this.setState({ formOn: false });
         });
     }
+  }
+
+  //✅
+  deletePost(ettPost) {
+    console.log(ettPost);
+
+    axios.post(
+      "http://localhost:2024/stormwatch/deletePost",
+      ettPost
+    ).then((e) => {
+      console.log(e)
+      let a = document.createElement("a");
+          a.href = "./stormwatch";
+          a.click();
+    });
   }
 
   //✅
