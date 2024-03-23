@@ -27,7 +27,6 @@ root.render(
         <Route path="/stormwatch" element={<Watch />} />
         <Route path="/printables" element={<Printables />} />
         <Route path="/account" element={<Account />} />
-
         <Route path="/weather/summary" element={<InfoTemplate />} />
         <Route path="/account/form" element={<Form />}/>
       </Routes>

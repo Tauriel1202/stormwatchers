@@ -5,8 +5,7 @@ import Header from "../js/header";
 import Footer from "../js/footer";
 import React from "react";
 import axios from "axios";
-import { stormType, toTitleCase } from "./functions";
-import { MathJaxContext, MathJax } from "better-react-mathjax";
+import { toTitleCase } from "./functions";
 
 class App extends React.Component {
   constructor() {
@@ -94,10 +93,6 @@ class App extends React.Component {
   }
 
   render() {
-    // const config = {
-    //   loader: { load: ["input/asciimath"] },
-    // };
-
     let cForecast = this.getForecast("current");
     let dForecast = this.getForecast("daily", 1);
     let dForecast2 = this.getForecast("daily", 2);
@@ -119,22 +114,23 @@ class App extends React.Component {
             <div className="highlightedStorm">
               <div className="cloudLayer">
                 <h3>Legendary Storm Spotlight</h3>
+                {/* <p className="stormName">{this.legend()}</p> */}
                 <p className="fact">{this.legend()}</p>
                 <p className="linkP">
-                  <a href='./lstorm'>Visit Storm!</a>
+                  <a href='legendarystorms'>Visit Storm!</a>
                 </p>
               </div>
             </div>
             <div className="report">
               <h3>See any interesting weather happening around you?</h3>
               <p>
-                <a href="Watch">Report a Storm!</a>
+                <a href="stormwatch">Report a Storm!</a>
               </p>
             </div>
             <div className="prints">
               <h3>🧩 Looking for weather puzzles?</h3>
               <p>
-                <a href="Printables">Check out the Printables page!</a>
+                <a href="printables">Check out the Printables page!</a>
               </p>
             </div>
           </div>
@@ -186,7 +182,7 @@ class App extends React.Component {
                     height={100}
                   />
                 </div>
-                <p>{cForecast[2]}&deg;F</p>
+                <p>{dForecast2[2]}&deg;F</p>
               </div>
               <div className="weatherData">
                 <p>{dForecast2[0]}</p>
@@ -199,16 +195,6 @@ class App extends React.Component {
             <h3>🔢➡ Weather Conversions ➡🔢</h3>
             <p>Fahrenheit = (Celsius * 1.8) + 32</p>
             <p>Celsius = (Fahrenheit - 32) / 1.8</p>
-
-            {/* <MathJaxContext config={config}>
-              {/* <MathJax>
-                {"`frac(10)(4x) approx 2^(12)`"}
-              </MathJax> */}
-            {/* <MathJax>
-                {"windchill `= 35.74 + 0.6215(`temperature`) - 35.75(`windspeed`)^0.16 + 0.4275(`temperature`)(`windspeed`)^0.16`"}
-              </MathJax>
-            </MathJaxContext> */}
-
             <p>
               Wind chill = 35.74 + 0.6215(Temperature) – 35.75(Windspeed
               <sup>0.16</sup>) + 0.4275(Temperature)(Windspeed<sup>0.16</sup>)
