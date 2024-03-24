@@ -6,7 +6,7 @@ const dotenv = require("dotenv").config();
 const port = 2024;
 const cors = require("cors");
 
-app.use(express.static("stormwatchers/build"));
+app.use(express.static("frontend/build"));
 
 app.options("*", cors());
 
@@ -35,7 +35,7 @@ app.get("/account/form", sendFile);
 
 function sendFile(req, res) {
   res.setHeader("Content-type", "text/html");
-  res.sendFile(path.resolve(__dirname, 'stormwatchers/build/index.html'));
+  res.sendFile(path.resolve(__dirname, 'frontend', 'build','index.html'));
 }
 
 app.use((req, res, next) => {
