@@ -25,6 +25,7 @@ app.set("view engine", "html");
 app.use(bodyParser.json());
 
 
+app.get("/", sendFile);
 app.get("/weather", sendFile);
 app.get("/stormprep", sendFile);
 app.get("/pastweather", sendFile);
@@ -37,8 +38,8 @@ app.get("/account/form", sendFile);
 
 
 function sendFile(req, res) {
-  res.setHeader("Content-type", "text/html");
-  res.sendFile(path.resolve(__dirname, 'frontend', 'build','index.html'));
+  // res.setHeader("Content-type", "text/html");
+  // res.sendFile(path.resolve(__dirname, 'frontend', 'build','index.html'));
   console.log("s file")
 }
 
