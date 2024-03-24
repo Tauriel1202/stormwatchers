@@ -15,8 +15,8 @@
     "react-plotly.js": "^2.6.0",
     "react-scripts": "^5.0.1"
   },
+  "private": true,
   "scripts": {
-    "start": "npx nodemon",
-    "build": "npx build"
+    "start": "npx nodemon"
   }
 }

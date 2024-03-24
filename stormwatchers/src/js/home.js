@@ -127,13 +127,13 @@ class App extends React.Component {
                 <a href="stormwatch">Report a Storm!</a>
               </p>
             </div>
+          </div>
             <div className="prints">
               <h3>🧩 Looking for weather puzzles?</h3>
               <p>
                 <a href="printables">Check out the Printables page!</a>
               </p>
             </div>
-          </div>
           <div className="forecast">
             <h3>Forecast</h3>
             <div className="weatherTile">
