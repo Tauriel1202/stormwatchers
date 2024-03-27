@@ -25,16 +25,16 @@ app.set("view engine", "html");
 app.use(bodyParser.json());
 
 // app.get("/", sendFile);
-app.get("/", (req, res) => res.type('html').send());
-app.get("/weather", sendFile);
-app.get("/stormprep", sendFile);
-app.get("/pastweather", sendFile);
-app.get("/legendarystorms", sendFile);
-app.get("/stormwatch", sendFile);
-app.get("/printables", sendFile);
-app.get("/account", sendFile);
-app.get("/weather/summary", sendFile);
-app.get("/account/form", sendFile);
+app.get("/", (req, res) => res.type('text/html').send());
+// app.get("/weather", sendFile);
+// app.get("/stormprep", sendFile);
+// app.get("/pastweather", sendFile);
+// app.get("/legendarystorms", sendFile);
+// app.get("/stormwatch", sendFile);
+// app.get("/printables", sendFile);
+// app.get("/account", sendFile);
+// app.get("/weather/summary", sendFile);
+// app.get("/account/form", sendFile);
 
 
 // function sendFile(req, res) {
