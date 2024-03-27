@@ -39,7 +39,7 @@ class Printables extends Component {
           </h3>
           <div className="imgDiv">
             <img
-              src={`../imgs/profPics/${this.state.printImg}.webp`}
+              src={`../imgs/prints/${this.state.printImg}.png`}
               alt={`${this.state.printImg}`}
               width={100}
               height={100}
@@ -70,16 +70,7 @@ class Printables extends Component {
 
   displayPrints() {
     let printImgs = [
-      "logoOfficial_small",
-      "Binoculars_xsmall",
-      "Cloud_xsmall",
-      "Hurricane_xsmall",
-      "Lightning_xsmall",
-      "Rainbow_xsmall",
-      "Raindrop2_xsmall",
-      "Snowflake2_xsmall",
-      "Sun_xsmall",
-      "Tornado_xsmall",
+      "weatherTypeCrossword"
     ];
 
     return printImgs.map((img) => {
@@ -93,7 +84,7 @@ class Printables extends Component {
         >
           <div className={`imgDiv`}>
             <img
-              src={`../imgs/profPics/${img}.webp`}
+              src={`../imgs/prints/${img}.png`}
               alt={`${img}`}
               height={100}
               width={100}

@@ -7,10 +7,10 @@ const port = 2024;
 const cors = require("cors");
 const path = require('path');
 
-console.log(__dirname)
-console.log(path.resolve(__dirname, 'frontend', 'build','index.html'))
+// console.log(__dirname)
+// console.log(path.resolve(__dirname, 'frontend', 'build','index.html'))
 
-app.use(express.static(path.resolve(__dirname, 'frontend', 'build')));
+// app.use(express.static(path.resolve(__dirname, 'frontend', 'build')));
 
 app.options("*", cors());
 
@@ -24,8 +24,8 @@ app.set("view engine", "html");
 
 app.use(bodyParser.json());
 
-
-app.get("/", sendFile);
+// app.get("/", sendFile);
+app.get("/", (req, res) => res.type('html').send());
 app.get("/weather", sendFile);
 app.get("/stormprep", sendFile);
 app.get("/pastweather", sendFile);
@@ -37,11 +37,11 @@ app.get("/weather/summary", sendFile);
 app.get("/account/form", sendFile);
 
 
-function sendFile(req, res) {
-  res.setHeader("Content-type", "text/html");
-  res.sendFile(path.resolve(__dirname, 'frontend', 'build','index.html'));
-  console.log("s file")
-}
+// function sendFile(req, res) {
+//   res.setHeader("Content-type", "text/html");
+//   res.sendFile(path.resolve(__dirname, 'frontend', 'build','index.html'));
+//   // console.log("s file")
+// }
 
 app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "*");
