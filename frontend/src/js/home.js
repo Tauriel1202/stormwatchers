@@ -25,7 +25,7 @@ class App extends React.Component {
     // random tips
     const randTipIdx = Math.floor(Math.random() * tipJson.tips.length);
     const randValue = tipJson.tips[randTipIdx];
-
+    // console.log(randValue);
     return randValue;
   }
 
@@ -46,9 +46,11 @@ class App extends React.Component {
 
     if (randFact) {
       randFact = randFact[0].slice(1, -1);
+      return randFact
+      // return [randFact, stormNames];
     }
 
-    return randFact;
+
   }
 
   getForecast(day, dNumber) {
@@ -96,6 +98,7 @@ class App extends React.Component {
     let cForecast = this.getForecast("current");
     let dForecast = this.getForecast("daily", 1);
     let dForecast2 = this.getForecast("daily", 2);
+    // console.log(this.legend()[1])
 
     // build html for page
     return (
@@ -117,7 +120,7 @@ class App extends React.Component {
                 {/* <p className="stormName">{this.legend()}</p> */}
                 <p className="fact">{this.legend()}</p>
                 <p className="linkP">
-                  <a href='legendarystorms'>Visit Storm!</a>
+                  <a href="legendarystorms">Visit Storm!</a>
                 </p>
               </div>
             </div>
@@ -128,19 +131,33 @@ class App extends React.Component {
               </p>
             </div>
           </div>
-            <div className="prints">
-              <h3>🧩 Looking for weather puzzles?</h3>
-              <p>
-                <a href="printables">Check out the Printables page!</a>
-              </p>
-            </div>
+          <div className="prints">
+            <h3>🧩 Looking for weather puzzles?</h3>
+            <p>
+              <a href="printables">Check out the Printables page!</a>
+            </p>
+          </div>
+
+          <div className="formula">
+            <h3>🔢➡ Weather Conversions ➡🔢</h3>
+            <p>Fahrenheit = (Celsius * 1.8) + 32</p>
+            <p>Celsius = (Fahrenheit - 32) / 1.8</p>
+            <p>
+              Wind chill = 35.74 + 0.6215(Temperature) – 35.75(Windspeed
+              <sup>0.16</sup>) + 0.4275(Temperature)(Windspeed<sup>0.16</sup>)
+            </p>
+          </div>
           <div className="forecast">
             <h3>Forecast</h3>
             <div className="weatherTile">
               <div className="bigNsmall">
                 <div className="imgDiv">
                   <img
-                    src={`./imgs/icons/${cForecast[4]}.png`}
+                    src={
+                      cForecast[4] !== ""
+                        ? `./imgs/icons/${cForecast[4]}.png`
+                        : ""
+                    }
                     alt="current weather image"
                     width={100}
                     height={100}
@@ -158,7 +175,11 @@ class App extends React.Component {
               <div className="bigNsmall">
                 <div className="imgDiv">
                   <img
-                    src={`./imgs/icons/${dForecast[4]}.png`}
+                    src={
+                      dForecast[4] !== ""
+                        ? `./imgs/icons/${dForecast[4]}.png`
+                        : ""
+                    }
                     alt="current weather image"
                     width={100}
                     height={100}
@@ -176,7 +197,11 @@ class App extends React.Component {
               <div className="bigNsmall">
                 <div className="imgDiv">
                   <img
-                    src={`./imgs/icons/${dForecast2[4]}.png`}
+                    src={
+                      dForecast2[4] !== ""
+                        ? `./imgs/icons/${dForecast2[4]}.png`
+                        : ""
+                    }
                     alt="current weather image"
                     width={100}
                     height={100}
@@ -190,15 +215,6 @@ class App extends React.Component {
                 <p>Humidity: {dForecast2[1]}%</p>
               </div>
             </div>
-          </div>
-          <div className="formula">
-            <h3>🔢➡ Weather Conversions ➡🔢</h3>
-            <p>Fahrenheit = (Celsius * 1.8) + 32</p>
-            <p>Celsius = (Fahrenheit - 32) / 1.8</p>
-            <p>
-              Wind chill = 35.74 + 0.6215(Temperature) – 35.75(Windspeed
-              <sup>0.16</sup>) + 0.4275(Temperature)(Windspeed<sup>0.16</sup>)
-            </p>
           </div>
           <div className="sats">
             <p>

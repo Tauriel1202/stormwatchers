@@ -35,7 +35,7 @@ class Printables extends Component {
               width={100}
               height={100}
             />
-            Stormwatchers: Kids
+            <span>Stormwatchers: Kids</span>
           </h3>
           <div className="imgDiv">
             <img

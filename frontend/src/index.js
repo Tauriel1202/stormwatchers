@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./css/master.css";
+import "./css/small.css";
 
 import Home from "./js/home";
 import Weather from "./js/weatherInfo";

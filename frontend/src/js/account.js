@@ -12,7 +12,7 @@ class Account extends React.Component {
       signedIn: Cookies.getCookie("username"),
       dataUsername: "",
       dataEmail: "",
-      profPic: "logoOfficial_small",
+      profPic: "logoOfficial_xsmall",
       runMe: true,
       picClicked: false,
     };
@@ -84,7 +84,7 @@ class Account extends React.Component {
 
   changePic() {
     let profImgs = [
-      "logoOfficial_small",
+      "logoOfficial_xsmall",
       "Binoculars_xsmall",
       "Cloud_xsmall",
       "Hurricane_xsmall",
