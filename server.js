@@ -9,18 +9,15 @@ const path = require('path');
 
 // console.log(__dirname)
 // console.log(path.resolve(__dirname, 'frontend', 'build','index.html'))
-
-app.options("*", cors());
-app.set("view engine", "html");
-app.use(bodyParser.json());
-
-
-app.use(express.static(path.resolve(__dirname, 'frontend', 'build')));
+app.use(express.static('frontend/build'));
 app.use(
   bodyParser.urlencoded({
     extended: true,
   })
 );
+app.set("view engine", "html");
+app.use(bodyParser.json());
+app.options("*", cors());
 app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader(
