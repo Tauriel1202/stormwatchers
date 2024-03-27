@@ -70,7 +70,8 @@ class Printables extends Component {
 
   displayPrints() {
     let printImgs = [
-      "weatherTypeCrossword"
+      "weatherTypeCrossword",
+      "lstormsWordSearch"
     ];
 
     return printImgs.map((img) => {
