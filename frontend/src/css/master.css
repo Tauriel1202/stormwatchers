@@ -304,7 +304,6 @@ h2 {
   margin: 2.5% auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-
 }
 
 .tile {
@@ -739,7 +738,6 @@ label {
 .buttons {
   background-color: var(--lightgrey);
   border: 2.5px solid var(--stormblue);
-
 }
 
 .buttons div {
@@ -857,7 +855,6 @@ button:hover {
   background-color: var(--grey);
   color: var(--lightgrey);
   border: 3.5px inset var(--grey);
-
 }
 
 .myaccount .hazard {
@@ -880,7 +877,6 @@ button:hover {
   border: 2px solid var(--accents);
   border-left: 5px solid var(--accents);
 }
-
 
 /*border checking*/
 
@@ -1082,6 +1078,26 @@ button.hazard {
   color: var(--lightgrey);
 }
 /*#endregion WATCH*/
+/*#region PRINTS*/
+.prints {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1em;
+}
+.printHead {
+  grid-column: 1 / 4;
+}
+
+.printHead p {
+  padding-top: 0;
+}
+
+.onePrint {
+  cursor: pointer;
+  border: 3.5px outset var(--accents);
+}
+
+/*#endregion PRINTS*/
 
 /*#region MARKERS*/
 .fog li::marker {
@@ -1112,7 +1128,8 @@ button.hazard {
   content: "❄ ";
 }
 
-.sAfter li::marker, .s li::marker {
+.sAfter li::marker,
+.s li::marker {
   content: "⛄ ";
 }
 
@@ -1175,4 +1192,3 @@ footer .imgDiv {
 }
 
 /*#endregion FOOTER*/
-
