@@ -20,8 +20,12 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/weather" element={<Weather />} />
+        {/* <Route path="/" element={<Home />} /> */}
+        <Route path="/" element={<div>
+          Render stinks
+        </div>} />
+
+        {/* <Route path="/weather" element={<Weather />} />
         <Route path="/stormprep" element={<Prep />} />
         <Route path="/pastweather" element={<Past />} />
         <Route path="/legendarystorms" element={<Lstorms />} />
@@ -29,7 +33,7 @@ root.render(
         <Route path="/printables" element={<Printables />} />
         <Route path="/account" element={<Account />} />
         <Route path="/weather/summary" element={<InfoTemplate />} />
-        <Route path="/account/form" element={<Form />}/>
+        <Route path="/account/form" element={<Form />}/> */}
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

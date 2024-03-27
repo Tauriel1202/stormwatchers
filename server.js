@@ -10,10 +10,12 @@ const path = require('path');
 // console.log(__dirname)
 // console.log(path.resolve(__dirname, 'frontend', 'build','index.html'))
 
-app.use(express.static(path.resolve(__dirname, 'frontend', 'build')));
-
 app.options("*", cors());
+app.set("view engine", "html");
+app.use(bodyParser.json());
 
+
+app.use(express.static(path.resolve(__dirname, 'frontend', 'build')));
 app.use(
   bodyParser.urlencoded({
     extended: true,
@@ -28,9 +30,7 @@ app.use((req, res, next) => {
   next();
 });
 
-app.set("view engine", "html");
 
-app.use(bodyParser.json());
 
 app.get("/", (req, res) => {
   res.setHeader("Content-type", "text/html");
@@ -52,7 +52,7 @@ app.get("/account/form", sendFile);
 function sendFile(req, res) {
   res.setHeader("Content-type", "text/html");
   res.sendFile(path.resolve(__dirname, 'frontend', 'build','index.html'));
-  // console.log("s file")
+  console.log("Get")
 }
 
 

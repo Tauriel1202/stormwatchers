@@ -26,7 +26,12 @@ class App extends React.Component {
     const randTipIdx = Math.floor(Math.random() * tipJson.tips.length);
     const randValue = tipJson.tips[randTipIdx];
     // console.log(randValue);
-    return randValue;
+    return (
+      <div className="tipTop">
+        <h4>{randValue.subject}</h4>
+        <p>{randValue.tip}</p>
+      </div>
+    );
   }
 
   legend() {
@@ -46,11 +51,14 @@ class App extends React.Component {
 
     if (randFact) {
       randFact = randFact[0].slice(1, -1);
-      return randFact
+      return (
+        <>
+          <h4 className="stormName">{stormNames}</h4>
+          <p className="fact">{randFact}</p>
+        </>
+      );
       // return [randFact, stormNames];
     }
-
-
   }
 
   getForecast(day, dNumber) {
@@ -98,6 +106,7 @@ class App extends React.Component {
     let cForecast = this.getForecast("current");
     let dForecast = this.getForecast("daily", 1);
     let dForecast2 = this.getForecast("daily", 2);
+    let tip = this.randomTip();
     // console.log(this.legend()[1])
 
     // build html for page
@@ -109,16 +118,12 @@ class App extends React.Component {
           <div className="content">
             <div className="tips">
               <h3>Weather Tip</h3>
-              <div className="tipTop">
-                <h4>{this.randomTip().subject}</h4>
-              </div>
-              <p>{this.randomTip().tip}</p>
+              {this.randomTip()}
             </div>
             <div className="highlightedStorm">
               <div className="cloudLayer">
                 <h3>Legendary Storm Spotlight</h3>
-                {/* <p className="stormName">{this.legend()}</p> */}
-                <p className="fact">{this.legend()}</p>
+                {this.legend()}
                 <p className="linkP">
                   <a href="legendarystorms">Visit Storm!</a>
                 </p>
