@@ -850,7 +850,7 @@ button:hover {
   padding-right: 1em;
 }
 
-.myaccount .leave,
+.leave,
 .myaccount .hazard {
   width: 50%;
   margin: 1em auto;
@@ -863,10 +863,13 @@ button:hover {
   grid-column: 1 / 3;
 }
 
-.myaccount .leave {
+ .leave {
   background-color: var(--grey);
   color: var(--lightgrey);
   border: 3.5px inset var(--grey);
+  border-radius: 10px;
+  text-decoration: none;
+  padding: 0.5em 3em;
 }
 
 .myaccount .hazard {
@@ -903,8 +906,14 @@ button:hover {
   border-radius: 10px;
   font-size: 1em;
   padding: 0.5em;
-  margin: 1em 18%;
+  margin: 1em 8% 1em 18%;
 }
+
+  #login {
+    padding: 0.5em 3em;
+    margin-right: 2em;
+    margin-left: 17%;
+  }
 
 .selectPic {
   background-color: var(--stormblue);
@@ -1126,6 +1135,32 @@ button.hazard {
 
 .thePrint span {
   padding-top: 1em;
+}
+
+.popupHead {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.popupHead h2 {
+  grid-column: 2 / 3;
+}
+
+.popupHead #buttons {
+  padding-top: 0.5em;
+  grid-column: 3 / 4;
+}
+
+#buttons .leave {
+  padding: 0.55em 2em;
+}
+
+#buttons button {
+  background-color: var(--accents);
+  border: 3.5px outset var(--accents);
+  border-radius: 10px;
+  padding: 0.8em 2.8em;
+  margin: 1em 1.5em;
 }
 
 /*#endregion PRINTS*/

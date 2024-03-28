@@ -9,7 +9,7 @@ class Form extends React.Component {
     super(props);
     this.state = {
       formType: new URLSearchParams(window.location.search).get("formType"),
-      profPic: 'logoOfficial_xsmall',
+      profPic: "logoOfficial_xsmall",
       signedIn: false,
       error: false,
     };
@@ -39,9 +39,13 @@ class Form extends React.Component {
               onClick={(e) => {
                 this.postForm(e, "login");
               }}
+              id="login"
             >
               Log in!
             </button>
+            <a href="../account" className="leave">
+              Cancel
+            </a>
           </form>
         </>
       );
@@ -92,6 +96,9 @@ class Form extends React.Component {
             >
               Create Account!
             </button>
+            <a href="../account" className="leave">
+              Cancel
+            </a>
           </form>
         </>
       );
@@ -150,6 +157,9 @@ class Form extends React.Component {
             >
               Update Account!
             </button>
+            <a href="../account" className="leave">
+              Cancel
+            </a>
           </form>
         </>
       );

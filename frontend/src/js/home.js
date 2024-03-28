@@ -16,7 +16,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    axios.get("http://localhost:2024/weatherAPI").then((jsObject) => {
+    axios.get("/weatherAPI").then((jsObject) => {
       this.setState({ weatherData: jsObject.data });
     });
   }

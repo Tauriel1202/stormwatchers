@@ -29,12 +29,6 @@ class Account extends React.Component {
           >
             Create an Account!
           </a>
-          {/* <button onClick={() => this.setState({ formType: "login" })}>
-            Log in!
-          </button>
-          <button onClick={() => this.setState({ formType: "signup" })}>
-            Create an Account!
-          </button> */}
         </div>
       </div>
     );

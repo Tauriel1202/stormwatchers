@@ -1,3 +1,4 @@
+import "../css/print.css";
 import React, { Component } from "react";
 import Header from "./header";
 import Footer from "./footer";
@@ -12,21 +13,32 @@ class Printables extends Component {
   }
 
   printPopup() {
-    let otherPrints = document.querySelector(".prints");
-    otherPrints.style.display = "none";
+    document.querySelector(".prints").style.display = "none";
+    document.querySelector("header").style.display = "none";
+    document.querySelector("footer").style.display = "none";
 
     return (
       <div className="popup">
-        <h2>Print Preview</h2>
-        <button
-          className="button"
-          onClick={() => {
-            this.printOne();
-          }}
-        >
-          Print
-        </button>
-
+        <div className="popupHead">
+          <h2>Print Preview</h2>
+          <div id="buttons">
+            <button
+              className="button"
+              onClick={() => {
+                {
+                  window.print()
+                    ? this.setState({ print: false })
+                    : this.setState({ print: false });
+                }
+              }}
+            >
+              Print
+            </button>
+            <a href="./printables" className="leave">
+              Cancel
+            </a>
+          </div>
+        </div>
         <div className="thePrint">
           <h3>
             <img
@@ -50,28 +62,15 @@ class Printables extends Component {
     );
   }
 
-  printOne() {
-    let imgToPrint = document.querySelector(".thePrint").innerHTML;
-
-    //print
-    let w;
-    w = window.open();
-    w.document.write(imgToPrint);
-    w.print();
-    w.close();
-
-    this.setState({ printImg: false });
-
-    // imgToPrint.addEventListener("click", (e) => {
-    //   window.print();
-    // }
-    // );
-  }
-
   displayPrints() {
     let printImgs = [
+      "weatherTypeAnagrams",
+      "snowflakeTypesUnscramble",
+      "cloudCrossword",
       "weatherTypeCrossword",
-      "lstormsWordSearch"
+      "lstormsWordSearch",
+      "stormPrepWordSearch",
+      "weatherColoringPage",
     ];
 
     return printImgs.map((img) => {
