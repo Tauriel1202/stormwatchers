@@ -104,6 +104,7 @@ function InfoTemplate() {
               }}
             ></p>
           </div>
+          <a href="#top" className="but">Back to Top ⬆</a>
         </div>
       </main>
       <Footer />

@@ -16,7 +16,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    axios.get("/weatherAPI").then((jsObject) => {
+    axios.get("http://localhost:2024/weatherAPI").then((jsObject) => {
       this.setState({ weatherData: jsObject.data });
     });
   }
@@ -160,7 +160,7 @@ class App extends React.Component {
                   <img
                     src={
                       cForecast[4] !== ""
-                        ? `./imgs/icons/${cForecast[4]}.png`
+                        ? `./imgs/icons/${toTitleCase(cForecast[4])}.png`
                         : ""
                     }
                     alt="current weather image"

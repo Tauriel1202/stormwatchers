@@ -9,6 +9,16 @@ class Printables extends Component {
     this.state = {
       print: false,
       printImg: "",
+      printImgs: [
+        "snowflakeTypesAnagrams",
+        "weatherTypeAnagrams",
+        "weatherColoringPage",
+        "cloudCrossword",
+        "weatherTypeCrossword",
+        "winterPrepCrossword",
+        "lstormsWordSearch",
+        "stormPrepWordSearch",
+      ],
     };
   }
 
@@ -62,34 +72,42 @@ class Printables extends Component {
     );
   }
 
-  displayPrints() {
-    let printImgs = [
-      "weatherTypeAnagrams",
-      "snowflakeTypesUnscramble",
-      "cloudCrossword",
-      "weatherTypeCrossword",
-      "lstormsWordSearch",
-      "stormPrepWordSearch",
-      "weatherColoringPage",
-    ];
+  displayPrints(i) {
+    // return this.state.printImgs.map((img) => {
+    return (
+      <div
+        className="onePrint"
+        key={i}
+        onClick={() => {
+          this.setState({ print: true, printImg: i });
+        }}
+      >
+        <div className={`imgDiv`}>
+          <img
+            src={`../imgs/prints/${i}.png`}
+            alt={`${i}`}
+            height={100}
+            width={100}
+          />
+        </div>
+      </div>
+    );
+    // });
+  }
 
-    return printImgs.map((img) => {
+  catTitles() {
+    let cats = ["Anagrams", "Coloring", "Crossword", "WordSearch"];
+
+    return cats.map((i) => {
       return (
-        <div
-          className="onePrint"
-          key={img}
-          onClick={() => {
-            this.setState({ print: true, printImg: img });
-          }}
-        >
-          <div className={`imgDiv`}>
-            <img
-              src={`../imgs/prints/${img}.png`}
-              alt={`${img}`}
-              height={100}
-              width={100}
-            />
-          </div>
+        <div className="catTitle" id={i} key={i}>
+          <h2>{i}</h2>
+          {
+            /* {this.state.printImgs.search(i) ? this.displayPrints() : ""} */
+            this.state.printImgs.map((img) =>
+              img.includes(i) ? this.displayPrints(img) : ""
+            )
+          }
         </div>
       );
     });
@@ -106,7 +124,8 @@ class Printables extends Component {
               <h2>Printable Activites</h2>
               <p>Click an Image to see the Print Preview!</p>
             </div>
-            {this.displayPrints()}
+            {this.catTitles()}
+            {/* {this.displayPrints()} */}
           </div>
         </main>
         <Footer />

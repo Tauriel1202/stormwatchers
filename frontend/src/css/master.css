@@ -117,8 +117,6 @@ h2 {
   display: grid;
 }
 
-
-
 .tips,
 .report,
 .prints {
@@ -129,7 +127,7 @@ h2 {
 }
 
 .tips,
-.prints{
+.prints {
   margin-bottom: 1em;
 }
 
@@ -212,7 +210,7 @@ h2 {
 }
 
 .report p {
-  width: 10em;
+  width: 12em;
   background-color: var(--accents);
   border: 5px solid outset var(--accents);
   border-radius: 10px;
@@ -223,6 +221,8 @@ h2 {
 .report a {
   color: var(--black);
   text-decoration: none;
+  /* width: 20em; */
+  padding: 1em 2.7em;
 }
 /*#endregion Report tile*/
 /* Prints Tile */
@@ -247,8 +247,8 @@ h2 {
 }
 
 .forecast,
-.content{
-  margin:0.5em;
+.content {
+  margin: 0.5em;
 }
 
 .forecast h3 {
@@ -330,6 +330,7 @@ h2 {
 
 .tile a {
   cursor: pointer;
+  text-decoration: none;
 }
 
 .tile:hover {
@@ -524,7 +525,7 @@ label {
 .prep select {
   border: 2.5px outset var(--accents);
   display: block;
-  padding: 0.5em;
+  padding: 1em;
   margin: auto;
 }
 
@@ -863,7 +864,7 @@ button:hover {
   grid-column: 1 / 3;
 }
 
- .leave {
+.leave {
   background-color: var(--grey);
   color: var(--lightgrey);
   border: 3.5px inset var(--grey);
@@ -909,11 +910,11 @@ button:hover {
   margin: 1em 8% 1em 18%;
 }
 
-  #login {
-    padding: 0.5em 3em;
-    margin-right: 2em;
-    margin-left: 17%;
-  }
+#login {
+  padding: 0.5em 3em;
+  margin-right: 2em;
+  margin-left: 17%;
+}
 
 .selectPic {
   background-color: var(--stormblue);
@@ -1100,21 +1101,55 @@ button.hazard {
 }
 /*#endregion WATCH*/
 /*#region PRINTS*/
-.printables .prints {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1em;
-}
-.printHead {
+/* .printables .prints { */
+/* display: grid; */
+/* grid-template-columns: repeat(3, 1fr); */
+/* gap: 1em; */
+/* } */
+/* .printHead {
   grid-column: 1 / 4;
 }
+
+.catTitle#Anagrams {
+  grid-column: 1 / 4;
+}
+
+.catTitle#Coloring {
+  grid-column: 1 / 4;
+  grid-row: 4 / 5;
+}
+
+.catTitle#Crossword {
+  grid-column: 1 / 4;
+  grid-row: 6 / 7;
+}
+
+.catTitle#WordSearch {
+  grid-column: 1 / 4;
+  grid-row: 8 / 9;
+} */
 
 .printHead p {
   padding-top: 0;
 }
 
+.catTitle {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1em;
+}
+
+.catTitle h2 {
+  width: 12em;
+  border-bottom: 3.5px outset var(--accents);
+  grid-column: 1 /4;
+}
+
 .onePrint {
   cursor: pointer;
+}
+
+.onePrint img {
   border: 3.5px outset var(--accents);
 }
 

@@ -23,7 +23,7 @@ class RainGraph extends React.Component {
       y: [this.rainfallByYear(years)], //one rainfall value
       type: "bar",
       text: [this.rainfallByYear(years)],
-      marker: [...colors],
+      marker: { color: colors },
       name: years,
     };
   }
@@ -50,6 +50,7 @@ class RainGraph extends React.Component {
         layout={{
           width: 500,
           height: 400,
+          autosize: true,
           title: "Rainfall by Year for Boston, MA (inches)",
         }}
       />

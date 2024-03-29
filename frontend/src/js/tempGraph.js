@@ -64,6 +64,7 @@ class TempGraph extends React.Component {
     for (let i = 0; i < years.length; i++) {
       graphlines.push(this.graphline(years[i], colors[i]));
     }
+
     return (
       <Plot
         className="plot"
