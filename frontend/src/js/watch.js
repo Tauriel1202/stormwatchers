@@ -100,7 +100,20 @@ class Watch extends React.Component {
     });
   }
 
-  convertImg() {}
+  convertImg() {
+    let imgField = document.querySelector(".eventPic").files; //gets the file from the input
+    if (imgField) {
+      let img = imgField[0]; //gets the img file itself
+
+      let reader = new FileReader();
+
+      reader.onload=function (e){
+        let b64
+      }
+
+      return img;
+    }
+  }
 
   //✅
   postStorm() {
@@ -151,7 +164,7 @@ class Watch extends React.Component {
           </label>
           <input type="hidden" name="username" value={postData.username} />
           <input type="hidden" name="myImg" value={postData.myImg} />
-          <input type="hidden" name="b64" value={this.state.b64} />
+          <input type="hidden" name="b64" onChange={this.convertImg} />
           <input type="hidden" name="old" value={postData.eventName} />
           <div className="buttons">
             <button
@@ -218,7 +231,7 @@ class Watch extends React.Component {
           </label>
           <input type="hidden" name="username" value={this.state.signedIn} />
           <input type="hidden" name="myImg" value={this.state.myImg} />
-          <input type="hidden" name="b64" value={this.state.b64} />
+          {/* <input type="hidden" name="b64" id='b64' onChange={this.convertImg} /> */}
           <div className="buttons">
             <button
               onClick={(e) => {
@@ -279,14 +292,13 @@ class Watch extends React.Component {
 
   //✅
   deletePost(ettPost) {
-    axios.post(
-      "http://localhost:2024/stormwatch/deletePost",
-      ettPost
-    ).then((e) => {
-      let a = document.createElement("a");
-          a.href = "./stormwatch";
-          a.click();
-    });
+    axios
+      .post("http://localhost:2024/stormwatch/deletePost", ettPost)
+      .then((e) => {
+        let a = document.createElement("a");
+        a.href = "./stormwatch";
+        a.click();
+      });
   }
 
   //✅

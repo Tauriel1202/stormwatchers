@@ -9,24 +9,59 @@
     <label>Pick an img<input type="file" name="img" /></label>
 
     <canvas id="myCanvas" width="250" height="160"> </canvas>
-    <script>
-      const canvas = document.querySelector("#myCanvas");
-      const ctx = canvas.getContext("2d");
-      const input = document.querySelector("input");
+    <!-- <script> -->
+    <label
+      >sdasdfasd<input
+        id="inputFileToLoad"
+        type="file"
+        onchange="encodeImageFileAsURL();"
+    /></label>
+    <div id="imgTest"></div>
+    <script type="text/javascript">
+      function encodeImageFileAsURL() {
+        var filesSelected = document.getElementById("inputFileToLoad").files;
+        if (filesSelected.length > 0) {
+          var fileToLoad = filesSelected[0];
 
-      input.onchange = function (e) {
-        console.log(e);
-        let img = new Image();
-        img.src = URL.createObjectURL(e.target.files[0]);
-        img.onload = function () {
-          let aspect = this.height/canvas.height;
-          ctx.clearRect(0, 0, canvas.width, canvas.height);
-          ctx.drawImage(img, 0, 0, canvas.width*aspect, canvas.height);
-          let data = ctx.getImageData(0, 0, canvas.width, canvas.height);
-          console.log(data)
-        };
-        console.log(img.src);
-      };
+          var fileReader = new FileReader();
+
+          fileReader.onload = function (fileLoadedEvent) {
+            var srcData = fileLoadedEvent.target.result; // <--- data: base64
+            console.log(srcData)
+
+            // var newImage = document.createElement("img");
+            // newImage.src = srcData;
+
+            // document.getElementById("imgTest").innerHTML = newImage.outerHTML;
+            // alert(
+            //   "Converted Base64 version is " +
+            //     document.getElementById("imgTest").innerHTML
+            // );
+            // console.log(
+            //   "Converted Base64 version is " +
+            //     document.getElementById("imgTest").innerHTML
+            // );
+          };
+          fileReader.readAsDataURL(fileToLoad);
+        }
+      }
+      // const canvas = document.querySelector("#myCanvas");
+      // const ctx = canvas.getContext("2d");
+      // const input = document.querySelector("input");
+
+      // input.onchange = function (e) {
+      //   console.log(e);
+      //   let img = new Image();
+      //   img.src = URL.createObjectURL(e.target.files[0]);
+      //   img.onload = function () {
+      //     let aspect = this.height/canvas.height;
+      //     ctx.clearRect(0, 0, canvas.width, canvas.height);
+      //     ctx.drawImage(img, 0, 0, canvas.width*aspect, canvas.height);
+      //     let data = ctx.getImageData(0, 0, canvas.width, canvas.height);
+      //     console.log(data)
+      //   };
+      //   console.log(img.src);
+      // };
     </script>
   </body>
 </html>

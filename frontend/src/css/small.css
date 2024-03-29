@@ -192,11 +192,85 @@
   }
 
   .lstorms label {
-    width: 100%;
+    width: 90%;
   }
 
   .hurricanes {
     margin: 2%;
+  }
+
+  .posts {
+    border-radius: 1.5em;
+    margin: 1em;
+  }
+
+  .watch .top button {
+    margin: 0 30%;
+  }
+
+  .catTitle,
+  .stormReports,
+  .watch .top {
+    display: block;
+  }
+
+  form {
+    max-width: 360px;
+  }
+
+  form label {
+    width: 18em;
+  }
+
+  form input {
+    height: 1.8em;
+    width: 20em;
+  }
+
+  .postForm .buttons {
+    margin: 0 10%;
+  }
+
+  .postForm button {
+    margin: 2em;
+  }
+
+  .postForm .leave {
+    padding: 0;
+  }
+
+  .account {
+    width: 90%;
+  }
+
+  .myaccount {
+    display: block;
+  }
+
+.myaccount .pic {
+
+  display: block;
+  margin: 0 auto;
+}
+
+  .myaccount .info {
+    /* padding: 1em 2em; */
+    margin: 3em 20%;
+  }
+
+  .myaccount span {
+    display: none;
+  }
+
+  .myaccount a,
+  .myaccount button {
+    display: block;
+  }
+
+  .myaccount .edit {
+    width: 50%;
+    /* padding: 0.8em; */
+    margin: 1em auto;
   }
 }
 /*#endregion SMALL version*/
