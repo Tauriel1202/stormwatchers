@@ -12,6 +12,8 @@ class Form extends React.Component {
       profPic: "logoOfficial_xsmall",
       signedIn: false,
       error: false,
+      host:localStorage.getItem("host") || "http://localhost:2024"
+
     };
   }
 
@@ -148,7 +150,7 @@ class Form extends React.Component {
               type="hidden"
               name="profPic"
               className="pic"
-              value={this.state.profPic}
+              value={Cookies.getCookie('myImg')}
             />
             <button
               onClick={(e) => {
@@ -177,7 +179,8 @@ class Form extends React.Component {
     }
 
     if (method === "create" && data.username !== "" && data.pwd !== "") {
-      axios.post(`http://localhost:2024/account/create`, data).then((e) => {
+      console.log(`${this.state.host}/account/create`)
+      axios.post(`${this.state.host}/account/create`, data).then((e) => {
         if (e.data.includes("username")) {
           this.setState({ error: true });
         } else {
@@ -189,7 +192,7 @@ class Form extends React.Component {
         }
       });
     } else if (method === "login" && data.username !== "" && data.pwd !== "") {
-      axios.post("http://localhost:2024/account/login", data).then((e) => {
+      axios.post(`${this.state.host}/account/login`, data).then((e) => {
         if (e.data.includes("username") || e.data.includes("password")) {
           this.setState({ error: true });
         } else {
@@ -200,11 +203,12 @@ class Form extends React.Component {
         }
       });
     } else if (method === "edit" && data.username !== "" && data.pwd !== "") {
-      axios.post(`http://localhost:2024/account/edit`, data).then((e) => {
+      axios.post(`${this.state.host}/account/edit`, data).then((e) => {
         if (e.data.includes("username")) {
           this.setState({ error: true });
         } else {
           Cookies.setCookie("username", data.username);
+          Cookies.setCookie('myImg', data.profPic)
           let a = document.createElement("a");
           a.href = "/account";
           a.click();

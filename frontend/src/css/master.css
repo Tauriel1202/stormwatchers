@@ -980,6 +980,8 @@ button:hover {
 
 .posts {
   background-color: var(--lightgrey);
+  border: 3.5px outset var(--lightgrey);
+  border-radius: 10px;
   display: grid;
 }
 
@@ -1294,26 +1296,3 @@ footer .imgDiv {
 
 /*#endregion FOOTER*/
 
-/*#region MED version*/
-@media only screen and (max-width: 900px) {
-  main {
-    background-color: rgb(255, 0, 140);
-  }
-
-  header {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .tiles {
-    max-width: 700px;
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .past section {
-    display: unset;
-  }
-}
-
-/*#endregion MED version*/

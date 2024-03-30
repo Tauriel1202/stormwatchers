@@ -24,4 +24,33 @@ export function stormType(json, dict) {
       </option>
     )
   })
+};
+
+export function imageToBase64(src){
+  let canvas = document.createElement("canvas")
+  let ctx = canvas.getContext("2d")
+  let image = new Image()
+  image.src = src
+
+  image.onload = function(){
+    let [width, height] = keepAspect(500, image.width, image.height)
+    canvas.width = width;
+    canvas.height = height;
+    console.log(width, height)
+    
+    ctx.clearRect(0, 0, width, height);
+    ctx.drawImage(image, 0, 0, width, height)
+    console.log(canvas.toDataURL("image/jpeg", .5))
+  }
+
+  return canvas.toDataURL("image/jpeg", 100);
+}
+
+function keepAspect(s, w, h){
+  let aspect = w/h
+  if(w > h){
+      return [s, s/aspect]
+  } else {
+      return [aspect*s, s];
+  }
 }

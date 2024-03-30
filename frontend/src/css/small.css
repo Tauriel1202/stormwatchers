@@ -215,16 +215,20 @@
   }
 
   form {
-    max-width: 360px;
+    max-width: 90%;
+  }
+
+  form.postForm {
+    display: block;
   }
 
   form label {
-    width: 18em;
+    width: 80%;
   }
 
   form input {
     height: 1.8em;
-    width: 20em;
+    /* width: 20em; */
   }
 
   .postForm .buttons {
