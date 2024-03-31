@@ -1058,6 +1058,11 @@ button:hover {
   margin: 0 4em;
 }
 
+.posts img {
+  margin: auto;
+  display: block;
+}
+
 .banner {
   background-image: linear-gradient(
     90deg,

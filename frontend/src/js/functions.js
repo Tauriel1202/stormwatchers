@@ -26,13 +26,13 @@ export function stormType(json, dict) {
   })
 };
 
-export function imageToBase64(src){
+export function imageToBase64(src, callback){
   let canvas = document.createElement("canvas")
   let ctx = canvas.getContext("2d")
   let image = new Image()
   image.src = src
 
-  image.onload = function(){
+  image.onload = function (){
     let [width, height] = keepAspect(500, image.width, image.height)
     canvas.width = width;
     canvas.height = height;
@@ -40,10 +40,16 @@ export function imageToBase64(src){
     
     ctx.clearRect(0, 0, width, height);
     ctx.drawImage(image, 0, 0, width, height)
-    console.log(canvas.toDataURL("image/jpeg", .5))
+    // console.log(canvas.toDataURL("image/jpeg", .5))
+
+    let b64 = canvas.toDataURL("image/jpeg", 1);
+    let kb = Math.round(b64.length / 1000)
+    if (kb > 80){
+      b64 = canvas.toDataURL("image/jpeg", .5);
+    }
+    callback(b64);
   }
 
-  return canvas.toDataURL("image/jpeg", 100);
 }
 
 function keepAspect(s, w, h){

@@ -29,6 +29,7 @@ async function postStorm(req, res) {
       loc: req.body.loc,
       desc: req.body.desc,
       eventPic: req.body.eventPic,
+      b64: req.body.b64
     })
     .then((e) => {
       res.status(201).send(e);
