@@ -204,7 +204,7 @@ class App extends React.Component {
                   <img
                     src={
                       dForecast2[4] !== ""
-                        ? `../public/imgs/icons/Rain.png`
+                        ? `../../public/imgs/icons/${toTitleCase(Rain)}.png`
                         : ""
                     }
                     alt="current weather image"
