@@ -160,7 +160,7 @@ class App extends React.Component {
                   <img
                     src={
                       cForecast[4] !== ""
-                        ? `./imgs/icons/${toTitleCase(cForecast[4])}.png`
+                        ? `../imgs/icons/${toTitleCase(cForecast[4])}.png`
                         : ""
                     }
                     alt="current weather image"
@@ -182,7 +182,7 @@ class App extends React.Component {
                   <img
                     src={
                       dForecast[4] !== ""
-                        ? `./imgs/icons/${dForecast[4]}.png`
+                        ? `../imgs/icons/${dForecast[4]}.png`
                         : ""
                     }
                     alt="current weather image"
@@ -204,7 +204,7 @@ class App extends React.Component {
                   <img
                     src={
                       dForecast2[4] !== ""
-                        ? `./imgs/icons/${dForecast2[4]}.png`
+                        ? `../imgs/icons/${dForecast2[4]}.png`
                         : ""
                     }
                     alt="current weather image"

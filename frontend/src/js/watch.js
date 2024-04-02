@@ -164,7 +164,9 @@ class Watch extends React.Component {
               className="eventPic"
               onChange={this.convertImg}
             />
+            <img id="imagePreview" src="" width={84} height={56} />
           </label>
+
           <input type="hidden" name="username" value={postData.username} />
           <input type="hidden" name="myImg" value={postData.myImg} />
           <input type="hidden" name="b64" onChange={this.convertImg} />
