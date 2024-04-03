@@ -15,7 +15,7 @@ class Header extends React.Component {
   render(){
   return (
     <>
-      <header>
+      <header id="top">
         <div className="headerContent">
           <div className="imgDiv">
             <img

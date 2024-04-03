@@ -65,7 +65,7 @@ function InfoTemplate() {
             })}
           </aside>
           <div className="deets">
-            <h2 id="top">{toTitleCase(stateWeatherType)}</h2>
+            <h2>{toTitleCase(stateWeatherType)}</h2>
             <h3>Overview</h3>
             <p
               dangerouslySetInnerHTML={{

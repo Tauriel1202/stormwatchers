@@ -381,7 +381,7 @@ h2 {
   border: 3.5px solid var(--accents);
   border-left: none;
   width: 15em;
-  height: 54.7em;
+  height: 55.5em;
   margin-bottom: 0.5em;
   position: -webkit-sticky;
   position: sticky;
@@ -507,6 +507,18 @@ h2 {
   height: auto;
 }
 
+.but {
+  width: 10em;
+  background-color: var(--accents);
+  color: var(--black);
+  border: 3.5px outset var(--accents);
+  border-radius: 10px;
+  text-decoration: none;
+  text-align: center;
+  padding: 1em;
+  margin: 1em auto;
+  grid-column: 1 / 4;
+}
 /*#endregion UNTILED*/
 
 /*#endregion WEATHER*/

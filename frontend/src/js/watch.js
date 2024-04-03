@@ -3,7 +3,7 @@ import Header from "./header";
 import Footer from "./footer";
 import Cookies from "./cookie";
 import axios from "axios";
-import { imageToBase64 } from "./functions";
+import { getUrl, imageToBase64 } from "./functions";
 
 class Watch extends React.Component {
   constructor(props) {
@@ -18,7 +18,7 @@ class Watch extends React.Component {
       postData: {},
       update: false,
       postClicked: {},
-      host: localStorage.getItem("host") || "http://localhost:2024",
+      host: getUrl(), //localStorage.getItem("host") || "http://localhost:2024",
       b64: "",
     };
   }
@@ -122,6 +122,7 @@ class Watch extends React.Component {
 
     if (this.state.update) {
       let postData = this.state.postClicked;
+      console.log(postData)
 
       return (
         <form className="postForm" method="post">
@@ -169,8 +170,10 @@ class Watch extends React.Component {
 
           <input type="hidden" name="username" value={postData.username} />
           <input type="hidden" name="myImg" value={postData.myImg} />
-          <input type="hidden" name="b64" onChange={this.convertImg} />
+          <input type="hidden" name="b64" id="b64"/>
           <input type="hidden" name="old" value={postData.eventName} />
+
+
           <div className="buttons">
             <button
               onClick={(e) => {

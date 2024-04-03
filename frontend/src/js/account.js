@@ -3,6 +3,7 @@ import Header from "./header";
 import Footer from "./footer";
 import Cookies from "./cookie";
 import axios from "axios";
+import { getUrl } from "./functions";
 
 class Account extends React.Component {
   constructor(props) {
@@ -15,7 +16,7 @@ class Account extends React.Component {
       profPic: "logoOfficial_xsmall",
       runMe: true,
       picClicked: false,
-      host:localStorage.getItem("host") || "http://localhost:2024"
+      host: getUrl() //localStorage.getItem("host") || "http://localhost:2024"
     };
   }
 

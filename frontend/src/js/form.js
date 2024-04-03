@@ -3,6 +3,7 @@ import React from "react";
 import Header from "./header";
 import Footer from "./footer";
 import axios from "axios";
+import { getUrl } from "./functions";
 
 class Form extends React.Component {
   constructor(props) {
@@ -12,7 +13,7 @@ class Form extends React.Component {
       profPic: "logoOfficial_xsmall",
       signedIn: false,
       error: false,
-      host:localStorage.getItem("host") || "http://localhost:2024"
+      host:getUrl()//localStorage.getItem("host") || "http://localhost:2024"
 
     };
   }

@@ -17,6 +17,7 @@ import InfoTemplate from "./js/infoTemplate";
 import Form from "./js/form";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
+
 root.render(
   <React.StrictMode>
     <BrowserRouter>

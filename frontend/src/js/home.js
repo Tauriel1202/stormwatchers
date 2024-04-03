@@ -5,13 +5,14 @@ import Header from "../js/header";
 import Footer from "../js/footer";
 import React from "react";
 import axios from "axios";
-import { toTitleCase } from "./functions";
+import { getUrl, toTitleCase } from "./functions";
 
 class App extends React.Component {
   constructor() {
     super();
     this.state = {
       weatherData: {},
+      // host: getUrl()
     };
   }
 

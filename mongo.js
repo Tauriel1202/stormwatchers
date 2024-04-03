@@ -127,7 +127,9 @@ async function updateImg(req, res) {
 async function updateStorm(req, res) {
   await wdb
     .findOneAndUpdate(
-      { eventName: req.body.old },
+      { eventName: req.body.old,
+
+       },
       {
         $set: {
           eventName: req.body.eventName,
