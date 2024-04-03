@@ -10,7 +10,7 @@ class Form extends React.Component {
     super(props);
     this.state = {
       formType: new URLSearchParams(window.location.search).get("formType"),
-      profPic: "logoOfficial_xsmall",
+      profPic: "profPlaceholder_xsmall",
       signedIn: false,
       error: false,
       host:getUrl()//localStorage.getItem("host") || "http://localhost:2024"
@@ -197,6 +197,7 @@ class Form extends React.Component {
         if (e.data.includes("username") || e.data.includes("password")) {
           this.setState({ error: true });
         } else {
+          Cookies.setCookie('myImg', data.profPic)
           Cookies.setCookie("username", data.username);
           let a = document.createElement("a");
           a.href = "/account";
@@ -208,8 +209,8 @@ class Form extends React.Component {
         if (e.data.includes("username")) {
           this.setState({ error: true });
         } else {
-          Cookies.setCookie("username", data.username);
           Cookies.setCookie('myImg', data.profPic)
+          Cookies.setCookie("username", data.username);
           let a = document.createElement("a");
           a.href = "/account";
           a.click();

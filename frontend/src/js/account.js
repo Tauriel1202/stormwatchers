@@ -13,10 +13,10 @@ class Account extends React.Component {
       signedIn: Cookies.getCookie("username"),
       dataUsername: "",
       dataEmail: "",
-      profPic: "logoOfficial_xsmall",
+      profPic: "profPlaceholder",
       runMe: true,
       picClicked: false,
-      host: getUrl() //localStorage.getItem("host") || "http://localhost:2024"
+      host: getUrl(), //localStorage.getItem("host") || "http://localhost:2024"
     };
   }
 
@@ -42,7 +42,7 @@ class Account extends React.Component {
       .post(`${this.state.host}/account/delete`, { username: si })
       .then(() => {
         Cookies.setCookie("username", "");
-        Cookies.setCookie("myImg", "logoOfficial_xsmall");
+        Cookies.setCookie("myImg", "profPlaceholder_xsmall");
         let a = document.createElement("a");
         a.href = "/account";
         a.click();
@@ -55,7 +55,7 @@ class Account extends React.Component {
     axios
       .post(`${this.state.host}/account`, { username: currentUser })
       .then((accountData) => {
-        Cookies.setCookie('myImg', accountData.data.profPic)
+        Cookies.setCookie("myImg", accountData.data.profPic);
 
         this.setState({
           dataUsername: accountData.data.username,
@@ -74,7 +74,10 @@ class Account extends React.Component {
       })
       .then(() => {
         Cookies.setCookie("myImg", img);
-        this.setState({ profPic: img, picClicked: false });
+        this.setState({
+          profPic: Cookies.getCookie("myImg"),
+          picClicked: false,
+        });
       });
   }
 
@@ -134,7 +137,6 @@ class Account extends React.Component {
           className="pic"
           onClick={() => {
             this.setPicClicked(true);
-            
           }}
         >
           <div className="profPic">

@@ -20,6 +20,7 @@ class Watch extends React.Component {
       postClicked: {},
       host: getUrl(), //localStorage.getItem("host") || "http://localhost:2024",
       b64: "",
+      filteredUser: "All Users",
     };
   }
 
@@ -33,72 +34,153 @@ class Watch extends React.Component {
   getPosts() {
     let postJson = this.state.postData;
 
-    return Object.keys(postJson).map((onePost) => {
-      let ettPost = postJson[onePost];
+    if (this.state.filteredUser === "All Users") {
+      return Object.keys(postJson).map((onePost) => {
+        let ettPost = postJson[onePost];
 
-      return (
-        <div className="posts" key={onePost}>
-          <div className="postUser">
-            <div className="imgDiv">
-              <img
-                src={`../imgs/profPics/${ettPost.myImg}.webp`}
-                alt="user"
-                width={100}
-                height={100}
-              />
+        return (
+          <div className="posts" key={onePost}>
+            <div className="postUser">
+              <div className="imgDiv">
+                <img
+                  src={`../imgs/profPics/${ettPost.myImg}.webp`}
+                  alt="user"
+                  width={100}
+                  height={100}
+                />
+              </div>
+              <h4>{ettPost.username}</h4>
             </div>
-            <h4>{ettPost.username}</h4>
+            <div className="postDeets">
+              <h3>{ettPost.eventName}</h3>
+              <p>{ettPost.loc}</p>
+              <p className="postDesc">{ettPost.desc}</p>
+              <div className="imgDiv">
+                <img
+                  src={`${ettPost.b64}`}
+                  alt={ettPost.eventName}
+                  width={100}
+                  height={100}
+                />
+              </div>
+              <p>{ettPost.time}</p>
+            </div>
+            {this.state.signedIn && (
+              <div className="buttons">
+                <button
+                  className="update"
+                  onClick={() => {
+                    this.setState({
+                      formOn: true,
+                      update: true,
+                      postClicked: ettPost,
+                    });
+                    // this.setState({ formOn: true });
+                  }}
+                >
+                  Update
+                </button>
+                <button
+                  className="hazard"
+                  onClick={() => {
+                    this.deletePost(ettPost);
+                  }}
+                >
+                  Delete
+                </button>
+              </div>
+            )}
+            {!this.state.signedIn && (
+              <div className="buttons">
+                <button disabled className="update">
+                  Update
+                </button>
+                <button disabled className="delete">
+                  Delete
+                </button>
+              </div>
+            )}
           </div>
-          <div className="postDeets">
-            <h3>{ettPost.eventName}</h3>
-            <p>{ettPost.loc}</p>
-            <p className="postDesc">{ettPost.desc}</p>
-            <div className="imgDiv">
-              <img
-                src={`${ettPost.b64}`}
-                alt={ettPost.eventName}
-                width={100}
-                height={100}
-              />
+        );
+      });
+    } else {
+      return Object.keys(postJson).map((onePost) => {
+        if (postJson[onePost].username === this.state.filteredUser) {
+          let ettPost = postJson[onePost];
+          return (
+            <div className="posts" key={onePost}>
+              <div className="postUser">
+                <div className="imgDiv">
+                  <img
+                    src={`../imgs/profPics/${ettPost.myImg}.webp`}
+                    alt="user"
+                    width={100}
+                    height={100}
+                  />
+                </div>
+                <h4>{ettPost.username}</h4>
+              </div>
+              <div className="postDeets">
+                <h3>{ettPost.eventName}</h3>
+                <p>{ettPost.loc}</p>
+                <p className="postDesc">{ettPost.desc}</p>
+                <div className="imgDiv">
+                  <img
+                    src={`${ettPost.b64}`}
+                    alt={ettPost.eventName}
+                    width={100}
+                    height={100}
+                  />
+                </div>
+                <p>{ettPost.time}</p>
+              </div>
+              {this.state.signedIn && (
+                <div className="buttons">
+                  <button
+                    className="update"
+                    onClick={() => {
+                      this.setState({
+                        formOn: true,
+                        update: true,
+                        postClicked: ettPost,
+                      });
+                      // this.setState({ formOn: true });
+                    }}
+                  >
+                    Update
+                  </button>
+                  <button
+                    className="hazard"
+                    onClick={() => {
+                      this.deletePost(ettPost);
+                    }}
+                  >
+                    Delete
+                  </button>
+                </div>
+              )}
+              {!this.state.signedIn && (
+                <div className="buttons">
+                  <button disabled className="update">
+                    Update
+                  </button>
+                  <button disabled className="delete">
+                    Delete
+                  </button>
+                </div>
+              )}
             </div>
-          </div>
-          {this.state.signedIn && (
-            <div className="buttons">
-              <button
-                className="update"
-                onClick={() => {
-                  this.setState({
-                    formOn: true,
-                    update: true,
-                    postClicked: ettPost,
-                  });
-                  // this.setState({ formOn: true });
-                }}
-              >
-                Update
-              </button>
-              <button
-                className="hazard"
-                onClick={() => {
-                  this.deletePost(ettPost);
-                }}
-              >
-                Delete
-              </button>
-            </div>
-          )}
-          {!this.state.signedIn && (
-            <div className="buttons">
-              <button disabled className="update">
-                Update
-              </button>
-              <button disabled className="delete">
-                Delete
-              </button>
-            </div>
-          )}
-        </div>
-      );
+          );
+        }
+      });
+    }
+  }
+
+  postFilter() {
+    let postJson = this.state.postData;
+
+    return Object.keys(postJson).map((onePost) => {
+      return <option key={onePost}>{postJson[onePost].username}</option>;
     });
   }
 
@@ -119,10 +201,12 @@ class Watch extends React.Component {
   //✅
   postStorm() {
     // console.log(this.convertImg())
+    let date = new Date();
+    console.log(date);
 
     if (this.state.update) {
       let postData = this.state.postClicked;
-      console.log(postData)
+      console.log(postData);
 
       return (
         <form className="postForm" method="post">
@@ -170,10 +254,9 @@ class Watch extends React.Component {
 
           <input type="hidden" name="username" value={postData.username} />
           <input type="hidden" name="myImg" value={postData.myImg} />
-          <input type="hidden" name="b64" id="b64"/>
+          <input type="hidden" name="b64" id="b64" />
           <input type="hidden" name="old" value={postData.eventName} />
-
-
+          <input type="hidden" name="time" value={date} />
           <div className="buttons">
             <button
               onClick={(e) => {
@@ -241,6 +324,7 @@ class Watch extends React.Component {
           <input type="hidden" name="username" value={this.state.signedIn} />
           <input type="hidden" name="myImg" value={this.state.myImg} />
           <input type="hidden" name="b64" id="b64" />
+          <input type="hidden" name="time" id="time" value={date} />
           <div className="buttons">
             <button
               onClick={(e) => {
@@ -335,15 +419,33 @@ class Watch extends React.Component {
         <Header />
         <main className="watch">
           <div className="top">
+            {/* banner */}
             {!this.state.signedIn && (
               <p className="banner">
                 Post, update, and delete actions are turned off. -
                 <a href="./account"> Sign in here</a> to enable them.
               </p>
             )}
+            {/* user select menu */}
+            {!this.state.formOn && (
+              <label className="userFilter">
+                Filter posts by user:
+                <select
+                  onChange={(e) => {
+                    this.setState({ filteredUser: e.target.value });
+                  }}
+                >
+                  <option>All Users</option>
+                  {this.postFilter()}
+                </select>
+              </label>
+            )}
+            {/* page header */}
             <h2>Weather Event Reports</h2>
+            {/* post button */}
             {!this.state.formOn && this.buttons()}
           </div>
+          {/* displayed posts */}
           {this.state.formOn && this.postStorm()}
           {!this.state.formOn && (
             <div className="stormReports">{this.getPosts()}</div>

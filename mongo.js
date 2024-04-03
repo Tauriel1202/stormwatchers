@@ -1,4 +1,4 @@
-const { MongoClient, ObjectId } = require("mongodb");
+const { MongoClient, ObjectId, Timestamp } = require("mongodb");
 const MongoConnection = process.env.MONGO;
 
 const client = new MongoClient(MongoConnection);
@@ -22,16 +22,17 @@ async function getPosts(req, res) {
 
 async function postStorm(req, res) {
   await wdb
-    .insertOne({
-      username: req.body.username,
-      myImg: req.body.myImg,
-      eventName: req.body.eventName,
-      loc: req.body.loc,
-      desc: req.body.desc,
-      eventPic: req.body.eventPic,
-      b64: req.body.b64
-    })
-    .then((e) => {
+  .insertOne({
+    username: req.body.username,
+    myImg: req.body.myImg,
+    eventName: req.body.eventName,
+    loc: req.body.loc,
+    desc: req.body.desc,
+    eventPic: req.body.eventPic,
+    b64: req.body.b64,
+    time: req.body.time
+  })
+  .then((e) => {
       res.status(201).send(e);
     });
 }
@@ -127,9 +128,7 @@ async function updateImg(req, res) {
 async function updateStorm(req, res) {
   await wdb
     .findOneAndUpdate(
-      { eventName: req.body.old,
-
-       },
+      { eventName: req.body.old },
       {
         $set: {
           eventName: req.body.eventName,

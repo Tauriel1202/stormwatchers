@@ -29,7 +29,7 @@ class Header extends React.Component {
           <div className="imgDiv">
             <a href="/account">
               <img
-                src={`../imgs/profPics/${Cookies.getCookie('myImg') || 'logoOfficial_xsmall'}.webp`}
+                src={`../imgs/profPics/${Cookies.getCookie('myImg') || 'profPlaceholder_xsmall'}.webp`}
                 alt="account"
                 width="100"
                 height="100"
