@@ -12,21 +12,25 @@ class App extends React.Component {
     super();
     this.state = {
       weatherData: {},
-      // host: getUrl()
+      host: getUrl(),
+      location: "Boston,Massachusetts",
     };
   }
 
   componentDidMount() {
-    axios.get("http://localhost:2024/weatherAPI").then((jsObject) => {
-      this.setState({ weatherData: jsObject.data });
-    });
+    axios
+      .get(`${this.state.host}/weatherAPI`, {
+        params: { lat: 42.3554334, lon: -71.060511 },
+      })
+      .then((jsObject) => {
+        this.setState({ weatherData: jsObject.data });
+      });
   }
 
   randomTip() {
     // random tips
     const randTipIdx = Math.floor(Math.random() * tipJson.tips.length);
     const randValue = tipJson.tips[randTipIdx];
-    // console.log(randValue);
     return (
       <div className="tipTop">
         <h4>{randValue.subject}</h4>
@@ -69,7 +73,7 @@ class App extends React.Component {
     let currentHumidity = "Loading...";
     let forecastImg = "";
     let re =
-      /light |heavy |moderate |partly |mostly |broken | sky|overcast |few |scattered /g;
+      /light |heavy |heavy intensity |moderate |partly |mostly |broken | sky|overcast |few |scattered /g;
 
     if (day in this.state.weatherData) {
       if (day === "current") {
@@ -103,19 +107,55 @@ class App extends React.Component {
     return [current, currentHumidity, currentTemp, currentWind, forecastImg];
   }
 
+  getSearchForecast = () => {
+    let locSearch = document.querySelector("#forecastLoc");
+
+    axios
+      .get(`${this.state.host}/locSearchAPI`, {
+        params: { loc: locSearch.value },
+      })
+      .then((res) => {
+        this.setState({
+          location: `${res.data[0].name}, ${res.data[0].state}, ${res.data[0].country}`,
+        });
+
+        axios
+          .get(`${this.state.host}/weatherAPI`, {
+            params: { lat: res.data[0].lat, lon: res.data[0].lon },
+          })
+          .then((jsObject) => {
+            this.setState({ weatherData: jsObject.data });
+          });
+      });
+  };
+
   render() {
     let cForecast = this.getForecast("current");
     let dForecast = this.getForecast("daily", 1);
     let dForecast2 = this.getForecast("daily", 2);
     let tip = this.randomTip();
-    // console.log(this.legend()[1])
 
     // build html for page
     return (
       <div className="App">
         <Header />
         <main className="home">
-          <h2>Home</h2>
+          <div className="homeTop">
+            <h2>Home</h2>
+            <div className="search">
+              <label>
+                Forecast location:
+                <input
+                  type="text"
+                  name="forecastLoc"
+                  id="forecastLoc"
+                  placeholder="Boston, MA"
+                />
+              </label>
+              <button onClick={this.getSearchForecast}>Search</button>
+            </div>
+          </div>
+
           <div className="content">
             <div className="tips">
               <h3>Weather Tip</h3>
@@ -155,6 +195,7 @@ class App extends React.Component {
           </div>
           <div className="forecast">
             <h3>Forecast</h3>
+            <p>Location: {this.state.location}</p>
             <div className="weatherTile">
               <div className="bigNsmall">
                 <div className="imgDiv">

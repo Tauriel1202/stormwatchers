@@ -55,8 +55,8 @@ function keepAspect(s, w, h) {
 
 export function getUrl() {
   let url = "http://localhost:2024";
-  url = "https://stormwatchers.onrender.com";
   if (!window.location.host.includes("localhost")) {
+    url = "https://stormwatchers.onrender.com";
   }
   return url;
 }

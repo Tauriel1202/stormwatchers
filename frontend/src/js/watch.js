@@ -179,9 +179,13 @@ class Watch extends React.Component {
   postFilter() {
     let postJson = this.state.postData;
 
-    return Object.keys(postJson).map((onePost) => {
-      return <option key={onePost}>{postJson[onePost].username}</option>;
+    let userArr = Object.keys(postJson).map((onePost) => {
+      return postJson[onePost].username
     });
+
+    return Array.from(new Set(userArr)).sort().map((e) => {
+      return <option key={e}>{e}</option>
+    })
   }
 
   convertImg() {

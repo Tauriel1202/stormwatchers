@@ -55,8 +55,8 @@ class Account extends React.Component {
     axios
       .post(`${this.state.host}/account`, { username: currentUser })
       .then((accountData) => {
-        Cookies.setCookie("myImg", accountData.data.profPic);
-
+        // Cookies.setCookie("myImg", accountData.data.profPic);
+console.log(accountData.data.profPic)
         this.setState({
           dataUsername: accountData.data.username,
           dataEmail: accountData.data.email,
@@ -71,6 +71,8 @@ class Account extends React.Component {
       .post(`${this.state.host}/account/updateImg`, {
         profPic: img,
         oldPic: this.state.profPic,
+        username: Cookies.getCookie("username")
+
       })
       .then(() => {
         Cookies.setCookie("myImg", img);

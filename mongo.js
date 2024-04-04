@@ -7,6 +7,7 @@ const wdb = client.db("stormwatchersKids").collection("weatherReports");
 
 async function getAccount(req, res) {
   await adb.findOne(req.body).then((e) => {
+    console.log(e.profPic)
     res.status(200).send(e);
   });
 }
@@ -110,17 +111,19 @@ async function updateAccount(req, res) {
 //✅
 async function updateImg(req, res) {
   await adb
-    .updateOne(
-      {
-        profPic: req.body.oldPic,
+  .updateOne(
+    {
+      username: req.body.username,
+      profPic: req.body.oldPic,
+    },
+    {
+      $set: {
+        profPic: req.body.profPic,
       },
-      {
-        $set: {
-          profPic: req.body.profPic,
-        },
-      }
+    }
     )
     .then((e) => {
+      console.log(req.body)
       res.status(200).send("img update successful");
     });
 }

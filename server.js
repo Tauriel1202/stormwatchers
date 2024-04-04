@@ -5,11 +5,11 @@ const app = express();
 const dotenv = require("dotenv").config();
 const port = 2024;
 const cors = require("cors");
-const path = require('path');
+const path = require("path");
 
 // console.log(__dirname)
 // console.log(path.resolve(__dirname, 'frontend', 'build','index.html'))
-app.use(express.static('frontend/build'));
+app.use(express.static("frontend/build"));
 app.use(
   bodyParser.urlencoded({
     extended: true,
@@ -27,12 +27,10 @@ app.use((req, res, next) => {
   next();
 });
 
-
-
 app.get("/", (req, res) => {
   res.setHeader("Content-type", "text/html");
-  res.sendFile(path.resolve(__dirname, 'frontend', 'build','index.html'));
-})
+  res.sendFile(path.resolve(__dirname, "frontend", "build", "index.html"));
+});
 // app.get("/", sendFile);
 // app.get("/", (req, res) => res.type('text/html').send());
 app.get("/weather", sendFile);
@@ -45,13 +43,10 @@ app.get("/account", sendFile);
 app.get("/weather/summary", sendFile);
 app.get("/account/form", sendFile);
 
-
 function sendFile(req, res) {
   res.setHeader("Content-type", "text/html");
-  res.sendFile(path.resolve(__dirname, 'frontend', 'build','index.html'));
+  res.sendFile(path.resolve(__dirname, "frontend", "build", "index.html"));
 }
-
-
 
 //mongo
 //accounts
@@ -71,7 +66,25 @@ app.post("/stormwatch/deletePost", accounts.deletePost);
 
 // weather api
 app.get("/weatherAPI", (req, res) => {
-  fetch(process.env.URL)
+  let url = process.env.URL;
+  url = url.replace("@lat", req.query.lat);
+  url = url.replace("@lon", req.query.lon);
+
+  fetch(url)
+    .then((response) => response.json())
+    .then((jsObject) => {
+      res.send(jsObject);
+    });
+});
+
+app.get("/locSearchAPI", (req, res) => {
+  let query = req.query.loc;
+  let params = query.split(",");
+  let url = process.env.NEWURL;
+
+  url = url.replace("@city", params[0]);
+  url = url.replace(",@state", params[1] ? `,${params[1]}` : "");
+  fetch(url)
     .then((response) => response.json())
     .then((jsObject) => {
       res.send(jsObject);
