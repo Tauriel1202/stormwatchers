@@ -1,8 +1,8 @@
 /*#region MED version*/
 @media only screen and (max-width: 900px) {
-  main {
+  /* main {
     background-color: rgb(255, 0, 140);
-  }
+  } */
 
   .headerContent,
   footer {
