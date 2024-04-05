@@ -178,6 +178,7 @@ console.log(accountData.data.profPic)
           onClick={() => {
             Cookies.deleteCookie("myImg");
             Cookies.deleteCookie("username");
+            this.setState({profPic: 'profPlaceholder_xsmall'})
           }}
         >
           Logout

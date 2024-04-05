@@ -5,6 +5,18 @@
     margin: 2%;
   }
 
+  .homeTop {
+    display: block;
+  }
+
+  .search { 
+    margin: auto;
+  }
+
+  .search button {
+    padding: 0.5em;
+  }
+
   .headerContent,
   footer {
     text-align: center;
@@ -105,6 +117,7 @@
     grid-row: 1 / 2;
 
     display: grid;
+    /* margin: 1em; */
     /* margin: auto; */
   }
 
@@ -120,6 +133,15 @@
     height: 100%;
     display: grid;
     grid-template-rows: 1fr 0.5fr;
+  }
+
+  .locP {
+    grid-column: 1 / 4;
+  }
+
+  .prints, .formula {
+    max-width: 25em;
+    margin: 2%;
   }
 
   .weatherTile .weatherData {
@@ -251,11 +273,10 @@
     display: block;
   }
 
-.myaccount .pic {
-
-  display: block;
-  margin: 0 auto;
-}
+  .myaccount .pic {
+    display: block;
+    margin: 0 auto;
+  }
 
   .myaccount .info {
     /* padding: 1em 2em; */

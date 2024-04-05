@@ -195,7 +195,7 @@ class App extends React.Component {
           </div>
           <div className="forecast">
             <h3>Forecast</h3>
-            <p>Location: {this.state.location}</p>
+            <p className="locP">Location: {this.state.location}</p>
             <div className="weatherTile">
               <div className="bigNsmall">
                 <div className="imgDiv">

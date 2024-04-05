@@ -10,7 +10,7 @@ class Header extends React.Component {
     super(props);
     this.state = {
       signedIn: Cookies.getCookie("username"),
-      userPic: Cookies.getCookie("myImg") || "profPlaceholder_xsmall",
+      userPic: "profPlaceholder_xsmall",
       host: getUrl(),
     };
   }
@@ -18,16 +18,19 @@ class Header extends React.Component {
   componentDidMount() {
     let currentUser = Cookies.getCookie("username");
 
-    axios
-      .post(`${this.state.host}/account`, { username: currentUser })
-      .then((data) => {
-        console.log(data.data.profPic);
-        this.setState({ userPic: data.data.profPic });
-      });
+    // if (currentUser !== "") {
+      axios
+        .post(`${this.state.host}/account`, { username: currentUser })
+        .then((data) => {
+          console.log(data.data.username, data.data.profPic);
+          this.setState({ userPic: data.data.profPic });
+        });
+    // } else {
+    //   console.log("💩");
+    // }
   }
 
   render() {
-
     return (
       <>
         <header id="top">
