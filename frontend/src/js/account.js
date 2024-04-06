@@ -183,7 +183,7 @@ console.log(accountData.data.profPic)
         >
           Logout
         </button>
-        <button className="hazard" onClick={this.deleteAccount}>
+        <button className="hazard" onClick={_ => {this.deleteAccount()}}>
           Delete Account
         </button>
       </div>
