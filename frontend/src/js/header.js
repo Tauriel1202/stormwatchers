@@ -2,8 +2,6 @@ import React from "react";
 import Cookies from "./cookie";
 import axios from "axios";
 import { getUrl } from "./functions";
-// import accountImg from "../imgs/icons/accountImg.png";
-// import logo from "../imgs/icons/logoPlaceholder.png";
 
 class Header extends React.Component {
   constructor(props) {
@@ -18,16 +16,14 @@ class Header extends React.Component {
   componentDidMount() {
     let currentUser = Cookies.getCookie("username");
 
-    // if (currentUser !== "") {
+    if (currentUser === null) {
       axios
         .post(`${this.state.host}/account`, { username: currentUser })
         .then((data) => {
-          console.log(data.data.username, data.data.profPic);
           this.setState({ userPic: data.data.profPic });
+          Cookies.setCookie("myImg", data.data.profPic);
         });
-    // } else {
-    //   console.log("💩");
-    // }
+    }
   }
 
   render() {

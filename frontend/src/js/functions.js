@@ -29,11 +29,9 @@ export function imageToBase64(src, callback) {
     let [width, height] = keepAspect(500, image.width, image.height);
     canvas.width = width;
     canvas.height = height;
-    console.log(width, height);
 
     ctx.clearRect(0, 0, width, height);
     ctx.drawImage(image, 0, 0, width, height);
-    // console.log(canvas.toDataURL("image/jpeg", .5))
 
     let b64 = canvas.toDataURL("image/jpeg", 1);
     let kb = Math.round(b64.length / 1000);

@@ -7,8 +7,6 @@ const port = 2024;
 const cors = require("cors");
 const path = require("path");
 
-// console.log(__dirname)
-// console.log(path.resolve(__dirname, 'frontend', 'build','index.html'))
 app.use(express.static("frontend/build"));
 app.use(
   bodyParser.urlencoded({
@@ -31,8 +29,6 @@ app.get("/", (req, res) => {
   res.setHeader("Content-type", "text/html");
   res.sendFile(path.resolve(__dirname, "frontend", "build", "index.html"));
 });
-// app.get("/", sendFile);
-// app.get("/", (req, res) => res.type('text/html').send());
 app.get("/weather", sendFile);
 app.get("/stormprep", sendFile);
 app.get("/pastweather", sendFile);

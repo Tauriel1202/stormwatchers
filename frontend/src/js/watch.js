@@ -75,7 +75,6 @@ class Watch extends React.Component {
                       update: true,
                       postClicked: ettPost,
                     });
-                    // this.setState({ formOn: true });
                   }}
                 >
                   Update
@@ -144,7 +143,6 @@ class Watch extends React.Component {
                         update: true,
                         postClicked: ettPost,
                       });
-                      // this.setState({ formOn: true });
                     }}
                   >
                     Update
@@ -204,13 +202,10 @@ class Watch extends React.Component {
 
   //✅
   postStorm() {
-    // console.log(this.convertImg())
     let date = new Date();
-    console.log(date);
 
     if (this.state.update) {
       let postData = this.state.postClicked;
-      console.log(postData);
 
       return (
         <form className="postForm" method="post">

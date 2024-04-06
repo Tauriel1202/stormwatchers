@@ -180,7 +180,6 @@ class Form extends React.Component {
     }
 
     if (method === "create" && data.username !== "" && data.pwd !== "") {
-      console.log(`${this.state.host}/account/create`)
       axios.post(`${this.state.host}/account/create`, data).then((e) => {
         if (e.data.includes("username")) {
           this.setState({ error: true });
